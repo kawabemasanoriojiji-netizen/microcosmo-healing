@@ -223,6 +223,14 @@
     margin: 0 0 16px;
   }
 
+  .blog-date {
+    color: #999;
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    margin-bottom: 14px;
+  }
+
   .blog-card p {
     color: var(--text-light);
     font-size: 14px;
@@ -238,6 +246,21 @@
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;
+  }
+
+  .blog-fallback {
+    border: 1px solid var(--border);
+    background: var(--bg-color);
+    border-radius: 4px;
+    padding: 32px;
+    text-align: center;
+  }
+
+  .blog-fallback p {
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 2;
+    margin: 0;
   }
 
   .image-area {
@@ -575,36 +598,6 @@
     </div>
   </section>
 
-  <!-- Blog Section -->
-  <section id="blog" style="padding-top: 40px;">
-    <div class="section-title">Blog</div>
-    <h2 class="section-heading">最近のブログ</h2>
-    <p class="blog-intro">
-      日々の気づきや、ヒーリング、自己開放、この世界の不思議について書いています。<br>
-      はじめての方は、こちらから少しずつ空気に触れて頂けたらと思います。
-    </p>
-    <div class="blog-grid">
-      <article class="blog-card">
-        <h3>最近の記事タイトル</h3>
-        <p>ここに記事の短い紹介文が入ります。日々の気づきや、心身のこと、本来の自分についての文章を掲載します。</p>
-        <a class="read-more" href="https://atelierkoshiki.blogspot.com" target="_blank" rel="noopener noreferrer">続きを読む</a>
-      </article>
-      <article class="blog-card">
-        <h3>最近の記事タイトル</h3>
-        <p>ここに記事の短い紹介文が入ります。読んでいるうちに、少しずつこの場所の空気に触れて頂けるような導線にしてください。</p>
-        <a class="read-more" href="https://atelierkoshiki.blogspot.com" target="_blank" rel="noopener noreferrer">続きを読む</a>
-      </article>
-      <article class="blog-card">
-        <h3>最近の記事タイトル</h3>
-        <p>ここに記事の短い紹介文が入ります。必要な方が、必要なタイミングで辿り着けるような静かな紹介にしてください。</p>
-        <a class="read-more" href="https://atelierkoshiki.blogspot.com" target="_blank" rel="noopener noreferrer">続きを読む</a>
-      </article>
-    </div>
-    <div class="quiet-cta">
-      <a href="https://atelierkoshiki.blogspot.com" class="secondary-button" target="_blank" rel="noopener noreferrer">ブログを読む</a>
-    </div>
-  </section>
-
   <!-- Flow セクション -->
   <section id="flow">
     <div class="section-title">Flow</div>
@@ -741,6 +734,22 @@
     </div>
   </section>
 
+  <!-- Blog Section -->
+  <section id="blog" style="padding-top: 80px;">
+    <div class="section-title">Blog</div>
+    <h2 class="section-heading">最近の文章</h2>
+    <p class="blog-intro">
+      Bloggerで日々の気づきや、ヒーリング、自己開放、この世界の不思議について書いています。
+    </p>
+    <div class="blog-grid" id="blog-posts" aria-live="polite"></div>
+    <div class="blog-fallback" id="blog-fallback" style="display: none;">
+      <p>日々の文章はBloggerで更新しています。</p>
+    </div>
+    <div class="quiet-cta" id="blog-button">
+      <a href="https://atelierkoshiki.blogspot.com" class="secondary-button" target="_blank" rel="noopener noreferrer">ブログを読む</a>
+    </div>
+  </section>
+
   <footer>
     <div class="footer-logo">microcosmo healing</div>
     <div class="footer-contact">
@@ -749,5 +758,97 @@
     <p style="font-size: 12px; color: #999;">&copy; microcosmo healing All Rights Reserved.</p>
   </footer>
 
+  <script>
+    (function () {
+      var postsEl = document.getElementById("blog-posts");
+      var fallbackEl = document.getElementById("blog-fallback");
+      var feedUrl = "https://atelierkoshiki.blogspot.com/feeds/posts/default?alt=json-in-script&max-results=3&callback=renderBloggerPosts";
+      var didRender = false;
+
+      function showFallback() {
+        if (didRender || !fallbackEl) return;
+        if (postsEl) postsEl.innerHTML = "";
+        fallbackEl.style.display = "block";
+      }
+
+      function stripHtml(html) {
+        var container = document.createElement("div");
+        container.innerHTML = html || "";
+        return (container.textContent || container.innerText || "").replace(/\s+/g, " ").trim();
+      }
+
+      function excerptFrom(entry) {
+        var raw = entry.content && entry.content.$t ? entry.content.$t : "";
+        if (!raw && entry.summary && entry.summary.$t) raw = entry.summary.$t;
+        var text = stripHtml(raw);
+        if (text.length <= 140) return text ? text + "…" : "";
+        return text.slice(0, 140) + "…";
+      }
+
+      function alternateLink(entry) {
+        var links = entry.link || [];
+        for (var i = 0; i < links.length; i++) {
+          if (links[i].rel === "alternate") return links[i].href;
+        }
+        return "https://atelierkoshiki.blogspot.com";
+      }
+
+      function formatDate(value) {
+        var date = new Date(value);
+        if (Number.isNaN(date.getTime())) return "";
+        return date.toLocaleDateString("ja-JP", {
+          year: "numeric",
+          month: "long",
+          day: "numeric"
+        });
+      }
+
+      function escapeHtml(text) {
+        return String(text || "").replace(/[&<>"']/g, function (character) {
+          return {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#039;"
+          }[character];
+        });
+      }
+
+      window.renderBloggerPosts = function (data) {
+        var entries = data && data.feed && data.feed.entry ? data.feed.entry.slice(0, 3) : [];
+        if (!postsEl || entries.length === 0) {
+          showFallback();
+          return;
+        }
+
+        postsEl.innerHTML = entries.map(function (entry) {
+          var title = entry.title && entry.title.$t ? entry.title.$t : "Bloggerの記事";
+          var date = formatDate(entry.published && entry.published.$t);
+          var excerpt = excerptFrom(entry);
+          var url = alternateLink(entry);
+
+          return [
+            '<article class="blog-card">',
+              date ? '<div class="blog-date">' + escapeHtml(date) + '</div>' : "",
+              "<h3>" + escapeHtml(title) + "</h3>",
+              "<p>" + escapeHtml(excerpt) + "</p>",
+              '<a class="read-more" href="' + escapeHtml(url) + '" target="_blank" rel="noopener noreferrer">続きを読む</a>',
+            "</article>"
+          ].join("");
+        }).join("");
+
+        didRender = true;
+        if (fallbackEl) fallbackEl.style.display = "none";
+      };
+
+      var script = document.createElement("script");
+      script.src = feedUrl;
+      script.async = true;
+      script.onerror = showFallback;
+      document.body.appendChild(script);
+      window.setTimeout(showFallback, 6000);
+    }());
+  </script>
 </body>
 </html>
