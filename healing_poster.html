@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>microcosmo healing | 「本当の自分」に還るヒーリング</title>
+<style>
+  :root {
+    --text-color: #333333;
+    --text-light: #666666;
+    --bg-color: #ffffff;
+    --accent: #06C755; /* LINE green */
+    --border: #f0f0f0;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Yu Mincho", "MS Mincho", "Hiragino Mincho ProN", serif; 
+    overflow-x: hidden;
+  }
+
+  /* --- Hero Section --- */
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    min-height: 100svh;
+    width: 100vw;
+  }
+
+  .sidebar {
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border);
+    position: relative;
+    background-color: var(--bg-color);
+    z-index: 10;
+  }
+  
+  .logo {
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    margin-bottom: 80px;
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+    color: #111;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+    transition: color 0.3s;
+  }
+  
+  .menu a:hover {
+    color: #000000;
+  }
+  
+  .booking-menu {
+    margin-top: auto;
+  }
+  
+  .line-button {
+    display: inline-block;
+    background-color: var(--accent);
+    color: white;
+    text-decoration: none;
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 12px 24px;
+    border-radius: 20px;
+    transition: opacity 0.2s;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(6, 199, 85, 0.2);
+  }
+  
+  .line-button:hover {
+    opacity: 0.8;
+  }
+
+  .text-link {
+    color: var(--text-color);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+
+  .profile-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  .secondary-button {
+    display: inline-block;
+    color: var(--text-color);
+    border: 1px solid var(--border);
+    text-decoration: none;
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+    font-size: 14px;
+    padding: 11px 20px;
+    border-radius: 20px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .secondary-button:hover {
+    border-color: #bbb;
+    color: #000;
+  }
+
+  .image-area {
+    background-image: url('healing_image.png');
+    background-size: cover; 
+    background-position: center;
+  }
+
+  .text-area {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(32px, 5vw, 72px);
+    padding: 40px;
+    background-color: var(--bg-color);
+  }
+
+  .main-text {
+    writing-mode: vertical-rl;
+    font-size: clamp(28px, min(3.5vw, 4.4svh), 46px);
+    letter-spacing: clamp(0.14em, 0.9svh, 0.28em);
+    line-height: 1.9;
+    max-height: calc(100svh - 96px);
+  }
+
+  .sub-text {
+    writing-mode: vertical-rl;
+    font-size: clamp(15px, min(1.8vw, 2.3svh), 20px);
+    letter-spacing: clamp(0.08em, 0.45svh, 0.15em);
+    line-height: 2.2;
+    color: #555555;
+    max-height: calc(100svh - 96px);
+  }
+
+  /* --- Common Section Styles --- */
+  section {
+    padding: 120px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+    font-size: 14px;
+    color: var(--text-light);
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .section-heading {
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 0.1em;
+    margin-bottom: 60px;
+    font-weight: normal;
+  }
+
+  /* --- Concept Section --- */
+  .concept-text {
+    text-align: center;
+    line-height: 2.2;
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  /* --- Flow Section --- */
+  .flow-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .flow-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    background: #fafafa;
+    padding: 40px;
+    border-radius: 4px;
+  }
+
+  .step-num {
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+    font-size: 32px;
+    color: #ddd;
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  .flow-step h3 {
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .flow-step p {
+    margin: 0;
+    line-height: 1.8;
+    color: var(--text-light);
+  }
+
+  /* --- Menu & Price Section --- */
+  .menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: 768px) {
+    .menu-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 50vh auto;
+      height: auto;
+    }
+    .sidebar {
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+      padding: 30px 20px;
+      align-items: center;
+    }
+    .logo { margin-bottom: 30px; text-align: center; }
+    .menu { flex-direction: row; flex-wrap: wrap; justify-content: center; margin-bottom: 30px; gap: 15px; }
+    .text-area { padding: 60px 20px; flex-direction: column; gap: 30px; }
+    .main-text, .sub-text { writing-mode: horizontal-tb; text-align: center; max-height: none; }
+    .flow-step { flex-direction: column; gap: 15px; padding: 30px 20px; }
+    .faq-grid { grid-template-columns: 1fr !important; }
+  }
+
+  .menu-card {
+    border: 1px solid var(--border);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  .menu-price {
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .menu-price span {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+
+  .menu-card p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  .special-package {
+    background: #111;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+    border-radius: 4px;
+  }
+
+  .special-package h3 {
+    margin: 0 0 20px 0;
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+  }
+
+  .special-package .price {
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .special-package .price span {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+
+  .special-package p {
+    font-size: 15px;
+    line-height: 2;
+    color: #ccc;
+    margin: 0 auto 15px auto;
+    max-width: 600px;
+    text-align: left;
+  }
+
+  /* --- Footer --- */
+  footer {
+    text-align: center;
+    padding: 80px 20px;
+    border-top: 1px solid var(--border);
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+  }
+
+  .footer-logo {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    margin-bottom: 30px;
+  }
+
+  .footer-contact {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 40px;
+  }
+
+</style>
+</head>
+<body>
+
+  <!-- ヒーローセクション -->
+  <div class="hero-container" id="top">
+    <div class="sidebar">
+      <div class="logo">microcosmo<br>healing</div>
+      <nav class="menu">
+        <a href="#concept">Concept</a>
+        <a href="#profile">Profile</a>
+        <a href="#flow">Flow</a>
+        <a href="#menu">Menu &amp; Price</a>
+        <a href="#product">Product</a>
+      </nav>
+      <div class="booking-menu">
+        <a href="#trial" class="line-button">LINEで予約・相談</a>
+      </div>
+    </div>
+    <div class="image-area"></div>
+    <div class="text-area">
+      <div class="main-text">
+        <span style="display: inline-block;">「本当の私」に還る、</span><br>
+        <span style="display: inline-block;">　真の癒しを</span>
+      </div>
+      <div class="sub-text">
+        ストレスにあえぐ頚椎二番を<br>
+        優しく包み込み、癒すヒーリング
+      </div>
+    </div>
+  </div>
+
+  <!-- Concept セクション -->
+  <section id="concept" style="padding-bottom: 60px;">
+    <div class="section-title">Concept</div>
+    <h2 class="section-heading">健やかさへの鍵は、自己開放</h2>
+    <div class="concept-text">
+      「もっと頑張る」ではなく「もっと素直に」――<br>
+      するとカラダもココロも「神様の設計通り」に動き始めます。<br>
+      それが人生好転の正攻法。<br><br>
+      自己否定の考えが歪みや緊張となって表れる「頚椎2番」に着目し、<br>
+      根本から心身を整えるヒーリングを行っています。<br>
+      「変わりたいけれど変われない」「ずっと同じ問題に悩まされている」<br>
+      そんなあなたのための、きっかけとなる場所です。
+    </div>
+  </section>
+
+  <!-- Profile Section -->
+  <section id="profile" style="background-color: #fafafa; border-radius: 8px; margin-bottom: 120px; padding: 60px 40px; max-width: 800px;">
+    <div class="section-title">Profile &amp; Story</div>
+    <div class="profile-container" style="display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
+      <div class="profile-image" style="flex: 1; min-width: 250px;">
+        <!-- profile.jpg として画像を読み込みます -->
+        <img src="profile.jpg" alt="Profile" style="width: 100%; border-radius: 4px; object-fit: cover;">
+      </div>
+      <div class="profile-content" style="flex: 2; min-width: 300px;">
+        <h3 style="font-size: 24px; margin-top: 0; font-weight: normal; margin-bottom: 20px;">プロフィール／オジジ</h3>
+        <p style="color: var(--text-light); line-height: 2; font-size: 15px;">
+          2007年、27歳の時に突然ヒーリング能力に目覚めました。「現代医療では難しい」と言われた不調のお客様が、続けて改善されたことをきっかけに、ご紹介の輪が広がり、18年間活動を続けています。
+        </p>
+        <p style="color: var(--text-light); line-height: 2; font-size: 15px;">
+          現在は、遠隔ヒーリングとリモートカウンセリングを中心に活動しています。北海道から沖縄離島まで、全国にクライアントがいらっしゃいます。
+        </p>
+        <p style="color: var(--text-light); line-height: 2; font-size: 15px;">
+          ヒーリングでは、心身を整えるだけでなく、本来の自分を取り戻していくことを大切にしています。「変わりたいけれど変われない」「長年、同じ問題に悩んでいる」そんな方へ。
+        </p>
+        <div class="profile-actions">
+          <a href="profile_full.html" class="secondary-button">詳しいプロフィールを読む</a>
+          <a href="https://atelierkoshiki.blogspot.com" class="secondary-button" target="_blank" rel="noopener noreferrer">Bloggerを読む</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flow セクション -->
+  <section id="flow">
+    <div class="section-title">Flow</div>
+    <h2 class="section-heading">施術の流れ</h2>
+    <div class="flow-container">
+      <div class="flow-step">
+        <div class="step-num">01</div>
+        <div>
+          <h3>ヒアリング</h3>
+          <p>現在の状態やお悩みをお伺いし、不調の根本的な原因（頚椎2番）にアプローチします。</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">02</div>
+        <div>
+          <h3>遠隔ヒーリング施術</h3>
+          <p>生活は普段通りで大丈夫です。体がリラックスしたタイミングで効果が発動します。ご希望の方には時間指定も可能です。より良いコンディションで受けるためのポイントは、<a href="#faq" class="text-link">アドバイスとFAQ</a>にまとめています。</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">03</div>
+        <div>
+          <h3>アフターケア・アドバイスなど</h3>
+          <p>施術後の状態の確認や、日常で気を付けるポイントなどのアドバイスをLINEにて丁寧に行います。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq">
+    <div class="section-title">Preparation</div>
+    <h2 class="section-heading">ヒーリングを受けるにあたって</h2>
+    <div class="faq-grid" style="display: grid; grid-template-columns: 1fr; gap: 22px;">
+      <div class="faq-card" style="border: 1px solid var(--border); padding: 30px;">
+        <h3 style="font-size: 16px; margin-top: 0; font-weight: normal;">受けるにあたって、必要な心構えはありますか？</h3>
+        <p style="font-size: 14px; color: var(--text-light); line-height: 1.8; margin-bottom: 0;">時々でもそっと動きをとめ、「こんなふうに体はいつも息をしているんだな」くらいの気持ちで呼吸を感じてみて下さい。それだけでヒーリングを受ける準備が整います。</p>
+      </div>
+      <div class="faq-card" style="border: 1px solid var(--border); padding: 30px;">
+        <h3 style="font-size: 16px; margin-top: 0; font-weight: normal;">どんな服装で受ければいいですか？</h3>
+        <p style="font-size: 14px; color: var(--text-light); line-height: 1.8; margin-bottom: 0;">しめつけの少ない服装がおすすめです。可能であれば、時計・アクセサリー・磁気ネックレス・ヘアピンなどの金属類は外しておくと、体の感覚を受け取りやすくなります。</p>
+      </div>
+      <div class="faq-card" style="border: 1px solid var(--border); padding: 30px;">
+        <h3 style="font-size: 16px; margin-top: 0; font-weight: normal;">いつ、どんなふうに効いてきますか？</h3>
+        <p style="font-size: 14px; color: var(--text-light); line-height: 1.8; margin-bottom: 0;">体が安心してゆるんだタイミングで、自然に働き始めます。眠っている時や、ぼんやり休んでいる時に深く浸透することもあります。体感には個人差がありますので、無理に感じ取ろうとしなくて大丈夫です。</p>
+      </div>
+      <div class="faq-card" style="border: 1px solid var(--border); padding: 30px;">
+        <h3 style="font-size: 16px; margin-top: 0; font-weight: normal;">何も伝えなくても大丈夫ですか？</h3>
+        <p style="font-size: 14px; color: var(--text-light); line-height: 1.8; margin-bottom: 0;">大丈夫です。ただ、「どこがつらいか」「いつ頃から気になっているか」などを事前に教えていただけると、状態を読み解く手がかりになります。言葉にしづらい場合は、そのままでも構いません。</p>
+      </div>
+      <div class="faq-card" style="border: 1px solid var(--border); padding: 30px;">
+        <h3 style="font-size: 16px; margin-top: 0; font-weight: normal;">どれくらいの期間受ければいいですか？一度で十分ですか？</h3>
+        <p style="font-size: 14px; color: var(--text-light); line-height: 1.8; margin-bottom: 0;">一度で変化を感じる方もいますが、生活環境や心身の癖によって戻りやすさは変わります。頚椎2番は「一度クリアにして終わり」よりも、良い状態を保つための定期メンテナンスとして受けていただくのがおすすめです。</p>
+      </div>
+      <div class="faq-card" style="border: 1px solid var(--border); padding: 30px;">
+        <h3 style="font-size: 16px; margin-top: 0; font-weight: normal;">受けた後に気をつけることはありますか？</h3>
+        <p style="font-size: 14px; color: var(--text-light); line-height: 1.8; margin-bottom: 0;">水分をとり、できる範囲でゆったりお過ごしください。眠気やだるさが出た時は、体が調整しているサインとして休める時間を優先していただければ十分です。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu セクション -->
+  <section id="menu">
+    <div class="section-title">Menu &amp; Price</div>
+    <h2 class="section-heading">料金のご案内</h2>
+    
+    <div class="menu-grid">
+      <div class="menu-card">
+        <h3>満月新月の浄化ヒーリング</h3>
+        <div class="menu-price">5,000<span>円</span></div>
+        <p>定期的な心身のメンテナンスと浄化に。（オススメ）</p>
+      </div>
+      <div class="menu-card">
+        <h3>遠隔ヒーリング</h3>
+        <div class="menu-price">7,000<span>円</span></div>
+        <p>上記日程以外で、ご自身のタイミングで受けたい方に。</p>
+      </div>
+      <div class="menu-card">
+        <h3>対面ヒーリング</h3>
+        <div class="menu-price">10,000<span>円</span></div>
+        <p>現在は出張のみ対応しております。（詳細な場所等はお問い合わせください）</p>
+      </div>
+      <div class="menu-card">
+        <h3>カウンセリング</h3>
+        <div class="menu-price">10,000<span>円</span></div>
+        <p>問題の源に向き合い、自分をアップデートする対話セッション。（リモート、遠隔ヒーリング込）</p>
+      </div>
+    </div>
+
+    <!-- 松果体ヒーリング（特別パッケージ） -->
+    <div class="special-package">
+      <h3>【特別パッケージ】<br>松果体ヒーリング</h3>
+      <div class="price">30,000<span>円</span></div>
+      <p>「本当の自分」の目覚めに深く関わる松果体をブーストするヒーリング。本気でご自身を変えたい方向けの集中コース特別枠です。</p>
+      <p>カウンセリングよりも更に一歩踏み込んだアドバイスをお伝えする「ライフコーチング」をセットにした特別な構成となっています。</p>
+      <p>「ご自身の変容のチャンス」と本気で向き合い、ご自身の変化にコミットしたい方におすすめです。</p>
+      <a href="#trial" class="line-button" style="margin-top: 20px; background-color: #fff; color: #111;">このパッケージについて相談する</a>
+    </div>
+  </section>
+
+  <!-- Product Section -->
+  <section id="product" style="padding-bottom: 120px;">
+    <div class="section-title">Product</div>
+    <h2 class="section-heading">取り扱い製品</h2>
+    
+    <div class="product-container" style="display: flex; gap: 40px; align-items: stretch; flex-wrap: wrap; background-color: #fafafa; border-radius: 8px; overflow: hidden;">
+      <div class="product-image" style="flex: 1; min-width: 300px;">
+        <!-- product.jpg として画像を読み込みます -->
+        <img src="product.jpg" alt="ヒーリングアクセサリー プレローマ" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="product-content" style="flex: 1; min-width: 300px; padding: 40px;">
+        <h3 style="font-size: 22px; font-weight: normal; margin-top: 0; margin-bottom: 10px;">ヒーリングアクセサリー<br>「プレローマ」</h3>
+        <div style="font-family: 'Yu Gothic', 'Meiryo', sans-serif; font-size: 20px; margin-bottom: 20px;">36,000<span>円</span></div>
+        <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;">素材：真鍮、麻紐</p>
+        <p style="font-size: 15px; color: var(--text-color); line-height: 1.8; margin-bottom: 40px;">
+          恒常的なヒーリングエネルギーが心身の調子を整えてくれます。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Free Trial Section -->
+  <section id="trial" style="background-color: #f7f9f8; text-align: center; padding: 80px 20px; max-width: 100vw; margin: 0; width: 100vw; margin-left: calc(-50vw + 50%);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-size: 28px; font-weight: normal; margin-bottom: 20px;">初回無料体験</h2>
+      <p style="color: var(--text-light); line-height: 2; font-size: 15px; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+        遠隔ヒーリング or カウンセリング（30分）<br>
+        LINE公式アカウントより、お気軽にお声がけをお待ちしております。
+      </p>
+      <a href="https://lin.ee/x2WpMEs" class="line-button" target="_blank" rel="noopener noreferrer" style="font-size: 16px; padding: 15px 40px;">LINE公式アカウントを追加する</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">microcosmo healing</div>
+    <div class="footer-contact">
+      Email: microcosmo.healing@gmail.com
+    </div>
+    <p style="font-size: 12px; color: #999;">&copy; microcosmo healing All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
