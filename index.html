@@ -122,6 +122,75 @@
     color: #000;
   }
 
+  .quiet-cta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 34px;
+  }
+
+  .intro-note {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 36px;
+  }
+
+  .target-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 24px;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+  }
+
+  .target-list li {
+    border-bottom: 1px solid var(--border);
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 1.8;
+    padding: 0 0 14px 18px;
+    position: relative;
+  }
+
+  .target-list li::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    top: 12px;
+  }
+
+  .concept-detail {
+    max-width: 760px;
+    margin: 44px auto 0;
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 2.1;
+  }
+
+  .concept-detail p {
+    margin: 0 0 22px;
+  }
+
+  .thought-list {
+    margin: 26px auto;
+    padding: 26px 30px;
+    max-width: 560px;
+    background: #fafafa;
+    border-left: 2px solid var(--border);
+    color: var(--text-color);
+    line-height: 2;
+  }
+
   .image-area {
     background-image: url('healing_image.png');
     background-size: cover; 
@@ -249,8 +318,13 @@
     }
     .logo { margin-bottom: 30px; text-align: center; }
     .menu { flex-direction: row; flex-wrap: wrap; justify-content: center; margin-bottom: 30px; gap: 15px; }
+    .booking-menu { text-align: center; }
     .text-area { padding: 60px 20px; flex-direction: column; gap: 30px; }
     .main-text, .sub-text { writing-mode: horizontal-tb; text-align: center; max-height: none; }
+    section { padding: 80px 20px; }
+    .section-heading { font-size: 24px; margin-bottom: 42px; }
+    .target-list { grid-template-columns: 1fr; gap: 14px; }
+    .thought-list { padding: 22px 20px; }
     .flow-step { flex-direction: column; gap: 15px; padding: 30px 20px; }
     .faq-grid { grid-template-columns: 1fr !important; }
   }
@@ -351,6 +425,7 @@
       <div class="logo">microcosmo<br>healing</div>
       <nav class="menu">
         <a href="#concept">Concept</a>
+        <a href="#for-you">For You</a>
         <a href="#profile">Profile</a>
         <a href="#flow">Flow</a>
         <a href="#menu">Menu &amp; Price</a>
@@ -358,6 +433,7 @@
       </nav>
       <div class="booking-menu">
         <a href="#trial" class="line-button">LINEで予約・相談</a>
+        <a href="#trial" class="secondary-button" style="margin-top: 12px;">初回無料体験について見る</a>
       </div>
     </div>
     <div class="image-area"></div>
@@ -373,18 +449,48 @@
     </div>
   </div>
 
+  <!-- For You セクション -->
+  <section id="for-you" style="padding-bottom: 60px;">
+    <div class="section-title">For You</div>
+    <h2 class="section-heading">このような方へ</h2>
+    <p class="intro-note">
+      心身の不調だけでなく、その奥にある緊張や生きづらさを静かに見つめたい方へ。<br>
+      遠隔ヒーリングとリモートカウンセリングで、全国からご相談いただけます。
+    </p>
+    <ul class="target-list">
+      <li>生きづらさを感じている</li>
+      <li>自己否定が強い</li>
+      <li>繊細で、人の影響を受けやすい</li>
+      <li>長年、同じ問題を繰り返している</li>
+      <li>本来の自分を抑えて生きてきた感覚がある</li>
+      <li>心身の不調の奥に、もっと深い原因がある気がする</li>
+    </ul>
+    <div class="quiet-cta">
+      <a href="#trial" class="line-button">まずは無料体験から</a>
+      <a href="https://lin.ee/x2WpMEs" class="secondary-button" target="_blank" rel="noopener noreferrer">LINEで相談する</a>
+    </div>
+  </section>
+
   <!-- Concept セクション -->
   <section id="concept" style="padding-bottom: 60px;">
     <div class="section-title">Concept</div>
-    <h2 class="section-heading">健やかさへの鍵は、自己開放</h2>
+    <h2 class="section-heading">頚椎2番から読み解く、心身の緊張</h2>
     <div class="concept-text">
-      「もっと頑張る」ではなく「もっと素直に」――<br>
-      するとカラダもココロも「神様の設計通り」に動き始めます。<br>
-      それが人生好転の正攻法。<br><br>
-      自己否定の考えが歪みや緊張となって表れる「頚椎2番」に着目し、<br>
-      根本から心身を整えるヒーリングを行っています。<br>
-      「変わりたいけれど変われない」「ずっと同じ問題に悩まされている」<br>
-      そんなあなたのための、きっかけとなる場所です。
+      直感霊視によって、心身の不調を読み解きます。<br>
+      特に注目しているのは、頚椎2番です。
+    </div>
+    <div class="concept-detail">
+      <p>この箇所には、自己否定的な思考が、歪みや緊張として表れやすいと考えています。</p>
+      <div class="thought-list">
+        「自分はこれをしてはならない」<br>
+        「こうでなければならない」<br>
+        「どうせこうしかならない」
+      </div>
+      <p>そのわずかな歪みや緊張が、全身へと波及していくことがあります。そのため、局所的な不調だけを見るのではなく、より根本にある緊張を整えることを大切にしています。</p>
+      <p>さらに深く見ていくと、その背景に幼少期のトラウマや、長年抑えてきた感情が関係していることもあります。だからこそ、最終的には「自己開放」が健やかさへの鍵になると考えています。</p>
+      <div class="quiet-cta">
+        <a href="#trial" class="line-button">初回無料体験について見る</a>
+      </div>
     </div>
   </section>
 
@@ -431,7 +537,7 @@
         <div class="step-num">02</div>
         <div>
           <h3>遠隔ヒーリング施術</h3>
-          <p>生活は普段通りで大丈夫です。体がリラックスしたタイミングで効果が発動します。ご希望の方には時間指定も可能です。より良いコンディションで受けるためのポイントは、<a href="#faq" class="text-link">アドバイスとFAQ</a>にまとめています。</p>
+          <p>生活は普段通りで大丈夫です。体がリラックスしたタイミングで、自然に働き始めることがあります。ご希望の方には時間指定も可能です。より良いコンディションで受けるためのポイントは、<a href="#faq" class="text-link">アドバイスとFAQ</a>にまとめています。</p>
         </div>
       </div>
       <div class="flow-step">
@@ -506,11 +612,10 @@
 
     <!-- 松果体ヒーリング（特別パッケージ） -->
     <div class="special-package">
-      <h3>【特別パッケージ】<br>松果体ヒーリング</h3>
+      <h3>【特別セッション】<br>松果体ヒーリング</h3>
       <div class="price">30,000<span>円</span></div>
-      <p>「本当の自分」の目覚めに深く関わる松果体をブーストするヒーリング。本気でご自身を変えたい方向けの集中コース特別枠です。</p>
-      <p>カウンセリングよりも更に一歩踏み込んだアドバイスをお伝えする「ライフコーチング」をセットにした特別な構成となっています。</p>
-      <p>「ご自身の変容のチャンス」と本気で向き合い、ご自身の変化にコミットしたい方におすすめです。</p>
+      <p>深い調整を求める方向けの特別なセッションです。松果体に関わる感覚や、本来の自分を取り戻していく流れを大切にしながら、通常メニューより一歩踏み込んで整えていきます。</p>
+      <p>カウンセリングよりも更に踏み込んだアドバイスをお伝えする「ライフコーチング」をセットにした構成です。</p>
       <a href="#trial" class="line-button" style="margin-top: 20px; background-color: #fff; color: #111;">このパッケージについて相談する</a>
     </div>
   </section>
