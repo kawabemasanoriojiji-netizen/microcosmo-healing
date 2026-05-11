@@ -61,11 +61,26 @@
     font-size: 15px;
     letter-spacing: 0.1em;
     font-family: "Yu Gothic", "Meiryo", sans-serif;
-    transition: color 0.3s;
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
   }
   
   .menu a:hover {
     color: #000000;
+  }
+
+  .menu a.quiet-room-link {
+    align-self: flex-start;
+    background: rgba(20, 35, 58, 0.06);
+    border: 1px solid rgba(20, 35, 58, 0.10);
+    border-radius: 6px;
+    color: #566270;
+    padding: 8px 12px;
+  }
+
+  .menu a.quiet-room-link:hover {
+    background: rgba(20, 35, 58, 0.10);
+    border-color: rgba(20, 35, 58, 0.16);
+    color: #333f4e;
   }
   
   .booking-menu {
@@ -632,7 +647,7 @@
         <a href="#flow">Flow</a>
         <a href="#menu">Menu &amp; Price</a>
         <a href="#product">Product</a>
-        <a href="moshi-tsukarete-itara.html">夜に寄り添う言葉</a>
+        <a href="moshi-tsukarete-itara.html" class="quiet-room-link">夜に寄り添う言葉</a>
         <a href="trial.html">無料体験</a>
       </nav>
       <div class="booking-menu">
