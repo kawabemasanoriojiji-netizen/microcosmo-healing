@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>夜に寄り添う言葉</title>
+<style>
+  :root {
+    --night: #0d1320;
+    --ink: #f2e8d6;
+    --muted: rgba(242, 232, 214, 0.74);
+    --faint: rgba(242, 232, 214, 0.52);
+    --line: rgba(225, 177, 112, 0.24);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    min-height: 100%;
+    background: var(--night);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100svh;
+    background: var(--night);
+    color: var(--ink);
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Noto Serif JP", serif;
+    letter-spacing: 0.04em;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(9, 17, 31, 0.58) 0%, rgba(12, 19, 31, 0.32) 48%, rgba(88, 54, 27, 0.14) 100%),
+      linear-gradient(180deg, rgba(9, 16, 28, 0.10) 0%, rgba(11, 17, 27, 0.54) 100%),
+      url("./images/quiet-night-desk.png") center center / cover no-repeat;
+    filter: brightness(1.20) saturate(1.05) contrast(0.94);
+    transform: scale(1.02);
+    z-index: 0;
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 68% 36%, rgba(225, 166, 92, 0.26), transparent 31%),
+      radial-gradient(circle at 22% 38%, rgba(30, 55, 85, 0.24), transparent 48%),
+      linear-gradient(90deg, rgba(11, 18, 32, 0.16), rgba(93, 56, 28, 0.08));
+    z-index: 1;
+  }
+
+  .entry {
+    position: relative;
+    z-index: 2;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(64px, 9vw, 120px) clamp(24px, 8vw, 112px);
+  }
+
+  .entry-inner {
+    width: min(100%, 620px);
+  }
+
+  .quiet-line {
+    width: 72px;
+    height: 1px;
+    margin: 0 0 30px;
+    background: var(--line);
+  }
+
+  h1 {
+    margin: 0 0 clamp(32px, 5vw, 58px);
+    font-size: clamp(25px, 3.7vw, 46px);
+    font-weight: 400;
+    line-height: 1.55;
+    letter-spacing: 0.09em;
+    text-shadow: 0 1px 26px rgba(4, 6, 12, 0.46);
+  }
+
+  .intro {
+    margin: 0 0 clamp(52px, 7vw, 84px);
+    color: var(--muted);
+    font-size: clamp(15px, 1.45vw, 18px);
+    line-height: 2.2;
+    text-shadow: 0 1px 18px rgba(3, 5, 10, 0.50);
+  }
+
+  .works {
+    display: grid;
+    gap: 18px;
+    width: min(100%, 520px);
+  }
+
+  .work-link {
+    display: block;
+    padding: 18px 0;
+    color: var(--ink);
+    text-decoration: none;
+    border-top: 1px solid var(--line);
+  }
+
+  .work-link:hover .work-title {
+    color: #fff6e5;
+  }
+
+  .work-title {
+    display: block;
+    font-size: clamp(19px, 2.2vw, 25px);
+    line-height: 1.7;
+    transition: color 0.2s ease;
+  }
+
+  .work-note {
+    display: block;
+    margin-top: 4px;
+    color: var(--faint);
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 720px) {
+    body::before {
+      background:
+        linear-gradient(180deg, rgba(10, 17, 29, 0.56) 0%, rgba(10, 17, 29, 0.34) 48%, rgba(12, 18, 28, 0.62) 100%),
+        url("./images/quiet-night-desk.png") 64% center / cover no-repeat;
+    }
+
+    .entry {
+      justify-content: flex-start;
+      padding-top: 76px;
+    }
+  }
+</style>
+</head>
+<body>
+  <main class="entry" aria-labelledby="page-title">
+    <div class="entry-inner">
+      <div class="quiet-line" aria-hidden="true"></div>
+      <h1 id="page-title">夜に寄り添う言葉</h1>
+
+      <nav class="works" aria-label="作品一覧">
+        <a class="work-link" href="./watashi-to-inochi.html">
+          <span class="work-title">1.「わたしといのち」2026年5月11日</span>
+        </a>
+      </nav>
+    </div>
+  </main>
+</body>
+</html>

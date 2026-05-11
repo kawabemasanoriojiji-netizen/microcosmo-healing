@@ -361,7 +361,7 @@
   }
 
   .image-area {
-    background-image: url('healing_image.png');
+    background-image: url('images/healing_image.png');
     background-size: cover; 
     background-position: center;
   }
@@ -632,6 +632,7 @@
         <a href="#flow">Flow</a>
         <a href="#menu">Menu &amp; Price</a>
         <a href="#product">Product</a>
+        <a href="moshi-tsukarete-itara.html">夜に寄り添う言葉</a>
         <a href="trial.html">無料体験</a>
       </nav>
       <div class="booking-menu">
@@ -738,7 +739,7 @@
     <div class="profile-container" style="display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
       <div class="profile-image" style="flex: 1; min-width: 250px;">
         <!-- profile.jpg として画像を読み込みます -->
-        <img src="profile.jpg" alt="Profile" style="width: 100%; border-radius: 4px; object-fit: cover;">
+        <img src="images/profile.jpg" alt="Profile" style="width: 100%; border-radius: 4px; object-fit: cover;">
       </div>
       <div class="profile-content" style="flex: 2; min-width: 300px;">
         <h3 style="font-size: 24px; margin-top: 0; font-weight: normal; margin-bottom: 20px;">プロフィール／オジジ</h3>
@@ -870,7 +871,7 @@
     <div class="product-container" style="display: flex; gap: 40px; align-items: stretch; flex-wrap: wrap; background-color: #fafafa; border-radius: 8px; overflow: hidden;">
       <div class="product-image" style="flex: 1; min-width: 300px;">
         <!-- product.jpg として画像を読み込みます -->
-        <img src="product.jpg" alt="ヒーリングアクセサリー プレローマ" style="width: 100%; height: 100%; object-fit: cover;">
+        <img src="images/product.jpg" alt="ヒーリングアクセサリー プレローマ" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
       <div class="product-content" style="flex: 1; min-width: 300px; padding: 40px;">
         <h3 style="font-size: 22px; font-weight: normal; margin-top: 0; margin-bottom: 10px;">ヒーリングアクセサリー<br>「プレローマ」</h3>
@@ -943,98 +944,5 @@
     </div>
     <p style="font-size: 12px; color: #999;">&copy; microcosmo healing All Rights Reserved.</p>
   </footer>
-
-  <script>
-    (function () {
-      var postsEl = document.getElementById("blog-posts");
-      var fallbackEl = document.getElementById("blog-fallback");
-      var feedUrl = "https://atelierkoshiki.blogspot.com/feeds/posts/default?alt=json-in-script&max-results=3&callback=renderBloggerPosts";
-      var didRender = false;
-
-      function showFallback() {
-        if (didRender || !fallbackEl) return;
-        if (postsEl) postsEl.innerHTML = "";
-        fallbackEl.style.display = "block";
-      }
-
-      function stripHtml(html) {
-        var container = document.createElement("div");
-        container.innerHTML = html || "";
-        return (container.textContent || container.innerText || "").replace(/\s+/g, " ").trim();
-      }
-
-      function excerptFrom(entry) {
-        var raw = entry.content && entry.content.$t ? entry.content.$t : "";
-        if (!raw && entry.summary && entry.summary.$t) raw = entry.summary.$t;
-        var text = stripHtml(raw);
-        if (text.length <= 140) return text ? text + "…" : "";
-        return text.slice(0, 140) + "…";
-      }
-
-      function alternateLink(entry) {
-        var links = entry.link || [];
-        for (var i = 0; i < links.length; i++) {
-          if (links[i].rel === "alternate") return links[i].href;
-        }
-        return "https://atelierkoshiki.blogspot.com";
-      }
-
-      function formatDate(value) {
-        var date = new Date(value);
-        if (Number.isNaN(date.getTime())) return "";
-        return date.toLocaleDateString("ja-JP", {
-          year: "numeric",
-          month: "long",
-          day: "numeric"
-        });
-      }
-
-      function escapeHtml(text) {
-        return String(text || "").replace(/[&<>"']/g, function (character) {
-          return {
-            "&": "&amp;",
-            "<": "&lt;",
-            ">": "&gt;",
-            '"': "&quot;",
-            "'": "&#039;"
-          }[character];
-        });
-      }
-
-      window.renderBloggerPosts = function (data) {
-        var entries = data && data.feed && data.feed.entry ? data.feed.entry.slice(0, 3) : [];
-        if (!postsEl || entries.length === 0) {
-          showFallback();
-          return;
-        }
-
-        postsEl.innerHTML = entries.map(function (entry) {
-          var title = entry.title && entry.title.$t ? entry.title.$t : "Bloggerの記事";
-          var date = formatDate(entry.published && entry.published.$t);
-          var excerpt = excerptFrom(entry);
-          var url = alternateLink(entry);
-
-          return [
-            '<article class="blog-card">',
-              date ? '<div class="blog-date">' + escapeHtml(date) + '</div>' : "",
-              "<h3>" + escapeHtml(title) + "</h3>",
-              "<p>" + escapeHtml(excerpt) + "</p>",
-              '<a class="read-more" href="' + escapeHtml(url) + '" target="_blank" rel="noopener noreferrer">続きを読む</a>',
-            "</article>"
-          ].join("");
-        }).join("");
-
-        didRender = true;
-        if (fallbackEl) fallbackEl.style.display = "none";
-      };
-
-      var script = document.createElement("script");
-      script.src = feedUrl;
-      script.async = true;
-      script.onerror = showFallback;
-      document.body.appendChild(script);
-      window.setTimeout(showFallback, 6000);
-    }());
-  </script>
 </body>
 </html>
