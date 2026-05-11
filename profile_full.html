@@ -102,6 +102,37 @@
       text-align: center;
     }
 
+    .quiet-room-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .quiet-room-box {
+      min-height: 118px;
+      border: 1px solid rgba(0, 0, 0, 0.22);
+      border-radius: 2px;
+      background: var(--bg-color);
+      padding: 18px 20px;
+      box-sizing: border-box;
+    }
+
+    .quiet-room-link {
+      display: inline-block;
+      color: rgba(62, 72, 86, 0.68);
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      line-height: 1.8;
+      text-decoration: none;
+    }
+
+    .quiet-room-link:hover {
+      color: rgba(36, 45, 58, 0.82);
+    }
+
     .button {
       display: inline-block;
       background: var(--accent);
@@ -132,12 +163,16 @@
       .blogger-box {
         padding: 26px 22px;
       }
+
+      .quiet-room-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
   <main class="page">
-    <a class="back-link" href="healing_poster.html">← トップへ戻る</a>
+    <a class="back-link" href="index.html">← トップへ戻る</a>
 
     <header class="profile-header">
       <img src="images/profile.jpg" alt="プロフィール写真" class="profile-photo">
@@ -161,6 +196,15 @@
       <h2>日々の文章はこちら</h2>
       <p>ヒーリングの背景にある考え方、日々の気づき、心身を整えるための視点はBloggerに綴っています。</p>
       <a class="button" href="https://atelierkoshiki.blogspot.com" target="_blank" rel="noopener noreferrer">Bloggerを読む</a>
+    </section>
+
+    <section class="quiet-room-grid" aria-label="文章へのリンク">
+      <div class="quiet-room-box">
+        <a class="quiet-room-link" href="moshi-tsukarete-itara.html">夜に寄り添う言葉</a>
+      </div>
+      <div class="quiet-room-box"></div>
+      <div class="quiet-room-box"></div>
+      <div class="quiet-room-box"></div>
     </section>
   </main>
 </body>
