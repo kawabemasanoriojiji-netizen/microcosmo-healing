@@ -87,7 +87,7 @@
 
     .lead,
     .writing-section,
-    .essay-card {
+    .room-card {
       background: var(--bg-color);
       border: 1px solid var(--border);
       border-radius: 6px;
@@ -99,40 +99,62 @@
     }
 
     .writing-section {
-      margin-top: 40px;
+      margin-top: 64px;
       text-align: center;
     }
 
     .writing-section p,
-    .essay-card p {
+    .room-intro,
+    .room-card p {
       color: var(--text-light);
       font-size: 15px;
       line-height: 2;
     }
 
-    .essay-section {
-      margin-top: 64px;
-    }
-
-    .essay-card {
-      max-width: 560px;
-      margin: 0 auto;
-      padding: 34px 30px 36px;
-      background: #fdfdfc;
-      border-color: rgba(0, 0, 0, 0.08);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.025);
+    .room-section {
+      margin-top: 40px;
       text-align: center;
     }
 
-    .essay-card h2 {
-      margin-bottom: 18px;
-      line-height: 1.7;
+    .room-intro {
+      max-width: 520px;
+      margin: 0 auto;
     }
 
-    .essay-card h2 span {
-      color: var(--text-light);
-      font-size: 16px;
-      letter-spacing: 0.12em;
+    .room-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 34px;
+    }
+
+    .room-card {
+      min-height: 220px;
+      padding: 32px 30px;
+      background: #fdfdfc;
+      border-color: rgba(0, 0, 0, 0.08);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.025);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .room-card h3 {
+      font-size: 22px;
+      font-weight: normal;
+      letter-spacing: 0.08em;
+      line-height: 1.7;
+      margin: 0 0 16px;
+    }
+
+    .room-card p {
+      margin-bottom: 24px;
+    }
+
+    .room-card-empty {
+      background: linear-gradient(145deg, #ffffff 0%, #fbfbfa 100%);
+      border-color: rgba(0, 0, 0, 0.06);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.64);
     }
 
     .quiet-button {
@@ -143,7 +165,8 @@
       font-family: "Yu Gothic", "Meiryo", sans-serif;
       font-size: 14px;
       letter-spacing: 0.06em;
-      margin-top: 4px;
+      margin-top: auto;
+      align-self: center;
       padding: 11px 24px;
       text-decoration: none;
       transition: border-color 0.2s, color 0.2s, background-color 0.2s;
@@ -188,20 +211,29 @@
 
       .lead,
       .writing-section,
-      .essay-card {
+      .room-card {
         padding: 26px 22px;
       }
 
       .writing-section {
-        margin-top: 32px;
-      }
-
-      .essay-section {
         margin-top: 48px;
       }
 
-      .essay-card h2 {
-        font-size: 22px;
+      .room-section {
+        margin-top: 36px;
+      }
+
+      .room-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .room-card {
+        min-height: 178px;
+      }
+
+      .room-card h3 {
+        font-size: 21px;
       }
     }
   </style>
@@ -228,18 +260,25 @@
       </div>
     </header>
 
+    <section class="room-section" aria-labelledby="small-room-title">
+      <h2 id="small-room-title">小さな部屋</h2>
+      <p class="room-intro">文章、絵、声、日々の記録など。<br>少しずつ開いていく場所です。</p>
+      <div class="room-grid">
+        <article class="room-card">
+          <h3>エッセイ</h3>
+          <p>静かな時間のための、小さな文章集です。</p>
+          <a class="quiet-button" href="moshi-tsukarete-itara.html">ページを見る</a>
+        </article>
+        <div class="room-card room-card-empty" aria-hidden="true"></div>
+        <div class="room-card room-card-empty" aria-hidden="true"></div>
+        <div class="room-card room-card-empty" aria-hidden="true"></div>
+      </div>
+    </section>
+
     <section class="writing-section">
       <h2>日々の文章</h2>
       <p>ヒーリングの背景にある考え方、日々の気づき、心身を整えるための視点はBloggerに綴っています。</p>
       <a class="button" href="https://atelierkoshiki.blogspot.com" target="_blank" rel="noopener noreferrer">Bloggerを読む</a>
-    </section>
-
-    <section class="essay-section" aria-labelledby="night-essay-title">
-      <div class="essay-card">
-        <h2 id="night-essay-title">夜に寄り添う言葉<br><span>（エッセイ）</span></h2>
-        <p>眠れない夜や、心が少し静けさを求める時に読める短い文章を置いています。</p>
-        <a class="quiet-button" href="moshi-tsukarete-itara.html">ページを見る</a>
-      </div>
     </section>
 
     <nav class="bottom-nav" aria-label="ページ下部ナビゲーション">
