@@ -3,7 +3,7 @@
 
   // Replace this with your Google Analytics 4 Measurement ID.
   // Example: G-ABCD123456
-  var GA_MEASUREMENT_ID = "G-1DCBDE1H59";
+  var GA_MEASUREMENT_ID = "G-CS7Y04NBCW";
   var ENABLE_LOCAL_PREVIEW = false;
 
   var isPlaceholder =
