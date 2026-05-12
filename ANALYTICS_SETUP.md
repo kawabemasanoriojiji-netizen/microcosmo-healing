@@ -1,14 +1,14 @@
 # アクセス解析の設定
 
 このサイトは Google Analytics 4 を読み込める状態になっています。
-まだ測定IDが未設定なので、今のまま公開してもアクセスデータは送信されません。
+現在、`analytics.js` には測定ID `G-CS7Y04NBCW` が設定されています。
 
 ## 設定手順
 
 1. Google Analytics で GA4 プロパティを作成します。
 2. 「データストリーム」で Web を選び、サイトURLに `https://kawabemasanoriojiji-netizen.github.io/microcosmo-healing/` を設定します。
 3. 表示された測定IDをコピーします。形式は `G-` から始まります。
-4. `analytics.js` のこの行を置き換えます。
+4. 測定IDを変更する場合は、`analytics.js` のこの行を置き換えます。
 
 ```js
 var GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
