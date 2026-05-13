@@ -67,8 +67,7 @@
     }
 
     .article,
-    .trial-section,
-    .cta-box {
+    .trial-section {
       background: var(--bg-color);
       border: 1px solid var(--border);
       border-radius: 6px;
@@ -99,40 +98,38 @@
     }
 
     .quiet-list li {
-      background: var(--quiet-bg);
-      border: 1px solid #f1f1f1;
-      border-radius: 5px;
-      color: var(--text-color);
-      line-height: 1.85;
-      margin: 0 0 12px;
-      padding: 15px 20px 15px 26px;
+      border-left: 2px solid #e7e7e7;
+      color: var(--text-light);
+      font-size: 14px;
+      line-height: 1.95;
+      margin: 0 0 16px;
+      padding: 2px 0 2px 18px;
     }
 
     .trial-section {
-      background: #fdfdfd;
+      background: var(--bg-color);
       margin-bottom: 34px;
     }
 
     .trial-card {
-      background: var(--quiet-bg);
-      border: 1px solid #f0f0f0;
-      border-radius: 6px;
-      margin: 30px 0 0;
-      padding: 28px;
+      background: #fbfbfb;
+      border: 1px solid #f3f3f3;
+      border-radius: 4px;
+      margin: 28px 0 0;
+      padding: 24px 26px;
     }
 
     .trial-card p {
-      color: var(--text-color);
+      color: var(--text-light);
     }
 
-    .cta-box {
+    .trial-actions {
+      margin-top: 18px;
+    }
+
+    .bottom-nav {
       margin-top: 34px;
       text-align: center;
-    }
-
-    .cta-box p {
-      margin: 0 auto 30px;
-      max-width: 560px;
     }
 
     .button {
@@ -164,8 +161,7 @@
       }
 
       .article,
-      .trial-section,
-      .cta-box {
+      .trial-section {
         padding: 28px 22px;
       }
 
@@ -178,7 +174,8 @@
       }
 
       .quiet-list li {
-        padding: 15px 18px 15px 22px;
+        font-size: 14px;
+        padding-left: 16px;
       }
 
       .trial-card {
@@ -201,7 +198,7 @@
     <h1>ヒーリングについて</h1>
 
     <section class="article">
-      <p>私は主として「頚椎2番」へヒーリングを行っています。</p>
+      <p>主として「頚椎2番」へのヒーリングを行います。</p>
 
       <p>頚椎2番は、心と身体の状態が非常に表れやすい場所です。</p>
 
@@ -220,7 +217,7 @@
 
       <p>頚椎2番は、日々のストレスによって揺れ動く場所であると同時に、長年の思考や生き方の癖が蓄積されやすい場所でもあります。</p>
 
-      <p>私はヒーリングによって、この頚椎2番の緊張を調整し、身体全体が本来の状態へ戻ろうとする流れを助けていきます。</p>
+      <p>ヒーリングは、この頚椎2番の緊張を調整し、身体全体が本来の状態へ戻ろうとする流れを助けます。</p>
 
       <div class="article-block large-gap">
         <p>人間の身体は、本来、自ら回復しようとする力を持っています。</p>
@@ -253,7 +250,7 @@
       </div>
 
       <div class="article-block large-gap">
-        <p>私は、ヒーリング体験を通して、単に症状を改善するだけではなく、</p>
+        <p>ヒーリング体験を通して、単に症状を改善するだけではなく、</p>
 
         <p>「人間の身体には、こんな不思議な力があるのか」<br>
         「身体とは本来、こんなにも繊細で賢いものなのか」</p>
@@ -270,6 +267,9 @@
       <div class="trial-card">
         <p>「どんな感じなのか知りたい」<br>
         「自分にも合うのか試してみたい」</p>
+        <div class="trial-actions">
+          <a class="button" href="https://lin.ee/x2WpMEs" target="_blank" rel="noopener noreferrer">無料体験を申し込む</a>
+        </div>
       </div>
 
       <p style="margin-top: 30px;">という方は、お気軽にご利用下さい。</p>
@@ -277,10 +277,9 @@
       <p>ご希望の方は、LINE公式よりご連絡下さい。</p>
     </section>
 
-    <section class="cta-box">
-      <a class="button" href="https://lin.ee/x2WpMEs" target="_blank" rel="noopener noreferrer">無料体験を申し込む</a>
+    <nav class="bottom-nav" aria-label="ページ下部ナビゲーション">
       <a class="secondary-button" href="index.html">トップへ戻る</a>
-    </section>
+    </nav>
   </main>
 </body>
 </html>
