@@ -69,8 +69,7 @@
 
     .article,
     .voices-section,
-    .price-section,
-    .cta-box {
+    .price-section {
       background: var(--bg-color);
       border: 1px solid var(--border);
       border-radius: 6px;
@@ -144,35 +143,33 @@
     }
 
     .voices li {
-      background: var(--quiet-bg);
-      border: 1px solid #f1f1f1;
-      border-radius: 5px;
-      color: var(--text-color);
-      font-weight: bold;
-      line-height: 1.85;
-      margin: 0 0 12px;
-      padding: 17px 20px 17px 28px;
+      border-left: 2px solid #e7e7e7;
+      color: var(--text-light);
+      font-size: 14px;
+      line-height: 1.95;
+      margin: 0 0 18px;
+      padding: 2px 0 2px 18px;
     }
 
     .price-section {
-      background: #fdfdfd;
+      background: var(--bg-color);
       margin-bottom: 36px;
     }
 
     .price-card {
-      background: var(--quiet-bg);
-      border: 1px solid #f0f0f0;
-      border-radius: 6px;
+      background: #fbfbfb;
+      border: 1px solid #f3f3f3;
+      border-radius: 4px;
       margin-top: 26px;
-      padding: 28px;
+      padding: 24px 26px;
     }
 
     .price {
       color: var(--text-color);
       font-family: "Yu Gothic", "Meiryo", sans-serif;
-      font-size: clamp(24px, 5vw, 30px);
+      font-size: clamp(21px, 4.5vw, 25px);
       letter-spacing: 0.04em;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
     .price span {
@@ -182,33 +179,21 @@
 
     .included {
       color: var(--text-light);
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .trial-note {
-      background: #ffffff;
-      border-radius: 4px;
       color: var(--text-color);
-      font-weight: bold;
+      font-size: 15px;
       margin: 24px 0 0;
-      padding: 16px 18px;
     }
 
-    .cta-box {
+    .price-actions {
+      margin-top: 18px;
+    }
+
+    .bottom-nav {
       margin-top: 34px;
-      text-align: center;
-    }
-
-    .cta-box p {
-      margin: 0 auto 30px;
-      max-width: 560px;
-    }
-
-    .closing-note {
-      color: #8a8a8a;
-      font-size: 14px;
-      line-height: 2;
-      margin-top: 48px;
       text-align: center;
     }
 
@@ -242,8 +227,7 @@
 
       .article,
       .voices-section,
-      .price-section,
-      .cta-box {
+      .price-section {
         padding: 28px 22px;
       }
 
@@ -266,7 +250,9 @@
       }
 
       .voices li {
-        padding: 16px 18px 16px 22px;
+        font-size: 14px;
+        margin-bottom: 16px;
+        padding-left: 16px;
       }
 
       .button,
@@ -356,6 +342,9 @@
         <div class="price">1時間 10,000<span>円</span></div>
         <p class="included">遠隔ヒーリング込み</p>
         <p class="trial-note">初回30分無料体験あり</p>
+        <div class="price-actions">
+          <a class="button" href="https://lin.ee/x2WpMEs" target="_blank" rel="noopener noreferrer">初回無料体験を申し込む</a>
+        </div>
       </div>
 
       <div class="article-block">
@@ -368,11 +357,9 @@
       </div>
     </section>
 
-    <section class="cta-box">
-      <p>必要なタイミングだと感じられた方は、LINE公式より静かにご相談ください。</p>
-      <a class="button" href="https://lin.ee/x2WpMEs" target="_blank" rel="noopener noreferrer">初回無料体験を申し込む</a>
+    <nav class="bottom-nav" aria-label="ページ下部ナビゲーション">
       <a class="secondary-button" href="index.html">トップへ戻る</a>
-    </section>
+    </nav>
   </main>
 </body>
 </html>
