@@ -156,40 +156,59 @@
       margin-bottom: 36px;
     }
 
-    .price-card {
-      background: #fbfbfb;
-      border: 1px solid #f3f3f3;
-      border-radius: 4px;
-      margin-top: 26px;
-      padding: 24px 26px;
+    .info-block {
+      margin-top: 28px;
     }
 
-    .price {
+    .info-block + .info-block {
+      margin-top: 44px;
+    }
+
+    .info-title {
+      color: var(--text-color);
+      font-size: 17px;
+      letter-spacing: 0.08em;
+      margin-bottom: 18px;
+    }
+
+    .fee-list {
+      margin: 0;
+    }
+
+    .fee-list div {
+      color: var(--text-light);
+      line-height: 2;
+      margin-bottom: 4px;
+    }
+
+    .fee-list .fee-main {
       color: var(--text-color);
       font-family: "Yu Gothic", "Meiryo", sans-serif;
-      font-size: clamp(21px, 4.5vw, 25px);
+      font-size: 18px;
       letter-spacing: 0.04em;
-      margin-bottom: 6px;
     }
 
-    .price span {
-      font-size: 14px;
-      margin-left: 4px;
-    }
-
-    .included {
-      color: var(--text-light);
-      margin-bottom: 20px;
-    }
-
-    .trial-note {
-      color: var(--text-color);
-      font-size: 15px;
+    .trial-list {
+      list-style: none;
       margin: 24px 0 0;
+      padding: 0;
     }
 
-    .price-actions {
-      margin-top: 18px;
+    .trial-list li {
+      border-left: 2px solid #e7e7e7;
+      color: var(--text-light);
+      font-size: 14px;
+      line-height: 1.95;
+      margin: 0 0 12px;
+      padding: 2px 0 2px 18px;
+    }
+
+    .trial-copy {
+      margin-bottom: 0;
+    }
+
+    .trial-actions {
+      margin-top: 24px;
     }
 
     .bottom-nav {
@@ -244,14 +263,22 @@
         margin-top: 52px;
       }
 
-      .thoughts,
-      .price-card {
+      .thoughts {
         padding: 22px 18px;
       }
 
       .voices li {
         font-size: 14px;
         margin-bottom: 16px;
+        padding-left: 16px;
+      }
+
+      .info-block + .info-block {
+        margin-top: 38px;
+      }
+
+      .trial-list li {
+        font-size: 14px;
         padding-left: 16px;
       }
 
@@ -336,24 +363,30 @@
 
     <section class="price-section">
       <h2>料金</h2>
-      <p>癖直しカウンセリングは、リモートで行っています。</p>
 
-      <div class="price-card">
-        <div class="price">1時間 10,000<span>円</span></div>
-        <p class="included">遠隔ヒーリング込み</p>
-        <p class="trial-note">初回30分無料体験あり</p>
-        <div class="price-actions">
-          <a class="button" href="https://lin.ee/x2WpMEs" target="_blank" rel="noopener noreferrer">初回無料体験を申し込む</a>
+      <div class="info-block">
+        <h3 class="info-title">料金</h3>
+        <div class="fee-list">
+          <div>癖直しカウンセリング（リモート）</div>
+          <div class="fee-main">60分　10,000円</div>
+          <div>遠隔ヒーリング込み</div>
         </div>
       </div>
 
-      <div class="article-block">
-        <p>まずは、<br>
-        「自分にはどんな癖があるのか」<br>
-        「どのように進めるのか」<br>
-        を知りたい方向けに、初回30分無料体験をご用意しています。</p>
+      <div class="info-block">
+        <h3 class="info-title">初回無料体験</h3>
+        <p>初めての方向けに、<br>
+        30分の無料体験をご用意しています。</p>
 
-        <p>ご希望の方は、LINE公式よりご連絡下さい。</p>
+        <ul class="trial-list">
+          <li>自分にどんな癖があるのか知りたい</li>
+          <li>どのように進めるのか試してみたい</li>
+        </ul>
+
+        <p class="trial-copy">という方は、お気軽にご利用下さい。</p>
+        <div class="trial-actions">
+          <a class="button" href="https://lin.ee/x2WpMEs" target="_blank" rel="noopener noreferrer">LINEで申し込む</a>
+        </div>
       </div>
     </section>
 
