@@ -131,6 +131,14 @@
     margin-top: 34px;
   }
 
+  .recommend-note {
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 2;
+    margin: 30px 0 0;
+    text-align: center;
+  }
+
   .intro-note {
     text-align: center;
     color: var(--text-light);
@@ -237,6 +245,16 @@
     font-size: 14px;
     line-height: 1.9;
     margin: 0 0 24px;
+  }
+
+  .blog-card h3 a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+
+  .blog-card h3 a:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
   }
 
   .read-more {
@@ -693,8 +711,7 @@
     <div class="section-title">For You</div>
     <h2 class="section-heading">このような方へ</h2>
     <p class="intro-note">
-      心身の不調だけでなく、その奥にある緊張や生きづらさを静かに見つめたい方へ。<br>
-      遠隔ヒーリングと癖直しカウンセリングで、全国からご相談いただけます。
+      心身の不調を「問い」として、本来の自分という「答え」を見つけたい――
     </p>
     <ul class="target-list">
       <li>生きづらさを感じている</li>
@@ -704,6 +721,7 @@
       <li>本来の自分を抑えて生きてきた感覚がある</li>
       <li>心身の不調の奥に、もっと深い原因がある気がする</li>
     </ul>
+    <p class="recommend-note">そんな方へおすすめします。</p>
     <div class="quiet-cta">
       <a href="trial.html" class="line-button">まずは無料体験から</a>
       <a href="https://lin.ee/x2WpMEs" class="secondary-button" target="_blank" rel="noopener noreferrer">LINEで相談する</a>
@@ -804,7 +822,7 @@
       </div>
       <div class="faq-card" style="border: 1px solid var(--border); padding: 30px;">
         <h3 style="font-size: 16px; margin-top: 0; font-weight: normal;">いつ、どんなふうに効いてきますか？</h3>
-        <p style="font-size: 14px; color: var(--text-light); line-height: 1.8; margin-bottom: 0;">体が安心してゆるんだタイミングで、自然に働き始めます。眠っている時や、ぼんやり休んでいる時に深く浸透することもあります。体感には個人差がありますので、無理に感じ取ろうとしなくて大丈夫です。</p>
+        <p style="font-size: 14px; color: var(--text-light); line-height: 1.8; margin-bottom: 0;">体が安心してゆるんだタイミングで、自然に働き始めます。睡眠中によく浸透します。体感には個人差がありますので、無理に感じ取ろうとしなくて大丈夫です。</p>
       </div>
       <div class="faq-card" style="border: 1px solid var(--border); padding: 30px;">
         <h3 style="font-size: 16px; margin-top: 0; font-weight: normal;">何も伝えなくても大丈夫ですか？</h3>
@@ -840,7 +858,7 @@
       <div class="menu-card">
         <h3>対面ヒーリング</h3>
         <div class="menu-price">10,000<span>円</span></div>
-        <p>現在は出張のみ対応しております。（詳細な場所等はお問い合わせください）</p>
+        <p>ご相談下さい。</p>
       </div>
       <div class="menu-card">
         <h3><a href="habit_counseling.html" class="text-link">癖直しカウンセリング</a></h3>
@@ -890,7 +908,7 @@
       <h2 style="font-size: 28px; font-weight: normal; margin-bottom: 20px;">初回無料体験</h2>
       <p style="color: var(--text-light); line-height: 2; font-size: 15px; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
         遠隔ヒーリング or 癖直しカウンセリング（30分）<br>
-        はじめての方へ向けた、小さな入口です。
+        お気軽にご連絡ください。
       </p>
       <a href="trial.html" class="line-button" style="font-size: 16px; padding: 15px 40px;">初回無料体験について見る</a>
     </div>
@@ -903,6 +921,11 @@
     <p class="blog-intro">
       Bloggerで日々の気づきや、ヒーリング、自己開放、この世界の不思議について書いています。
     </p>
+    <article class="blog-card" style="max-width: 760px; min-height: 0; margin: 0 auto 28px;">
+      <div class="blog-date">2026年5月17日</div>
+      <h3><a href="https://atelierkoshiki.blogspot.com/2026/05/blog-post_17.html" target="_blank" rel="noopener noreferrer">４２通目の手紙　人生の指針となる言葉　アインシュタイン</a></h3>
+      <p>おはようございます。皆様には人生の指針とする言葉はありますか？私には沢山あります。本を読み、良い言葉を見つけると、パソコンに保存します。人生には順風の時もあれば逆風の時もあります。順風の時には調子に乗って羽目を外さないように、逆風の時には目先の苦難に視界を奪われて挫けないように、</p>
+    </article>
     <div class="blog-grid" id="blog-posts" aria-live="polite"></div>
     <div class="blog-fallback" id="blog-fallback" style="display: none;">
       <p>日々の文章はBloggerで更新しています。</p>
