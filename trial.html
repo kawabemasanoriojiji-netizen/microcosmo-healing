@@ -7,11 +7,11 @@
   <script src="./analytics.js" defer></script>
   <style>
     :root {
-      --text-color: #333333;
-      --text-light: #666666;
+      --text-color: #222222;
+      --text-light: #4d4d4d;
       --bg-color: #ffffff;
       --accent: #06C755;
-      --border: #eeeeee;
+      --border: #dedede;
     }
 
     body {
@@ -101,6 +101,7 @@
     .voices li {
       border-bottom: 1px solid var(--border);
       color: var(--text-light);
+      font-size: 15.5px;
       padding: 12px 0 12px 18px;
       position: relative;
     }
@@ -112,7 +113,7 @@
       content: "";
       height: 5px;
       left: 0;
-      opacity: 0.55;
+      opacity: 0.75;
       position: absolute;
       top: 25px;
       width: 5px;
@@ -126,6 +127,36 @@
       padding: 22px 24px;
     }
 
+    .target-groups {
+      display: grid;
+      gap: 34px;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 4px auto 0;
+      max-width: 780px;
+    }
+
+    .target-group h3 {
+      border-bottom: 1px solid var(--border);
+      color: var(--text-color);
+      font-size: 17px;
+      font-weight: normal;
+      letter-spacing: 0.08em;
+      margin: 0 0 18px;
+      padding-bottom: 12px;
+    }
+
+    .target-group .quiet-list {
+      display: grid;
+      gap: 13px;
+    }
+
+    .target-group .quiet-list li {
+      border-bottom: 0;
+      line-height: 1.9;
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+
     .cta-box {
       margin-top: 32px;
       text-align: center;
@@ -134,7 +165,7 @@
     .button {
       background: var(--accent);
       border-radius: 24px;
-      box-shadow: 0 4px 10px rgba(6, 199, 85, 0.18);
+      box-shadow: 0 4px 12px rgba(6, 199, 85, 0.28);
       color: #ffffff;
       display: inline-block;
       font-size: 14px;
@@ -163,6 +194,18 @@
         box-sizing: border-box;
         width: 100%;
       }
+
+      .target-groups {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      p,
+      .quiet-list li,
+      .voices li {
+        font-size: 15.5px;
+        line-height: 1.95;
+      }
     }
   </style>
 </head>
@@ -175,7 +218,7 @@
 
     <section class="lead">
       <p>「少し気になるけれど、いきなり申し込むのは不安」<br>
-      「自分に合うかどうか分からない」</p>
+      「遠隔ヒーリングなんて受けたことがない」</p>
       <p>そんな方へ向けて、無料体験をご用意しています。</p>
       <p>無理な勧誘などはありませんので、お気軽にご連絡ください。</p>
     </section>
@@ -192,14 +235,29 @@
 
     <section class="section-box">
       <h2>こんな方へ</h2>
-      <ul class="quiet-list">
-        <li>生きづらさを感じている</li>
-        <li>自己否定が強い</li>
-        <li>繊細で、人の影響を受けやすい</li>
-        <li>長年、同じ問題を繰り返している</li>
-        <li>本来の自分が分からなくなっている</li>
-        <li>心身の不調の奥に、もっと深い原因がある気がする</li>
-      </ul>
+      <div class="target-groups">
+        <div class="target-group">
+          <h3>体</h3>
+          <ul class="quiet-list">
+            <li>医者や整体では治らない不調を抱えている</li>
+            <li>疲れが抜けない。体が重たく感じる</li>
+          </ul>
+        </div>
+        <div class="target-group">
+          <h3>心</h3>
+          <ul class="quiet-list">
+            <li>生きづらさを感じている</li>
+            <li>本来の自分を抑えて生きてきた感覚がある</li>
+          </ul>
+        </div>
+        <div class="target-group">
+          <h3>人生</h3>
+          <ul class="quiet-list">
+            <li>長年、同じ問題を繰り返している</li>
+            <li>自分らしい生き方を発見したい</li>
+          </ul>
+        </div>
+      </div>
       <p style="margin-top: 22px;">そんな方へ。</p>
     </section>
 
