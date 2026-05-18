@@ -214,8 +214,10 @@
 
   .blog-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    max-width: 760px;
+    margin: 0 auto;
   }
 
   .blog-card {
@@ -225,7 +227,7 @@
     border-radius: 4px;
     display: flex;
     flex-direction: column;
-    min-height: 220px;
+    min-height: 0;
   }
 
   .blog-card h3 {
@@ -532,7 +534,6 @@
     .hero-social-visual { bottom: 28px; }
     .target-list { grid-template-columns: 1fr; gap: 14px; }
     .thought-list { padding: 22px 20px; }
-    .blog-grid { grid-template-columns: 1fr; gap: 18px; }
     .blog-card { min-height: 0; padding: 24px 22px; }
     .social-section { padding: 34px 20px 54px; }
     .social-links { gap: 8px 16px; }
@@ -663,7 +664,7 @@
         優しく包み込み、癒すヒーリング
       </div>
       <div class="hero-social hero-social-visual" aria-labelledby="hero-social-heading">
-        <div class="social-heading" id="hero-social-heading">Instagram / Threads / LINE</div>
+        <div class="social-heading" id="hero-social-heading">Instagram / Threads / YouTube / LINE</div>
         <div class="social-links">
           <a class="social-link" href="https://www.instagram.com/microcosmo_healing/" target="_blank" rel="noopener noreferrer" aria-label="Instagram healing">
             <span class="social-icon" aria-hidden="true">
@@ -683,6 +684,15 @@
               </svg>
             </span>
             <span>Threads</span>
+          </a>
+          <a class="social-link" href="https://www.youtube.com/@%E6%B2%B3%E9%82%8A%E6%AD%A3%E5%89%87-q3n" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <span class="social-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6.5 7.2c3.6-.4 7.4-.4 11 0 1 .1 1.8.9 1.9 1.9.2 1.9.2 3.9 0 5.8-.1 1-.9 1.8-1.9 1.9-3.6.4-7.4.4-11 0-1-.1-1.8-.9-1.9-1.9-.2-1.9-.2-3.9 0-5.8.1-1 .9-1.8 1.9-1.9Z"></path>
+                <path d="m10.5 9.7 4.4 2.3-4.4 2.3Z"></path>
+              </svg>
+            </span>
+            <span>YouTube</span>
           </a>
           <a class="social-link" href="https://lin.ee/x2WpMEs" target="_blank" rel="noopener noreferrer" aria-label="LINE公式">
             <span class="social-icon" aria-hidden="true">
@@ -915,7 +925,26 @@
     <p class="blog-intro">
       Bloggerで日々の気づきや、ヒーリング、自己開放、この世界の不思議について書いています。
     </p>
-    <div class="blog-grid" id="blog-posts" aria-live="polite"></div>
+    <div class="blog-grid" id="blog-posts" aria-live="polite">
+      <article class="blog-card">
+        <div class="blog-date">2026年5月18日</div>
+        <h3><a href="https://atelierkoshiki.blogspot.com/2026/05/blog-post_18.html" target="_blank" rel="noopener noreferrer">４３通目の手紙　ヒーリングの成果とご感想。命の叡智についての話</a></h3>
+        <p>おはようございます。牡牛座の新月でした。皆様はいかがお過ごしでしたか。今回から、満月新月のお知らせをLINE公式でさせて頂くことにしました。</p>
+        <a class="read-more" href="https://atelierkoshiki.blogspot.com/2026/05/blog-post_18.html" target="_blank" rel="noopener noreferrer">続きを読む</a>
+      </article>
+      <article class="blog-card">
+        <div class="blog-date">2026年5月17日</div>
+        <h3><a href="https://atelierkoshiki.blogspot.com/2026/05/blog-post_17.html" target="_blank" rel="noopener noreferrer">４２通目の手紙　人生の指針となる言葉　アインシュタイン</a></h3>
+        <p>おはようございます。皆様には人生の指針とする言葉はありますか？私には沢山あります。本を読み、良い言葉を見つけると、パソコンに保存します。</p>
+        <a class="read-more" href="https://atelierkoshiki.blogspot.com/2026/05/blog-post_17.html" target="_blank" rel="noopener noreferrer">続きを読む</a>
+      </article>
+      <article class="blog-card">
+        <div class="blog-date">2026年5月16日</div>
+        <h3><a href="https://atelierkoshiki.blogspot.com/2026/05/blog-post_16.html" target="_blank" rel="noopener noreferrer">４１通目の手紙　心の扉を開いて世界と向き合う</a></h3>
+        <p>おはようございます。明日１７日（日）の牡牛座新月のヒーリングです。皆様のお申し込みをお待ちしております。</p>
+        <a class="read-more" href="https://atelierkoshiki.blogspot.com/2026/05/blog-post_16.html" target="_blank" rel="noopener noreferrer">続きを読む</a>
+      </article>
+    </div>
     <div class="blog-fallback" id="blog-fallback" style="display: none;">
       <p>日々の文章はBloggerで更新しています。</p>
     </div>
@@ -946,6 +975,15 @@
         </span>
         <span>Threads</span>
       </a>
+      <a class="social-link" href="https://www.youtube.com/@%E6%B2%B3%E9%82%8A%E6%AD%A3%E5%89%87-q3n" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <span class="social-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6.5 7.2c3.6-.4 7.4-.4 11 0 1 .1 1.8.9 1.9 1.9.2 1.9.2 3.9 0 5.8-.1 1-.9 1.8-1.9 1.9-3.6.4-7.4.4-11 0-1-.1-1.8-.9-1.9-1.9-.2-1.9-.2-3.9 0-5.8.1-1 .9-1.8 1.9-1.9Z"></path>
+            <path d="m10.5 9.7 4.4 2.3-4.4 2.3Z"></path>
+          </svg>
+        </span>
+        <span>YouTube</span>
+      </a>
     </div>
   </div>
 
@@ -956,5 +994,78 @@
     </div>
     <p style="font-size: 12px; color: #999;">&copy; microcosmo healing All Rights Reserved.</p>
   </footer>
+  <script>
+    (function () {
+      var postsContainer = document.getElementById("blog-posts");
+      var fallback = document.getElementById("blog-fallback");
+
+      function stripHtml(html) {
+        var template = document.createElement("template");
+        template.innerHTML = html || "";
+        return (template.content.textContent || "").replace(/\s+/g, " ").trim();
+      }
+
+      function escapeHtml(text) {
+        var span = document.createElement("span");
+        span.textContent = text || "";
+        return span.innerHTML;
+      }
+
+      function formatDate(dateText) {
+        var date = new Date(dateText);
+        if (Number.isNaN(date.getTime())) {
+          return "";
+        }
+        return date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日";
+      }
+
+      function postUrl(entry) {
+        var links = entry.link || [];
+        for (var i = 0; i < links.length; i += 1) {
+          if (links[i].rel === "alternate") {
+            return links[i].href;
+          }
+        }
+        return "https://atelierkoshiki.blogspot.com";
+      }
+
+      window.renderBlogPosts = function (data) {
+        var entries = data && data.feed && data.feed.entry ? data.feed.entry.slice(0, 3) : [];
+        if (!entries.length || !postsContainer) {
+          if (fallback) {
+            fallback.style.display = "block";
+          }
+          return;
+        }
+
+        postsContainer.innerHTML = entries.map(function (entry) {
+          var url = postUrl(entry);
+          var title = entry.title && entry.title.$t ? entry.title.$t : "最近の文章";
+          var content = entry.content && entry.content.$t ? entry.content.$t : "";
+          var text = stripHtml(content);
+          var excerpt = text.slice(0, 112);
+          if (text.length > 112) {
+            excerpt += "…";
+          }
+
+          return '<article class="blog-card">' +
+            '<div class="blog-date">' + formatDate(entry.published && entry.published.$t) + '</div>' +
+            '<h3><a href="' + escapeHtml(url) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(title) + '</a></h3>' +
+            '<p>' + escapeHtml(excerpt) + '</p>' +
+            '<a class="read-more" href="' + escapeHtml(url) + '" target="_blank" rel="noopener noreferrer">続きを読む</a>' +
+          '</article>';
+        }).join("");
+      };
+
+      var script = document.createElement("script");
+      script.src = "https://atelierkoshiki.blogspot.com/feeds/posts/default?alt=json-in-script&max-results=3&callback=renderBlogPosts";
+      script.onerror = function () {
+        if (fallback) {
+          fallback.style.display = "block";
+        }
+      };
+      document.body.appendChild(script);
+    }());
+  </script>
 </body>
 </html>
