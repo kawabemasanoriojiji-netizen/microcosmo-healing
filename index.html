@@ -55,6 +55,12 @@
     flex-direction: column;
     gap: 30px;
   }
+
+  .menu-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
   
   .menu a {
     text-decoration: none;
@@ -67,6 +73,12 @@
   
   .menu a:hover {
     color: #000000;
+  }
+
+  .menu-group .menu-sub {
+    font-size: 13px;
+    opacity: 0.78;
+    padding-left: 18px;
   }
 
   .booking-menu {
@@ -572,6 +584,8 @@
     }
     .logo { margin-bottom: 30px; text-align: center; }
     .menu { flex-direction: row; flex-wrap: wrap; justify-content: center; margin-bottom: 30px; gap: 15px; }
+    .menu-group { align-items: center; flex-direction: row; gap: 12px; }
+    .menu-group .menu-sub { padding-left: 0; }
     .booking-menu { text-align: center; }
     .text-area { padding: 60px 20px 96px; flex-direction: column; gap: 30px; }
     .main-text, .sub-text { writing-mode: horizontal-tb; text-align: center; max-height: none; }
@@ -700,7 +714,11 @@
         <a href="#for-you">For You</a>
         <a href="#profile">Profile</a>
         <a href="#blog">Blog</a>
-        <a href="healing.html#flow">Flow</a>
+        <span class="menu-group">
+          <a href="healing.html">Healing</a>
+          <a class="menu-sub" href="healing.html#flow">Flow</a>
+          <a class="menu-sub" href="healing.html#faq">FAQ</a>
+        </span>
         <a href="#menu">Menu &amp; Price</a>
         <a href="#product">Product</a>
         <a href="trial.html">無料体験</a>
