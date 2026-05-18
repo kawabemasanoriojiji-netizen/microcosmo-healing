@@ -31,7 +31,8 @@
 
     .back-link,
     .button,
-    .secondary-button {
+    .secondary-button,
+    .section-label {
       font-family: "Yu Gothic", "Meiryo", sans-serif;
     }
 
@@ -114,6 +115,87 @@
       text-align: center;
     }
 
+    .section-label {
+      color: #8a8a8a;
+      font-size: 13px;
+      font-weight: normal;
+      letter-spacing: 0.12em;
+      line-height: 1.8;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    .subnav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin: -18px 0 40px;
+    }
+
+    .subnav a {
+      color: var(--text-light);
+      font-family: "Yu Gothic", "Meiryo", sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    .guide-section {
+      background: var(--bg-color);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 34px;
+      padding: clamp(30px, 6vw, 48px);
+    }
+
+    .flow-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .flow-step {
+      display: flex;
+      gap: 24px;
+    }
+
+    .step-num {
+      color: #cfcfcf;
+      font-family: "Yu Gothic", "Meiryo", sans-serif;
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 1;
+      min-width: 44px;
+    }
+
+    .flow-step h3,
+    .faq-card h3 {
+      color: var(--text-color);
+      font-size: 17px;
+      font-weight: normal;
+      line-height: 1.7;
+      margin: 0 0 12px;
+    }
+
+    .flow-step p,
+    .faq-card p {
+      line-height: 1.9;
+      margin-bottom: 0;
+    }
+
+    .faq-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .faq-card {
+      border-left: 2px solid #e7e7e7;
+      padding-left: 18px;
+    }
+
     .bottom-nav {
       margin-top: 34px;
       text-align: center;
@@ -167,6 +249,15 @@
         margin: 8px 0 0;
         width: 100%;
       }
+
+      .subnav {
+        justify-content: flex-start;
+      }
+
+      .flow-step {
+        flex-direction: column;
+        gap: 12px;
+      }
     }
   </style>
 </head>
@@ -175,6 +266,11 @@
     <a class="back-link" href="index.html">← トップへ戻る</a>
 
     <h1>ヒーリングについて</h1>
+
+    <nav class="subnav" aria-label="ヒーリングページ内ナビゲーション">
+      <a href="#flow">施術の流れ</a>
+      <a href="#faq">FAQ</a>
+    </nav>
 
     <section class="article">
       <p>心身の不調、そして好調の「鍵」である頚椎2番。</p>
@@ -212,6 +308,65 @@
 
       <div class="simple-trial">
         <a class="button" href="https://lin.ee/x2WpMEs" target="_blank" rel="noopener noreferrer">無料体験を申し込む</a>
+      </div>
+    </section>
+
+    <section class="guide-section" id="flow">
+      <div class="section-label">Flow</div>
+      <h2>施術の流れ</h2>
+      <div class="flow-container">
+        <div class="flow-step">
+          <div class="step-num">01</div>
+          <div>
+            <h3>ヒアリング</h3>
+            <p>現在の状態やお悩みをお伺いします。テキストメッセージの他、ビデオ通話でのお伝えもご利用いただけます（10分）。</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="step-num">02</div>
+          <div>
+            <h3>遠隔ヒーリング施術</h3>
+            <p>生活は普段通りで大丈夫です。イメージとしては、回復のためのスイッチが押された後、その後、体がリラックスしたタイミングで、全身に作用が広がっていきます。時間ご指定も可能です。より良いコンディションで受けるためのポイントは、<a href="#faq">FAQ</a>にまとめています。</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="step-num">03</div>
+          <div>
+            <h3>アフターケア・アドバイスなど</h3>
+            <p>施術後の状態の確認や、日常で気を付けるポイントなどのアドバイスを、テキストメッセージまたはビデオ通話（同上）にて丁寧に行います。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="guide-section" id="faq">
+      <div class="section-label">FAQ</div>
+      <h2>ヒーリングを受けるにあたって</h2>
+      <div class="faq-grid">
+        <div class="faq-card">
+          <h3>受けるにあたって、必要な心構えはありますか？</h3>
+          <p>いつもより少し意識的に、時間を取って呼吸を感じて下さい。それだけでヒーリングを受ける準備が整います。</p>
+        </div>
+        <div class="faq-card">
+          <h3>どんな服装で受ければいいですか？</h3>
+          <p>しめつけの少ない服装がおすすめです。可能であれば、時計・アクセサリー・磁気ネックレス・ヘアピンなどの金属類は外しておくと、体の感覚を受け取りやすくなります。</p>
+        </div>
+        <div class="faq-card">
+          <h3>いつ、どんなふうに効いてきますか？</h3>
+          <p>体が安心してゆるんだタイミングで、自然に働き始めます。睡眠中によく浸透します。体感には個人差がありますので、無理に感じ取ろうとしなくて大丈夫です。</p>
+        </div>
+        <div class="faq-card">
+          <h3>何も伝えなくても大丈夫ですか？</h3>
+          <p>大丈夫です。ただ、「どこがつらいか」「いつ頃から気になっているか」などを事前に教えていただけると、状態を読み解く手がかりになります。言葉にしづらい場合は、そのままでも構いません。</p>
+        </div>
+        <div class="faq-card">
+          <h3>どれくらいの期間受ければいいですか？一度で十分ですか？</h3>
+          <p>難しい問題が一度きりのヒーリングで完治する方もいらっしゃいます。一方で、継続的なヒーリングによって、体が徐々に健康な状態を「覚えていく」。そんな受け方をされる方もいらっしゃいます。状態やご希望などをお聞かせ頂ければ、お見立てを申し上げます。</p>
+        </div>
+        <div class="faq-card">
+          <h3>受けた後に気をつけることはありますか？</h3>
+          <p>普段通り過ごして下さって大丈夫です。眠気やだるさが出た時は、体が調整しているサインとしてお休みを優先して下さい。</p>
+        </div>
       </div>
     </section>
 
