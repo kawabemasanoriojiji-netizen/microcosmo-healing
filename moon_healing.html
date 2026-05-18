@@ -76,9 +76,7 @@
     }
 
     .article,
-    .voices-section,
-    .price-section,
-    .guide-section {
+    .voices-section {
       background: var(--bg-color);
       border: 1px solid var(--border);
       border-radius: 6px;
@@ -138,12 +136,8 @@
       padding: 2px 0 2px 18px;
     }
 
-    .fee-box {
-      background: #fbfbfb;
-      border: 1px solid #f3f3f3;
-      border-radius: 4px;
-      margin-top: 28px;
-      padding: 24px 26px;
+    .fee-summary {
+      margin-top: 18px;
     }
 
     .fee-title {
@@ -176,6 +170,17 @@
 
     .guide-actions {
       margin-top: 24px;
+    }
+
+    .price-section,
+    .guide-section {
+      margin: 48px 4px 34px;
+      padding: 0;
+    }
+
+    .guide-section {
+      border-top: 1px solid var(--border);
+      padding-top: 34px;
     }
 
     .bottom-nav {
@@ -216,9 +221,7 @@
       }
 
       .article,
-      .voices-section,
-      .price-section,
-      .guide-section {
+      .voices-section {
         padding: 28px 22px;
       }
 
@@ -230,14 +233,16 @@
         margin-top: 52px;
       }
 
-      .fee-box {
-        padding: 22px 18px;
-      }
-
       .voices li,
       .quiet-list li {
         font-size: 14px;
         padding-left: 16px;
+      }
+
+      .price-section,
+      .guide-section {
+        margin-left: 0;
+        margin-right: 0;
       }
 
       .button,
@@ -285,7 +290,7 @@
     <section class="price-section">
       <h2>料金について</h2>
 
-      <div class="fee-box">
+      <div class="fee-summary">
         <p class="fee-title">満月・新月ヒーリング</p>
         <p class="fee-main">5,000円</p>
       </div>
