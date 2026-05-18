@@ -7,11 +7,11 @@
 <script src="./analytics.js" defer></script>
 <style>
   :root {
-    --text-color: #333333;
-    --text-light: #666666;
+    --text-color: #222222;
+    --text-light: #4d4d4d;
     --bg-color: #ffffff;
     --accent: #06C755; /* LINE green */
-    --border: #f0f0f0;
+    --border: #dedede;
   }
   
   body {
@@ -85,7 +85,7 @@
     border-radius: 20px;
     transition: opacity 0.2s;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(6, 199, 85, 0.2);
+    box-shadow: 0 4px 12px rgba(6, 199, 85, 0.28);
   }
   
   .line-button:hover {
@@ -147,22 +147,36 @@
     margin-bottom: 36px;
   }
 
+  .target-groups {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .target-group h3 {
+    color: var(--text-color);
+    font-size: 17px;
+    font-weight: normal;
+    letter-spacing: 0.08em;
+    margin: 0 0 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
   .target-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px 24px;
-    max-width: 720px;
-    margin: 0 auto;
+    gap: 14px;
     padding: 0;
     list-style: none;
   }
 
   .target-list li {
-    border-bottom: 1px solid var(--border);
     color: var(--text-light);
-    font-size: 15px;
-    line-height: 1.8;
-    padding: 0 0 14px 18px;
+    font-size: 15.5px;
+    line-height: 1.9;
+    padding: 0 0 0 18px;
     position: relative;
   }
 
@@ -172,7 +186,7 @@
     height: 5px;
     border-radius: 50%;
     background: var(--accent);
-    opacity: 0.6;
+    opacity: 0.75;
     position: absolute;
     left: 0;
     top: 12px;
@@ -181,8 +195,8 @@
   .concept-detail {
     max-width: 760px;
     margin: 44px auto 0;
-    color: var(--text-light);
-    font-size: 15px;
+    color: var(--text-color);
+    font-size: 16px;
     line-height: 2.1;
   }
 
@@ -235,7 +249,7 @@
   }
 
   .blog-date {
-    color: #999;
+    color: #777;
     font-family: "Yu Gothic", "Meiryo", sans-serif;
     font-size: 12px;
     letter-spacing: 0.08em;
@@ -293,7 +307,7 @@
   }
 
   .social-heading {
-    color: #999;
+    color: #777;
     font-size: 12px;
     font-weight: normal;
     letter-spacing: 0.16em;
@@ -332,7 +346,7 @@
     height: 22px;
     border: 1px solid #d8d8d8;
     border-radius: 50%;
-    color: #555;
+    color: #333;
     line-height: 1;
     transition: border-color 0.2s, color 0.2s;
   }
@@ -411,7 +425,7 @@
     font-size: clamp(15px, min(1.8vw, 2.3svh), 20px);
     letter-spacing: clamp(0.08em, 0.45svh, 0.15em);
     line-height: 2.2;
-    color: #555555;
+    color: #3f3f3f;
     max-height: calc(100svh - 96px);
   }
 
@@ -505,6 +519,21 @@
     color: var(--text-light);
   }
 
+  .faq-card h3 {
+    color: var(--text-color);
+    font-size: 17px !important;
+    line-height: 1.7;
+  }
+
+  .faq-card p,
+  .flow-step p,
+  .menu-card p,
+  .special-package p {
+    color: var(--text-light) !important;
+    font-size: 15.5px !important;
+    line-height: 1.9 !important;
+  }
+
   /* --- Menu & Price Section --- */
   .menu-grid {
     display: grid;
@@ -539,7 +568,8 @@
     .hero-social .social-heading { text-align: center; }
     .hero-social .social-links { justify-content: center; }
     .hero-social-visual { bottom: 28px; }
-    .target-list { grid-template-columns: 1fr; gap: 14px; }
+    .target-groups { grid-template-columns: 1fr; gap: 30px; max-width: 540px; }
+    .target-list { gap: 13px; }
     .thought-list { padding: 22px 20px; }
     .blog-card { min-height: 0; padding: 24px 22px; }
     .social-section { padding: 34px 20px 54px; }
@@ -547,6 +577,14 @@
     .social-link { font-size: 12px; }
     .flow-step { flex-direction: column; gap: 15px; padding: 30px 20px; }
     .faq-grid { grid-template-columns: 1fr !important; }
+    .faq-card { padding: 24px 20px !important; }
+    .faq-card h3 { font-size: 16.5px !important; }
+    .faq-card p,
+    .flow-step p,
+    .menu-card p,
+    .special-package p,
+    .profile-content p,
+    .product-content p { font-size: 15.5px !important; line-height: 1.95 !important; }
   }
 
   .menu-card {
@@ -723,14 +761,29 @@
     <p class="intro-note">
       心身の不調を「問い」として、本来の自分という「答え」を見つけたい――
     </p>
-    <ul class="target-list">
-      <li>生きづらさを感じている</li>
-      <li>自己否定が強い</li>
-      <li>繊細で、人の影響を受けやすい</li>
-      <li>長年、同じ問題を繰り返している</li>
-      <li>本来の自分を抑えて生きてきた感覚がある</li>
-      <li>心身の不調の奥に、もっと深い原因がある気がする</li>
-    </ul>
+    <div class="target-groups">
+      <div class="target-group">
+        <h3>体</h3>
+        <ul class="target-list">
+          <li>医者や整体では治らない不調を抱えている</li>
+          <li>疲れが抜けない。体が重たく感じる</li>
+        </ul>
+      </div>
+      <div class="target-group">
+        <h3>心</h3>
+        <ul class="target-list">
+          <li>生きづらさを感じている</li>
+          <li>本来の自分を抑えて生きてきた感覚がある</li>
+        </ul>
+      </div>
+      <div class="target-group">
+        <h3>人生</h3>
+        <ul class="target-list">
+          <li>長年、同じ問題を繰り返している</li>
+          <li>自分らしい生き方を発見したい</li>
+        </ul>
+      </div>
+    </div>
     <p class="recommend-note">そんな方へおすすめします。</p>
     <div class="quiet-cta">
       <a href="trial.html" class="line-button">まずは無料体験から</a>
@@ -744,17 +797,11 @@
     <h2 class="section-heading">頚椎2番から読み解く、心身の緊張</h2>
     <div class="concept-text">
       直感霊視によって、心身の不調を読み解きます。<br>
-      特に注目しているのは、頚椎2番です。
+      特に注目するのは、頚椎2番です。
     </div>
     <div class="concept-detail">
-      <p>この箇所には、自己否定的な思考が、歪みや緊張として表れやすいと考えています。</p>
-      <div class="thought-list">
-        「自分はこれをしてはならない」<br>
-        「こうでなければならない」<br>
-        「どうせこうしかならない」
-      </div>
-      <p>そのわずかな歪みや緊張が、全身へと波及していくことがあります。そのため、局所的な不調だけを見るのではなく、より根本にある緊張を整えることを大切にしています。</p>
-      <p>さらに深く見ていくと、その背景に幼少期のトラウマや、長年抑えてきた感情が関係していることもあります。だからこそ、最終的には「自己開放」が健やかさへの鍵になると考えています。</p>
+      <p>この箇所には、心身のストレスが歪みや緊張として表れます。</p>
+      <p>実はそれが心身の不調の震源地。ヒーリングは頚椎2番を無理なく優しく整えます。</p>
       <div class="quiet-cta">
         <a href="trial.html" class="line-button">初回無料体験について見る</a>
       </div>
@@ -772,13 +819,13 @@
       <div class="profile-content" style="flex: 2; min-width: 300px;">
         <h3 style="font-size: 24px; margin-top: 0; font-weight: normal; margin-bottom: 20px;">プロフィール／オジジ</h3>
         <p style="color: var(--text-light); line-height: 2; font-size: 15px;">
-          2007年、27歳の時に突然ヒーリング能力を自覚しました。「現代医療では難しい」と言われた不調のお客様が、続けて改善されたことをきっかけに、ご紹介の輪が広がり、18年間活動を続けています。
+          2007年、27歳の時に持って生まれたヒーリング能力に気付き、ヒーラーになりました。「現代医療では難しい」と言われた不調のお客様が、続けて改善されたことをきっかけに、ご紹介の輪が広がり、18年間活動を続けています。
         </p>
         <p style="color: var(--text-light); line-height: 2; font-size: 15px;">
-          現在は、遠隔ヒーリングと癖直しカウンセリングを中心に活動しています。北海道から沖縄離島まで、全国にクライアントがいらっしゃいます。
+          遠隔ヒーリングと癖直しカウンセリングを中心に活動しています。北海道から沖縄離島まで、全国にクライアントがいらっしゃいます。
         </p>
         <p style="color: var(--text-light); line-height: 2; font-size: 15px;">
-          ヒーリングでは、心身を整えるだけでなく、本来の自分を取り戻していくことを大切にしています。「変わりたいけれど変われない」「長年、同じ問題に悩んでいる」そんな方へ。
+          仕事の傍ら、チェロや、動物のイラストや、家庭料理を楽しんでいます。
         </p>
         <div class="profile-actions">
           <a href="profile_full.html" class="secondary-button">詳しいプロフィールを読む</a>
@@ -797,21 +844,21 @@
         <div class="step-num">01</div>
         <div>
           <h3>ヒアリング</h3>
-          <p>現在の状態やお悩みをお伺いし、不調の根本的な原因（頚椎2番）にアプローチします。</p>
+          <p>現在の状態やお悩みをお伺いします。テキストメッセージの他、ビデオ通話でのお伝えもご利用いただけます（10分）。</p>
         </div>
       </div>
       <div class="flow-step">
         <div class="step-num">02</div>
         <div>
           <h3>遠隔ヒーリング施術</h3>
-          <p>生活は普段通りで大丈夫です。体がリラックスしたタイミングで、自然に働き始めることがあります。ご希望の方には時間指定も可能です。より良いコンディションで受けるためのポイントは、<a href="#faq" class="text-link">アドバイスとFAQ</a>にまとめています。</p>
+          <p>生活は普段通りで大丈夫です。イメージとしては、回復のためのスイッチが押された後、その後、体がリラックスしたタイミングで、全身に作用が広がっていきます。時間ご指定も可能です。より良いコンディションで受けるためのポイントは、<a href="#faq" class="text-link">アドバイスとFAQ</a>にまとめています。</p>
         </div>
       </div>
       <div class="flow-step">
         <div class="step-num">03</div>
         <div>
           <h3>アフターケア・アドバイスなど</h3>
-          <p>施術後の状態の確認や、日常で気を付けるポイントなどのアドバイスをLINEにて丁寧に行います。</p>
+          <p>施術後の状態の確認や、日常で気を付けるポイントなどのアドバイスを、テキストメッセージまたはビデオ通話（同上）にて丁寧に行います。</p>
         </div>
       </div>
     </div>
@@ -824,7 +871,7 @@
     <div class="faq-grid" style="display: grid; grid-template-columns: 1fr; gap: 22px;">
       <div class="faq-card" style="border: 1px solid var(--border); padding: 30px;">
         <h3 style="font-size: 16px; margin-top: 0; font-weight: normal;">受けるにあたって、必要な心構えはありますか？</h3>
-        <p style="font-size: 14px; color: var(--text-light); line-height: 1.8; margin-bottom: 0;">時々でもそっと動きをとめ、「こんなふうに体はいつも息をしているんだな」くらいの気持ちで呼吸を感じてみて下さい。それだけでヒーリングを受ける準備が整います。</p>
+        <p style="font-size: 14px; color: var(--text-light); line-height: 1.8; margin-bottom: 0;">いつもより少し意識的に、時間を取って呼吸を感じて下さい。それだけでヒーリングを受ける準備が整います。</p>
       </div>
       <div class="faq-card" style="border: 1px solid var(--border); padding: 30px;">
         <h3 style="font-size: 16px; margin-top: 0; font-weight: normal;">どんな服装で受ければいいですか？</h3>
@@ -840,11 +887,11 @@
       </div>
       <div class="faq-card" style="border: 1px solid var(--border); padding: 30px;">
         <h3 style="font-size: 16px; margin-top: 0; font-weight: normal;">どれくらいの期間受ければいいですか？一度で十分ですか？</h3>
-        <p style="font-size: 14px; color: var(--text-light); line-height: 1.8; margin-bottom: 0;">一度で変化を感じる方もいますが、生活環境や心身の癖によって戻りやすさは変わります。頚椎2番は「一度クリアにして終わり」よりも、良い状態を保つための定期メンテナンスとして受けていただくのがおすすめです。</p>
+        <p style="font-size: 14px; color: var(--text-light); line-height: 1.8; margin-bottom: 0;">難しい問題が一度きりのヒーリングで完治する方もいらっしゃいます。一方で、継続的なヒーリングによって、体が徐々に健康な状態を「覚えていく」。そんな受け方をされる方もいらっしゃいます。状態やご希望などをお聞かせ頂ければ、お見立てを申し上げます。</p>
       </div>
       <div class="faq-card" style="border: 1px solid var(--border); padding: 30px;">
         <h3 style="font-size: 16px; margin-top: 0; font-weight: normal;">受けた後に気をつけることはありますか？</h3>
-        <p style="font-size: 14px; color: var(--text-light); line-height: 1.8; margin-bottom: 0;">水分をとり、できる範囲でゆったりお過ごしください。眠気やだるさが出た時は、体が調整しているサインとして休める時間を優先していただければ十分です。</p>
+        <p style="font-size: 14px; color: var(--text-light); line-height: 1.8; margin-bottom: 0;">普段通り過ごして下さって大丈夫です。眠気やだるさが出た時は、体が調整しているサインとしてお休みを優先して下さい。</p>
       </div>
     </div>
   </section>
@@ -877,13 +924,12 @@
       </div>
     </div>
 
-    <!-- 深い自己変容のための特別セッション -->
+    <!-- 特別パッケージ -->
     <div class="special-package">
-      <h3>【特別パッケージ】<br>深い自己変容のための特別セッション</h3>
+      <h3>【特別パッケージ】<br>人生に転機をもたらす特別メニュー</h3>
       <div class="price">30,000<span>円</span></div>
-      <p>通常のヒーリングよりもさらに深く、本来の感受性や可能性を開いていくことを目的とした特別なセッションです。</p>
-      <p>心身の調整に加え、ご自身の変化を言語化し、今後の方向性を整理するライフコーチングをセットにしています。</p>
-      <p>「もっと自分らしく生きたい」「本来の可能性を開きたい」と感じている方へ。</p>
+      <p>通常のヒーリングが「回復」「維持」を目的とするものだとすれば、本メニューは「目覚め」「方向づけ」を致します。</p>
+      <p>あなた自身の個性、生い立ち、願い、適正、困難などを総合的に見ながら、あなたの人生の旅の「テーマ」と「歩き方」をお伝えするライフコーチングをセットにしています。</p>
       <div class="quiet-cta" style="margin-top: 24px;">
         <a href="pineal_healing.html" class="secondary-button">特別セッションについて詳しく見る</a>
         <a href="https://lin.ee/x2WpMEs" class="line-button" target="_blank" rel="noopener noreferrer">LINEで相談する</a>
