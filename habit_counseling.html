@@ -6,11 +6,11 @@
   <title>癖直しカウンセリング | microcosmo healing</title>
   <style>
     :root {
-      --text-color: #333333;
-      --text-light: #666666;
+      --text-color: #222222;
+      --text-light: #4d4d4d;
       --bg-color: #ffffff;
       --accent: #06C755;
-      --border: #eeeeee;
+      --border: #dedede;
       --soft-bg: #fafafa;
       --quiet-bg: #f7f8f7;
     }
@@ -64,6 +64,7 @@
 
     p {
       color: var(--text-light);
+      font-size: 15.5px;
       margin: 0 0 26px;
     }
 
@@ -145,9 +146,36 @@
     .voices li {
       border-left: 2px solid #e7e7e7;
       color: var(--text-light);
-      font-size: 14px;
+      font-size: 15.5px;
       line-height: 1.95;
       margin: 0 0 18px;
+      padding: 2px 0 2px 18px;
+    }
+
+    .pattern-section {
+      background: var(--bg-color);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 36px;
+      padding: clamp(30px, 6vw, 48px);
+    }
+
+    .pattern-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .pattern-list {
+      list-style: none;
+      margin: 28px 0 34px;
+      padding: 0;
+    }
+
+    .pattern-list li {
+      border-left: 2px solid #dcdcdc;
+      color: var(--text-light);
+      font-size: 15.5px;
+      line-height: 1.95;
+      margin: 0 0 16px;
       padding: 2px 0 2px 18px;
     }
 
@@ -219,7 +247,7 @@
     .button {
       background: var(--accent);
       border-radius: 24px;
-      box-shadow: 0 4px 10px rgba(6, 199, 85, 0.18);
+      box-shadow: 0 4px 12px rgba(6, 199, 85, 0.28);
       color: #ffffff;
       display: inline-block;
       font-size: 14px;
@@ -246,7 +274,8 @@
 
       .article,
       .voices-section,
-      .price-section {
+      .price-section,
+      .pattern-section {
         padding: 28px 22px;
       }
 
@@ -268,7 +297,7 @@
       }
 
       .voices li {
-        font-size: 14px;
+        font-size: 15.5px;
         margin-bottom: 16px;
         padding-left: 16px;
       }
@@ -278,7 +307,12 @@
       }
 
       .trial-list li {
-        font-size: 14px;
+        font-size: 15.5px;
+        padding-left: 16px;
+      }
+
+      .pattern-list li {
+        font-size: 15.5px;
         padding-left: 16px;
       }
 
@@ -364,43 +398,36 @@
       </div>
     </section>
 
-    <section class="voices-section">
-      <h2 class="section-label">こんなお声を頂いています</h2>
-      <p>実際に、癖直しカウンセリングを通して、次のようなご感想を多く頂いています。</p>
+    <section class="pattern-section">
+      <p>人生の問題はどういうふうにして生じるのでしょうか。</p>
+      <p>実はそこには凹凸の関係があります。</p>
 
-      <ul class="voices">
-        <li>いつも人に合わせて自分を押し殺していたことに気付いた</li>
-        <li>以前より自然体でいられるようになった</li>
-        <li>人間関係やパートナー関係が改善した</li>
-        <li>余計な悩み事を抱えないで済むようになった</li>
-      </ul>
-    </section>
-
-    <section class="price-section">
-      <h2>料金</h2>
-
-      <div class="info-block">
-        <div class="fee-list">
-          <div>癖直しカウンセリング（リモート）</div>
-          <div class="fee-main">60分　10,000円</div>
-          <div>遠隔ヒーリング込み</div>
-        </div>
+      <div class="article-block">
+        <p>あなたが凹だとすると、人生は凸の形を取ります。</p>
+        <p>例えばあなたが「嫌だ」と思うことを、まるで忠実に再現するかのようにあなたを困らせる人ーー。</p>
       </div>
 
-      <div class="info-block">
-        <h3 class="info-title">初回無料体験</h3>
-        <p>初めての方向けに、<br>
-        30分の無料体験をご用意しています。</p>
+      <ul class="pattern-list">
+        <li>いつも同じ人間関係のストレスに見舞われる</li>
+        <li>そういうつもりじゃないのに誤解される</li>
+        <li>自分のペースを乱される</li>
+      </ul>
 
-        <ul class="trial-list">
-          <li>自分にどんな癖があるのか知りたい</li>
-          <li>どのように進めるのか試してみたい</li>
-        </ul>
+      <div class="article-block">
+        <p>繰り返されるパターンには、必然があります。</p>
+        <p>自分が変わらない限り、現実は変わりません。<br>
+        逆に言えば、自分が変われば、現実は必ず変わります。</p>
+      </div>
 
-        <p class="trial-copy">という方は、お気軽にご利用下さい。</p>
-        <div class="trial-actions">
-          <a class="button" href="https://lin.ee/x2WpMEs" target="_blank" rel="noopener noreferrer">LINEで申し込む</a>
-        </div>
+      <div class="article-block">
+        <p>あなた自身の理想的な凹凸が整っていくことで、人生は驚くほどスムースになります。</p>
+        <p>ここに深く関わっているのが「癖」です。</p>
+      </div>
+
+      <div class="article-block">
+        <p>誰もが何かしらの癖を持っています。<br>
+        小さな無自覚の癖の数々。</p>
+        <p>それに気付き、改め、今までよりも「引っかかりのない」自分になっていくことで、あなたは自分自身だけでなく、人生そのものの変化を体験することができるでしょう。</p>
       </div>
     </section>
 
