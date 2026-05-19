@@ -323,6 +323,27 @@
     margin: 0;
   }
 
+  .latest-video {
+    max-width: 760px;
+    margin: 44px auto 0;
+  }
+
+  .latest-video a {
+    display: block;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: #fafafa;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+  }
+
+  .latest-video img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
   .social-section {
     padding: 44px 20px 64px;
     max-width: 900px;
@@ -599,6 +620,8 @@
     .target-list { gap: 13px; }
     .thought-list { padding: 22px 20px; }
     .blog-card { min-height: 0; padding: 24px 22px; }
+    .latest-video { margin-top: 34px; }
+    .latest-video a { min-height: 44px; }
     .social-section { padding: 34px 20px 54px; }
     .social-links { gap: 8px 16px; }
     .social-link { font-size: 12px; }
@@ -612,6 +635,13 @@
     .special-package p,
     .profile-content p,
     .product-content p { font-size: 15.5px !important; line-height: 1.95 !important; }
+    .intro-note,
+    .recommend-note,
+    .concept-detail,
+    .concept-text,
+    .blog-intro { font-size: 15.5px; line-height: 2.05; }
+    .line-button,
+    .secondary-button { min-height: 44px; box-sizing: border-box; }
   }
 
   .menu-card {
@@ -994,6 +1024,11 @@
     </div>
     <div class="quiet-cta" id="blog-button">
       <a href="https://atelierkoshiki.blogspot.com" class="secondary-button" target="_blank" rel="noopener noreferrer">ブログを読む</a>
+    </div>
+    <div class="latest-video">
+      <a href="https://www.youtube.com/watch?v=81FfrQrxG5E" target="_blank" rel="noopener noreferrer" aria-label="YouTube最新動画を開く">
+        <img src="https://i.ytimg.com/vi/81FfrQrxG5E/hqdefault.jpg" alt="ヒーリング夜話＃１　痛みが開いてくれる扉" loading="lazy">
+      </a>
     </div>
   </section>
 
