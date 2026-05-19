@@ -323,25 +323,38 @@
     margin: 0;
   }
 
-  .latest-video {
-    max-width: 760px;
+  .latest-videos {
+    max-width: 980px;
     margin: 44px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
   }
 
-  .latest-video a {
+  .latest-video-card {
     display: block;
     overflow: hidden;
     border: 1px solid var(--border);
     border-radius: 4px;
     background: #fafafa;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+    color: inherit;
+    text-decoration: none;
   }
 
-  .latest-video img {
+  .latest-video-card img {
     display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
+  }
+
+  .latest-video-card span {
+    display: block;
+    padding: 12px 14px 14px;
+    color: var(--text-light);
+    font-size: 13px;
+    line-height: 1.55;
   }
 
   .social-section {
@@ -620,8 +633,8 @@
     .target-list { gap: 13px; }
     .thought-list { padding: 22px 20px; }
     .blog-card { min-height: 0; padding: 24px 22px; }
-    .latest-video { margin-top: 34px; }
-    .latest-video a { min-height: 44px; }
+    .latest-videos { grid-template-columns: 1fr; gap: 18px; margin-top: 34px; max-width: 520px; }
+    .latest-video-card { min-height: 44px; }
     .social-section { padding: 34px 20px 54px; }
     .social-links { gap: 8px 16px; }
     .social-link { font-size: 12px; }
@@ -821,9 +834,9 @@
     </div>
   </div>
 
-  <!-- このような方へ セクション -->
+  <!-- For You セクション -->
   <section id="for-you" style="padding-bottom: 60px;">
-    <div class="section-title">このような方へ</div>
+    <div class="section-title">For You</div>
     <h2 class="section-heading">このような方へ</h2>
     <p class="intro-note">
       心身の不調を「問い」として、本来の自分という「答え」を見つけたい――
@@ -858,9 +871,9 @@
     </div>
   </section>
 
-  <!-- コンセプト セクション -->
+  <!-- Concept セクション -->
   <section id="concept" style="padding-bottom: 60px;">
-    <div class="section-title">コンセプト</div>
+    <div class="section-title">Concept</div>
     <h2 class="section-heading">頚椎2番から読み解く、心身の緊張</h2>
     <div class="concept-text">
       直感霊視によって、心身の不調を読み解きます。<br>
@@ -891,9 +904,9 @@
     </div>
   </section>
 
-  <!-- プロフィール セクション -->
+  <!-- Profile Section -->
   <section id="profile" style="background-color: #fafafa; border-radius: 8px; margin-bottom: 120px; padding: 60px 40px; max-width: 800px;">
-    <div class="section-title">プロフィール</div>
+    <div class="section-title">Profile &amp; Story</div>
     <div class="profile-container" style="display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
       <div class="profile-image" style="flex: 1; min-width: 250px;">
         <!-- profile.jpg として画像を読み込みます -->
@@ -917,9 +930,9 @@
     </div>
   </section>
 
-  <!-- 料金 セクション -->
+  <!-- Menu セクション -->
   <section id="menu">
-    <div class="section-title">料金</div>
+    <div class="section-title">Menu &amp; Price</div>
     <h2 class="section-heading">料金のご案内</h2>
     
     <div class="menu-grid">
@@ -957,9 +970,9 @@
     </div>
   </section>
 
-  <!-- 製品 セクション -->
+  <!-- Product Section -->
   <section id="product" style="padding-bottom: 120px;">
-    <div class="section-title">製品</div>
+    <div class="section-title">Product</div>
     <h2 class="section-heading">取り扱い製品</h2>
     
     <div class="product-container" style="display: flex; gap: 40px; align-items: stretch; flex-wrap: wrap; background-color: #fafafa; border-radius: 8px; overflow: hidden;">
@@ -990,9 +1003,9 @@
     </div>
   </section>
 
-  <!-- 最近の文章 セクション -->
+  <!-- Blog Section -->
   <section id="blog" style="padding-top: 80px;">
-    <div class="section-title">最近の文章</div>
+    <div class="section-title">Blog</div>
     <h2 class="section-heading">最近の文章</h2>
     <p class="blog-intro">
       ブログで日々の気づきや、ヒーリング、自己開放、この世界の不思議について書いています。
@@ -1023,9 +1036,18 @@
     <div class="quiet-cta" id="blog-button">
       <a href="https://atelierkoshiki.blogspot.com" class="secondary-button" target="_blank" rel="noopener noreferrer">ブログを読む</a>
     </div>
-    <div class="latest-video">
-      <a href="https://www.youtube.com/watch?v=81FfrQrxG5E" target="_blank" rel="noopener noreferrer" aria-label="YouTube最新動画を開く">
+    <div class="latest-videos" aria-label="YouTube最新動画">
+      <a class="latest-video-card" href="https://www.youtube.com/watch?v=81FfrQrxG5E" target="_blank" rel="noopener noreferrer" aria-label="ヒーリング夜話＃１　痛みが開いてくれる扉をYouTubeで開く">
         <img src="https://i.ytimg.com/vi/81FfrQrxG5E/hqdefault.jpg" alt="ヒーリング夜話＃１　痛みが開いてくれる扉" loading="lazy">
+        <span>ヒーリング夜話＃１　痛みが開いてくれる扉</span>
+      </a>
+      <a class="latest-video-card" href="https://www.youtube.com/watch?v=1jCaf1g7PFw" target="_blank" rel="noopener noreferrer" aria-label="『麻色の旅路』をYouTubeで開く">
+        <img src="https://i.ytimg.com/vi/1jCaf1g7PFw/hqdefault.jpg" alt="『麻色の旅路』" loading="lazy">
+        <span>『麻色の旅路』</span>
+      </a>
+      <a class="latest-video-card" href="https://www.youtube.com/watch?v=iSee13MVukQ" target="_blank" rel="noopener noreferrer" aria-label="随想１をYouTubeで開く">
+        <img src="https://i.ytimg.com/vi/iSee13MVukQ/hqdefault.jpg" alt="随想１" loading="lazy">
+        <span>随想１</span>
       </a>
     </div>
   </section>
