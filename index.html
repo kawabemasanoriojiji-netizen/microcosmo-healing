@@ -486,7 +486,7 @@
   }
 
   .image-area {
-    background-image: url('HP/B3FCAE6D-C230-4F89-9373-CC1DA7D2AE1F.jpg');
+    background-image: url('images/healing_image.png');
     background-size: cover; 
     background-position: center;
   }
@@ -638,53 +638,56 @@
       font-size: 17px;
       overflow-wrap: normal;
       word-break: normal;
-      word-break: auto-phrase;
+      line-break: strict;
     }
     .menu-grid {
       grid-template-columns: 1fr;
     }
     .hero-container {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 50vh auto;
       height: auto;
     }
     .sidebar {
-      display: contents;
       border-right: none;
-      padding: 0;
+      border-bottom: 1px solid var(--border);
+      padding: 30px 20px;
+      align-items: center;
     }
     .logo {
-      order: 1;
-      margin: 0;
-      padding: 30px 20px 24px;
+      margin-bottom: 30px;
+      padding: 0;
       text-align: center;
       font-size: 26px;
     }
     .menu {
-      order: 2;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
-      margin: 0;
-      padding: 0 20px 28px;
+      margin-bottom: 30px;
+      padding: 0;
       gap: 16px 18px;
-      border-bottom: 1px solid var(--border);
     }
-    .menu a { font-size: 14px; letter-spacing: 0.08em; }
-    .menu-group { align-items: center; flex-direction: row; gap: 12px; }
-    .menu-group .menu-sub { padding-left: 0; }
     .booking-menu {
-      order: 4;
-      margin: 0;
-      padding: 28px 20px 0;
+      margin-top: auto;
+      padding-top: 0;
       text-align: center;
     }
     .image-area {
-      order: 3;
-      min-height: 52svh;
+      min-height: 0;
     }
-    .text-area { order: 5; padding: 48px 20px 46px; flex-direction: column; gap: 28px; }
-    .main-text, .sub-text { writing-mode: horizontal-tb; text-align: center; max-height: none; text-wrap: pretty; }
+    .text-area {
+      padding: 60px 20px 46px;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .main-text, .sub-text {
+      writing-mode: horizontal-tb;
+      text-align: center;
+      max-height: none;
+      text-wrap: pretty;
+    }
     .main-text {
       font-size: 34px;
       line-height: 1.65;
@@ -695,9 +698,24 @@
       line-height: 1.95;
       letter-spacing: 0.03em;
     }
+    .menu a { font-size: 14px; letter-spacing: 0.08em; }
+    .menu-group { align-items: center; flex-direction: row; gap: 12px; }
+    .menu-group .menu-sub { padding-left: 0; }
     section { padding: 80px 20px; }
     .section-title { font-size: 15px; }
     .section-heading { font-size: 27px; margin-bottom: 42px; line-height: 1.6; }
+    .section-heading,
+    .main-text,
+    .sub-text,
+    .line-button,
+    .menu a,
+    .target-group h3,
+    .menu-card h3,
+    .special-package h3,
+    .blog-card h3 {
+      word-break: keep-all;
+      overflow-wrap: normal;
+    }
     .hero-social { margin-top: 4px; padding-top: 16px; width: min(100%, 340px); }
     .hero-social .social-heading { text-align: center; }
     .hero-social .social-links { justify-content: center; }
@@ -711,6 +729,8 @@
     .target-list { gap: 13px; }
     .thought-list { padding: 22px 20px; }
     .blog-card { min-height: 0; padding: 24px 22px; }
+    .blog-card h3 { font-size: 17px; line-height: 1.65; }
+    .blog-card p { font-size: 14px; line-height: 1.8; }
     .latest-videos { grid-template-columns: 1fr; gap: 18px; margin-top: 34px; max-width: 520px; }
     .latest-video-card { min-height: 44px; }
     .social-section { padding: 34px 20px 54px; }
@@ -744,9 +764,7 @@
       max-width: 100%;
       white-space: normal;
     }
-    .blog-card h3 { font-size: 20px; }
-    .blog-card p,
-    .latest-video-card span,
+    .latest-video-card span { font-size: 14px; line-height: 1.65; }
     .menu-card h3 { font-size: 20px; }
     .special-package { padding: 34px 20px; }
     .special-package h3 {
@@ -867,13 +885,13 @@
     <div class="sidebar">
       <div class="logo">microcosmo<br>healing</div>
       <nav class="menu">
-        <a href="#top">HOME</a>
-        <a href="#voices">VOICE</a>
-        <a href="#concept">CONCEPT</a>
-        <a href="#menu">MENU</a>
-        <a href="#profile">PROFILE</a>
-        <a href="#blog">BLOG</a>
-        <a href="#product">PRODUCT</a>
+        <a href="#top">ホーム</a>
+        <a href="#voices">お客様の声</a>
+        <a href="#concept">考え方</a>
+        <a href="#menu">メニュー</a>
+        <a href="#profile">プロフィール</a>
+        <a href="#blog">ブログ</a>
+        <a href="#product">製品</a>
       </nav>
       <div class="booking-menu">
         <a href="trial.html" class="line-button"><span class="keep-line">初回無料体験</span><span class="keep-line">について見る</span></a>
@@ -975,7 +993,7 @@
 
   <!-- Concept セクション -->
   <section id="concept" style="padding-bottom: 60px;">
-    <div class="section-title">Concept</div>
+    <div class="section-title">考え方</div>
     <h2 class="section-heading">頚椎2番から読み解く、心身の緊張</h2>
     <div class="concept-text">
       直感霊視によって、心身の不調を読み解きます。<br>
@@ -1034,7 +1052,6 @@
     <div class="special-package" style="margin-bottom: 34px;">
       <h3>初回無料体験</h3>
       <p style="text-align: center;">遠隔ヒーリング or ライフコーチング（15分）</p>
-      <p style="text-align: center;">はじめての方へ向けた、小さな入口です。</p>
       <div class="quiet-cta" style="margin-top: 24px;">
         <a href="trial.html" class="line-button"><span class="keep-line">初回無料体験</span><span class="keep-line">について見る</span></a>
       </div>
@@ -1071,9 +1088,6 @@
         <p style="color: var(--text-light); line-height: 2; font-size: 15px;">
           仕事の傍ら、チェロや、動物のイラストや、家庭料理を楽しんでいます。
         </p>
-        <div class="profile-actions">
-          <a href="https://atelierkoshiki.blogspot.com" class="secondary-button" target="_blank" rel="noopener noreferrer">ブログを読む</a>
-        </div>
       </div>
     </div>
   </section>
@@ -1082,9 +1096,6 @@
   <section id="blog" style="padding-top: 80px;">
     <div class="section-title">Blog</div>
     <h2 class="section-heading">最近の文章</h2>
-    <p class="blog-intro">
-      ブログで日々の気づきや、ヒーリング、自己開放、この世界の不思議について書いています。
-    </p>
     <div class="blog-grid" id="blog-posts" aria-live="polite">
       <article class="blog-card">
         <div class="blog-date">2026年5月18日</div>
@@ -1108,9 +1119,6 @@
     <div class="blog-fallback" id="blog-fallback" style="display: none;">
       <p>日々の文章はブログで更新しています。</p>
     </div>
-    <div class="quiet-cta" id="blog-button">
-      <a href="https://atelierkoshiki.blogspot.com" class="secondary-button" target="_blank" rel="noopener noreferrer">ブログを読む</a>
-    </div>
     <div class="latest-videos" aria-label="YouTube最新動画">
       <a class="latest-video-card" href="https://www.youtube.com/watch?v=81FfrQrxG5E" target="_blank" rel="noopener noreferrer" aria-label="ヒーリング夜話＃１　痛みが開いてくれる扉をYouTubeで開く">
         <img src="https://i.ytimg.com/vi/81FfrQrxG5E/hqdefault.jpg" alt="ヒーリング夜話＃１　痛みが開いてくれる扉" loading="lazy">
@@ -1124,6 +1132,27 @@
         <img src="https://i.ytimg.com/vi/iSee13MVukQ/hqdefault.jpg" alt="随想１" loading="lazy">
         <span>随想１</span>
       </a>
+    </div>
+  </section>
+
+  <!-- Product Section -->
+  <section id="product" style="padding-bottom: 120px;">
+    <div class="section-title">Product</div>
+    <h2 class="section-heading">取り扱い製品</h2>
+
+    <div class="product-container" style="display: flex; gap: 40px; align-items: stretch; flex-wrap: wrap; background-color: #fafafa; border-radius: 8px; overflow: hidden;">
+      <div class="product-image" style="flex: 1; min-width: 300px;">
+        <!-- product.jpg として画像を読み込みます -->
+        <img src="HP/product.jpg" alt="ヒーリングアクセサリー プレローマ" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="product-content" style="flex: 1; min-width: 300px; padding: 40px;">
+        <h3 style="font-size: 22px; font-weight: normal; margin-top: 0; margin-bottom: 10px;">ヒーリングアクセサリー<br>「プレローマ」</h3>
+        <div style="font-family: 'Yu Gothic', 'Meiryo', sans-serif; font-size: 20px; margin-bottom: 20px;">36,000<span>円</span></div>
+        <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;">素材：真鍮、麻紐</p>
+        <p style="font-size: 15px; color: var(--text-color); line-height: 1.8; margin-bottom: 40px;">
+          恒常的なヒーリングエネルギーが心身の調子を整えてくれます。
+        </p>
+      </div>
     </div>
   </section>
 
@@ -1160,27 +1189,6 @@
       </a>
     </div>
   </div>
-
-  <!-- Product Section -->
-  <section id="product" style="padding-bottom: 120px;">
-    <div class="section-title">Product</div>
-    <h2 class="section-heading">取り扱い製品</h2>
-
-    <div class="product-container" style="display: flex; gap: 40px; align-items: stretch; flex-wrap: wrap; background-color: #fafafa; border-radius: 8px; overflow: hidden;">
-      <div class="product-image" style="flex: 1; min-width: 300px;">
-        <!-- product.jpg として画像を読み込みます -->
-        <img src="HP/product.jpg" alt="ヒーリングアクセサリー プレローマ" style="width: 100%; height: 100%; object-fit: cover;">
-      </div>
-      <div class="product-content" style="flex: 1; min-width: 300px; padding: 40px;">
-        <h3 style="font-size: 22px; font-weight: normal; margin-top: 0; margin-bottom: 10px;">ヒーリングアクセサリー<br>「プレローマ」</h3>
-        <div style="font-family: 'Yu Gothic', 'Meiryo', sans-serif; font-size: 20px; margin-bottom: 20px;">36,000<span>円</span></div>
-        <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;">素材：真鍮、麻紐</p>
-        <p style="font-size: 15px; color: var(--text-color); line-height: 1.8; margin-bottom: 40px;">
-          恒常的なヒーリングエネルギーが心身の調子を整えてくれます。
-        </p>
-      </div>
-    </div>
-  </section>
 
   <footer>
     <div class="footer-logo">microcosmo healing</div>
