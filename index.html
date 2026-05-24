@@ -21,6 +21,7 @@
     color: var(--text-color);
     font-family: "Yu Mincho", "MS Mincho", "Hiragino Mincho ProN", serif; 
     overflow-x: hidden;
+    line-break: strict;
   }
 
   /* --- Hero Section --- */
@@ -160,12 +161,25 @@
     margin-bottom: 36px;
   }
 
+  .keep-line {
+    display: inline-block;
+  }
+
   .target-groups {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 34px;
     max-width: 780px;
     margin: 0 auto;
+  }
+
+  #voices {
+    max-width: 1080px;
+  }
+
+  #voices .target-groups {
+    max-width: 1040px;
+    gap: 30px;
   }
 
   .target-group h3 {
@@ -176,6 +190,16 @@
     margin: 0 0 18px;
     padding-bottom: 12px;
     border-bottom: 1px solid var(--border);
+  }
+
+  .target-group h3 span {
+    display: inline-block;
+    color: var(--text-light);
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+    margin-top: 6px;
   }
 
   .target-list {
@@ -191,6 +215,12 @@
     line-height: 1.9;
     padding: 0 0 0 18px;
     position: relative;
+  }
+
+  .target-list strong {
+    color: var(--text-color);
+    font-weight: 700;
+    background: linear-gradient(transparent 62%, rgba(6, 199, 85, 0.18) 62%);
   }
 
   .target-list li::before {
@@ -456,7 +486,7 @@
   }
 
   .image-area {
-    background-image: url('images/healing_image.png');
+    background-image: url('HP/B3FCAE6D-C230-4F89-9373-CC1DA7D2AE1F.jpg');
     background-size: cover; 
     background-position: center;
   }
@@ -533,6 +563,7 @@
     letter-spacing: 0.1em;
     margin-bottom: 60px;
     font-weight: normal;
+    text-wrap: pretty;
   }
 
   /* --- Concept Section --- */
@@ -603,29 +634,70 @@
   }
 
   @media (max-width: 768px) {
+    body {
+      font-size: 17px;
+      overflow-wrap: normal;
+      word-break: normal;
+      word-break: auto-phrase;
+    }
     .menu-grid {
       grid-template-columns: 1fr;
     }
     .hero-container {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto 50vh auto;
+      display: flex;
+      flex-direction: column;
       height: auto;
     }
     .sidebar {
+      display: contents;
       border-right: none;
-      border-bottom: 1px solid var(--border);
-      padding: 30px 20px;
-      align-items: center;
+      padding: 0;
     }
-    .logo { margin-bottom: 30px; text-align: center; }
-    .menu { flex-direction: row; flex-wrap: wrap; justify-content: center; margin-bottom: 30px; gap: 15px; }
+    .logo {
+      order: 1;
+      margin: 0;
+      padding: 30px 20px 24px;
+      text-align: center;
+      font-size: 26px;
+    }
+    .menu {
+      order: 2;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0;
+      padding: 0 20px 28px;
+      gap: 16px 18px;
+      border-bottom: 1px solid var(--border);
+    }
+    .menu a { font-size: 14px; letter-spacing: 0.08em; }
     .menu-group { align-items: center; flex-direction: row; gap: 12px; }
     .menu-group .menu-sub { padding-left: 0; }
-    .booking-menu { text-align: center; }
-    .text-area { padding: 60px 20px 46px; flex-direction: column; gap: 28px; }
-    .main-text, .sub-text { writing-mode: horizontal-tb; text-align: center; max-height: none; }
+    .booking-menu {
+      order: 4;
+      margin: 0;
+      padding: 28px 20px 0;
+      text-align: center;
+    }
+    .image-area {
+      order: 3;
+      min-height: 52svh;
+    }
+    .text-area { order: 5; padding: 48px 20px 46px; flex-direction: column; gap: 28px; }
+    .main-text, .sub-text { writing-mode: horizontal-tb; text-align: center; max-height: none; text-wrap: pretty; }
+    .main-text {
+      font-size: 34px;
+      line-height: 1.65;
+      letter-spacing: 0.06em;
+    }
+    .sub-text {
+      font-size: 18px;
+      line-height: 1.95;
+      letter-spacing: 0.03em;
+    }
     section { padding: 80px 20px; }
-    .section-heading { font-size: 24px; margin-bottom: 42px; }
+    .section-title { font-size: 15px; }
+    .section-heading { font-size: 27px; margin-bottom: 42px; line-height: 1.6; }
     .hero-social { margin-top: 4px; padding-top: 16px; width: min(100%, 340px); }
     .hero-social .social-heading { text-align: center; }
     .hero-social .social-links { justify-content: center; }
@@ -643,30 +715,46 @@
     .latest-video-card { min-height: 44px; }
     .social-section { padding: 34px 20px 54px; }
     .social-links { gap: 8px 16px; }
-    .social-link { font-size: 12px; }
+    .social-link { font-size: 14px; }
     .flow-step { flex-direction: column; gap: 15px; padding: 30px 20px; }
     .faq-grid { grid-template-columns: 1fr !important; }
     .faq-card { padding: 24px 20px !important; }
-    .faq-card h3 { font-size: 16.5px !important; }
+    .faq-card h3 { font-size: 18px !important; }
     .faq-card p,
     .flow-step p,
     .menu-card p,
     .special-package p,
     .profile-content p,
-    .product-content p { font-size: 15.5px !important; line-height: 1.95 !important; }
+    .product-content p { font-size: 17px !important; line-height: 1.95 !important; }
     .intro-note,
     .recommend-note,
     .concept-detail,
     .concept-text,
-    .blog-intro { font-size: 15.5px; line-height: 2.05; }
+    .blog-intro { font-size: 17px; line-height: 2; }
+    .target-group h3 { font-size: 19px; }
+    .target-group h3 span { font-size: 13px; }
+    .target-list li,
+    .concept-list li { font-size: 17px; line-height: 1.9; }
     .line-button,
-    .secondary-button { min-height: 44px; box-sizing: border-box; }
+    .secondary-button {
+      min-height: 48px;
+      box-sizing: border-box;
+      font-size: 16px;
+      border-radius: 24px;
+      max-width: 100%;
+      white-space: normal;
+    }
+    .blog-card h3 { font-size: 20px; }
+    .blog-card p,
+    .latest-video-card span,
+    .menu-card h3 { font-size: 20px; }
     .special-package { padding: 34px 20px; }
     .special-package h3 {
-      font-size: 19px;
+      font-size: 21px;
       letter-spacing: 0.04em;
       line-height: 1.7;
     }
+    .special-package .package-name { font-size: 26px; }
   }
 
   .menu-card {
@@ -780,15 +868,15 @@
       <div class="logo">microcosmo<br>healing</div>
       <nav class="menu">
         <a href="#top">HOME</a>
-        <a href="#for-you">FOR YOU</a>
+        <a href="#voices">VOICE</a>
         <a href="#concept">CONCEPT</a>
-        <a href="#profile">PROFILE</a>
         <a href="#menu">MENU</a>
-        <a href="#product">PRODUCT</a>
+        <a href="#profile">PROFILE</a>
         <a href="#blog">BLOG</a>
+        <a href="#product">PRODUCT</a>
       </nav>
       <div class="booking-menu">
-        <a href="trial.html" class="line-button">初回無料体験について見る</a>
+        <a href="trial.html" class="line-button"><span class="keep-line">初回無料体験</span><span class="keep-line">について見る</span></a>
       </div>
     </div>
     <div class="image-area"></div>
@@ -801,8 +889,7 @@
         ストレスにあえぐ頚椎二番を<br>
         優しく包み込み、癒すヒーリング
       </div>
-      <div class="hero-social hero-social-visual" aria-labelledby="hero-social-heading">
-        <div class="social-heading" id="hero-social-heading">Instagram / Threads / YouTube / LINE</div>
+      <div class="hero-social hero-social-visual" aria-label="SNSリンク">
         <div class="social-links">
           <a class="social-link" href="https://www.instagram.com/microcosmo_healing/" target="_blank" rel="noopener noreferrer" aria-label="Instagram healing">
             <span class="social-icon" aria-hidden="true">
@@ -848,39 +935,41 @@
     </div>
   </div>
 
-  <!-- For You セクション -->
-  <section id="for-you" style="padding-bottom: 60px;">
-    <div class="section-title">For You</div>
-    <h2 class="section-heading">このような方へ</h2>
-    <p class="intro-note">
-      心身の不調を「問い」として、本来の自分という「答え」を見つけたい――
-    </p>
+  <!-- Voice セクション -->
+  <section id="voices" style="padding-bottom: 60px;">
+    <div class="section-title">Voice</div>
+    <h2 class="section-heading">お客様の声</h2>
     <div class="target-groups">
       <div class="target-group">
-        <h3>体</h3>
+        <h3>体<br><span>身体の変化・不調の改善・深い休息</span></h3>
         <ul class="target-list">
-          <li>医者や整体では治らない不調を抱えている</li>
-          <li>疲れが抜けない。体が重たく感じる</li>
+          <li>痛みによる中途覚醒がなくなり、<strong>朝までぐっすり眠れました</strong>。お願いして本当によかったです！</li>
+          <li>体の奥から<strong>温泉に入ったみたいに温かく</strong>なった！ と、初めて受けた主人が驚き、感動しています。</li>
+          <li>遠隔ヒーリングと言葉のやり取りで、<strong>体力が一気に戻りました</strong>。</li>
+          <li>セッション後に瞑想をすると、いつもと違って驚くほど深く集中でき、<strong>心身が整います</strong>。</li>
         </ul>
       </div>
       <div class="target-group">
-        <h3>心</h3>
+        <h3>心<br><span>メンタルの解放・自己受容・インナーチャイルド</span></h3>
         <ul class="target-list">
-          <li>生きづらさを感じている</li>
-          <li>本来の自分を抑えて生きてきた感覚がある</li>
+          <li>「ありのままの自分を愛してあげましょう」の言葉に救われ、病や障害を<strong>自分の特性として前向きに受け入れられました</strong>。</li>
+          <li>「まずは自分の幸せがあってこそ」という感覚が、ヒーリングとコーチングを通して<strong>やっと体感できました</strong>。</li>
+          <li>コーチングのおかげで、心がスーッと落ち着き、安心しました。浅くなっていた呼吸が、終わった後は<strong>見違えるほど楽に、深く</strong>なりました。</li>
+          <li>自分の感情を「ドラマを見るように俯瞰する視点」を持てたことで、不満や怒りに振り回されず、<strong>冷静に対処できるようになりました</strong>。</li>
+          <li>親から受けた昔の傷をしっかり認め、怖かった幼い自分に寄り添うことができ、<strong>張り詰めていた心の蓋が優しく開きました</strong>。</li>
+          <li>「自分は正しい、間違っていない」という心の頑なさが消えていくにつれ、<strong>学ぶ楽しさと圧倒的な安心感</strong>に包まれています。</li>
         </ul>
       </div>
       <div class="target-group">
-        <h3>人生</h3>
+        <h3>人生<br><span>現実の好転・人間関係の調和・生き方の変容</span></h3>
         <ul class="target-list">
-          <li>長年、同じ問題を繰り返している</li>
-          <li>自分らしい生き方を発見したい</li>
+          <li>幼少期からの家族関係の呪縛や、無意識の負の行動パターンを、初めて客観的に俯瞰して<strong>手放せました</strong>。</li>
+          <li>意識の変化と連動するように、新しい仕事が決まるなど、<strong>人生の現実が動き出しました</strong>。</li>
+          <li>自分の内面を観察し、相手へのコントロール欲を手放した途端、断絶状態だった大切な人から温かい謝罪の連絡が届き、<strong>奇跡的に復縁できました</strong>！</li>
+          <li>「ため息、否定、不安、後悔」を俯瞰して手放していくことで、<strong>職場のストレスが激減</strong>し、現実がどんどん明るくなっています。</li>
+          <li>「相手のせいにせず、自分の内面を見つめる」。この人生の法則を腑に落としたことで、もやもやが晴れて<strong>人生の視界がクリアになりました</strong>。</li>
         </ul>
       </div>
-    </div>
-    <p class="recommend-note">そんな方へおすすめします。</p>
-    <div class="quiet-cta">
-      <a href="https://lin.ee/x2WpMEs" class="line-button" target="_blank" rel="noopener noreferrer">無料体験を申し込む</a>
     </div>
   </section>
 
@@ -911,35 +1000,6 @@
         <li>人間関係のストレスが減る</li>
         <li>自分らしく生きられるようになる</li>
       </ul>
-      <div class="quiet-cta">
-        <a href="https://lin.ee/x2WpMEs" class="line-button" target="_blank" rel="noopener noreferrer">申し込む</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Profile Section -->
-  <section id="profile" style="background-color: #fafafa; border-radius: 8px; margin-bottom: 120px; padding: 60px 40px; max-width: 800px;">
-    <div class="section-title">Profile &amp; Story</div>
-    <div class="profile-container" style="display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
-      <div class="profile-image" style="flex: 1; min-width: 250px;">
-        <!-- profile.jpg として画像を読み込みます -->
-        <img src="images/profile.jpg" alt="プロフィール写真" style="width: 100%; border-radius: 4px; object-fit: cover;">
-      </div>
-      <div class="profile-content" style="flex: 2; min-width: 300px;">
-        <h3 style="font-size: 24px; margin-top: 0; font-weight: normal; margin-bottom: 20px;">プロフィール／オジジ</h3>
-        <p style="color: var(--text-light); line-height: 2; font-size: 15px;">
-          2007年、27歳の時に持って生まれたヒーリング能力に気付き、ヒーラーになりました。「現代医療では難しい」と言われた不調のお客様が、続けて改善されたことをきっかけに、ご紹介の輪が広がり、18年間活動を続けています。
-        </p>
-        <p style="color: var(--text-light); line-height: 2; font-size: 15px;">
-          遠隔ヒーリングとライフコーチングを中心に活動しています。北海道から沖縄離島まで、全国にクライアントがいらっしゃいます。
-        </p>
-        <p style="color: var(--text-light); line-height: 2; font-size: 15px;">
-          仕事の傍ら、チェロや、動物のイラストや、家庭料理を楽しんでいます。
-        </p>
-        <div class="profile-actions">
-          <a href="https://atelierkoshiki.blogspot.com" class="secondary-button" target="_blank" rel="noopener noreferrer">ブログを読む</a>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -947,7 +1007,7 @@
   <section id="menu">
     <div class="section-title">Menu &amp; Price</div>
     <h2 class="section-heading">料金のご案内</h2>
-    
+
     <div class="menu-grid">
       <div class="menu-card">
         <h3><a href="moon_healing.html" class="text-link">満月新月の浄化ヒーリング</a></h3>
@@ -967,13 +1027,22 @@
       <div class="menu-card">
         <h3><a href="habit_counseling.html" class="text-link">ライフコーチング</a></h3>
         <div class="menu-price">7,000<span>円</span></div>
-        <p>無自覚の癖に気付き、本来の自然な在り方を取り戻す対話セッション。</p>
+        <p>人生の繰り返すパターンを明らかにし、本来の自然な在り方を取り戻す対話セッション。</p>
+      </div>
+    </div>
+
+    <div class="special-package" style="margin-bottom: 34px;">
+      <h3>初回無料体験</h3>
+      <p style="text-align: center;">遠隔ヒーリング or ライフコーチング（15分）</p>
+      <p style="text-align: center;">はじめての方へ向けた、小さな入口です。</p>
+      <div class="quiet-cta" style="margin-top: 24px;">
+        <a href="trial.html" class="line-button"><span class="keep-line">初回無料体験</span><span class="keep-line">について見る</span></a>
       </div>
     </div>
 
     <!-- 特別パッケージ -->
     <div class="special-package">
-      <h3>【<span class="no-break">人生に変化をもたらす</span><span class="no-break">特別メニュー</span>】</h3>
+      <h3><span class="no-break">人生に変化をもたらす</span><span class="no-break">特別メニュー</span></h3>
       <p class="package-name">松果体ヒーリング</p>
       <div class="price">30,000<span>円</span></div>
       <p>あなた自身の個性、生い立ち、魂の願い、適性、ぶつかりやすい困難などを総合的に見ながら、あなたの人生の旅の『テーマ』と『歩き方』をお伝えする通常のライフコーチングよりも更に大きく一歩踏み込んだスペシャルコーチングをセットにしています。</p>
@@ -983,36 +1052,29 @@
     </div>
   </section>
 
-  <!-- Product Section -->
-  <section id="product" style="padding-bottom: 120px;">
-    <div class="section-title">Product</div>
-    <h2 class="section-heading">取り扱い製品</h2>
-    
-    <div class="product-container" style="display: flex; gap: 40px; align-items: stretch; flex-wrap: wrap; background-color: #fafafa; border-radius: 8px; overflow: hidden;">
-      <div class="product-image" style="flex: 1; min-width: 300px;">
-        <!-- product.jpg として画像を読み込みます -->
-        <img src="images/product.jpg" alt="ヒーリングアクセサリー プレローマ" style="width: 100%; height: 100%; object-fit: cover;">
+  <!-- Profile Section -->
+  <section id="profile" style="background-color: #fafafa; border-radius: 8px; margin-bottom: 120px; padding: 60px 40px; max-width: 800px;">
+    <div class="section-title">Profile &amp; Story</div>
+    <div class="profile-container" style="display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
+      <div class="profile-image" style="flex: 1; min-width: 250px;">
+        <!-- profile.jpg として画像を読み込みます -->
+        <img src="HP/images/profile.jpg" alt="プロフィール写真" style="width: 100%; border-radius: 4px; object-fit: cover;">
       </div>
-      <div class="product-content" style="flex: 1; min-width: 300px; padding: 40px;">
-        <h3 style="font-size: 22px; font-weight: normal; margin-top: 0; margin-bottom: 10px;">ヒーリングアクセサリー<br>「プレローマ」</h3>
-        <div style="font-family: 'Yu Gothic', 'Meiryo', sans-serif; font-size: 20px; margin-bottom: 20px;">36,000<span>円</span></div>
-        <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;">素材：真鍮、麻紐</p>
-        <p style="font-size: 15px; color: var(--text-color); line-height: 1.8; margin-bottom: 40px;">
-          恒常的なヒーリングエネルギーが心身の調子を整えてくれます。
+      <div class="profile-content" style="flex: 2; min-width: 300px;">
+        <h3 style="font-size: 24px; margin-top: 0; font-weight: normal; margin-bottom: 20px;">プロフィール／オジジ</h3>
+        <p style="color: var(--text-light); line-height: 2; font-size: 15px;">
+          2007年、27歳の時に持って生まれたヒーリング能力に気付き、ヒーラーになりました。「現代医療では難しい」と言われた不調のお客様が、続けて改善されたことをきっかけに、ご紹介の輪が広がり、18年間活動を続けています。
         </p>
+        <p style="color: var(--text-light); line-height: 2; font-size: 15px;">
+          遠隔ヒーリングとライフコーチングを中心に活動しています。北海道から沖縄離島まで、全国にクライアントがいらっしゃいます。
+        </p>
+        <p style="color: var(--text-light); line-height: 2; font-size: 15px;">
+          仕事の傍ら、チェロや、動物のイラストや、家庭料理を楽しんでいます。
+        </p>
+        <div class="profile-actions">
+          <a href="https://atelierkoshiki.blogspot.com" class="secondary-button" target="_blank" rel="noopener noreferrer">ブログを読む</a>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- 初回無料体験 セクション -->
-  <section id="trial" style="background-color: #f7f9f8; text-align: center; padding: 80px 20px; max-width: 100vw; margin: 0; width: 100vw; margin-left: calc(-50vw + 50%);">
-    <div style="max-width: 900px; margin: 0 auto;">
-      <h2 style="font-size: 28px; font-weight: normal; margin-bottom: 20px;">初回無料体験</h2>
-      <p style="color: var(--text-light); line-height: 2; font-size: 15px; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
-        遠隔ヒーリング or ライフコーチング（15分）<br>
-        お気軽にご連絡ください。
-      </p>
-      <a href="trial.html" class="line-button" style="font-size: 16px; padding: 15px 40px;">初回無料体験について見る</a>
     </div>
   </section>
 
@@ -1098,6 +1160,27 @@
       </a>
     </div>
   </div>
+
+  <!-- Product Section -->
+  <section id="product" style="padding-bottom: 120px;">
+    <div class="section-title">Product</div>
+    <h2 class="section-heading">取り扱い製品</h2>
+
+    <div class="product-container" style="display: flex; gap: 40px; align-items: stretch; flex-wrap: wrap; background-color: #fafafa; border-radius: 8px; overflow: hidden;">
+      <div class="product-image" style="flex: 1; min-width: 300px;">
+        <!-- product.jpg として画像を読み込みます -->
+        <img src="HP/product.jpg" alt="ヒーリングアクセサリー プレローマ" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="product-content" style="flex: 1; min-width: 300px; padding: 40px;">
+        <h3 style="font-size: 22px; font-weight: normal; margin-top: 0; margin-bottom: 10px;">ヒーリングアクセサリー<br>「プレローマ」</h3>
+        <div style="font-family: 'Yu Gothic', 'Meiryo', sans-serif; font-size: 20px; margin-bottom: 20px;">36,000<span>円</span></div>
+        <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;">素材：真鍮、麻紐</p>
+        <p style="font-size: 15px; color: var(--text-color); line-height: 1.8; margin-bottom: 40px;">
+          恒常的なヒーリングエネルギーが心身の調子を整えてくれます。
+        </p>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <div class="footer-logo">microcosmo healing</div>
