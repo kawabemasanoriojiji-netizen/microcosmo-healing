@@ -165,6 +165,10 @@
     display: inline-block;
   }
 
+  .sp-break {
+    display: none;
+  }
+
   .target-groups {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -709,12 +713,14 @@
     .sub-text,
     .line-button,
     .menu a,
-    .target-group h3,
     .menu-card h3,
     .special-package h3,
     .blog-card h3 {
       word-break: keep-all;
       overflow-wrap: normal;
+    }
+    .sp-break {
+      display: block;
     }
     .hero-social { margin-top: 4px; padding-top: 16px; width: min(100%, 340px); }
     .hero-social .social-heading { text-align: center; }
@@ -755,6 +761,13 @@
     .target-group h3 span { font-size: 13px; }
     .target-list li,
     .concept-list li { font-size: 17px; line-height: 1.9; }
+    .target-list li,
+    .concept-detail p,
+    .special-package p,
+    .profile-content p,
+    .blog-card p {
+      overflow-wrap: break-word;
+    }
     .line-button,
     .secondary-button {
       min-height: 48px;
@@ -961,31 +974,31 @@
       <div class="target-group">
         <h3>体<br><span>身体の変化・不調の改善・深い休息</span></h3>
         <ul class="target-list">
-          <li>痛みによる中途覚醒がなくなり、<strong>朝までぐっすり眠れました</strong>。お願いして本当によかったです！</li>
-          <li>体の奥から<strong>温泉に入ったみたいに温かく</strong>なった！ と、初めて受けた主人が驚き、感動しています。</li>
-          <li>遠隔ヒーリングと言葉のやり取りで、<strong>体力が一気に戻りました</strong>。</li>
-          <li>セッション後に瞑想をすると、いつもと違って驚くほど深く集中でき、<strong>心身が整います</strong>。</li>
+          <li>痛みによる中途覚醒がなくなり、<br class="sp-break"><strong>朝までぐっすり眠れました</strong>。お願いして本当によかったです！</li>
+          <li>体の奥から<strong>温泉に入ったみたいに温かく</strong>なった！ と、<br class="sp-break">初めて受けた主人が驚き、<br class="sp-break">感動しています。</li>
+          <li>遠隔ヒーリングと言葉のやり取りで、<br class="sp-break"><strong>体力が一気に戻りました</strong>。</li>
+          <li>セッション後に瞑想をすると、<br class="sp-break">いつもと違って驚くほど深く集中でき、<br class="sp-break"><strong>心身が整います</strong>。</li>
         </ul>
       </div>
       <div class="target-group">
-        <h3>心<br><span>メンタルの解放・自己受容・インナーチャイルド</span></h3>
+        <h3>心<br><span>メンタルの解放・自己受容・<br class="sp-break">インナーチャイルド</span></h3>
         <ul class="target-list">
-          <li>「ありのままの自分を愛してあげましょう」の言葉に救われ、病や障害を<strong>自分の特性として前向きに受け入れられました</strong>。</li>
-          <li>「まずは自分の幸せがあってこそ」という感覚が、ヒーリングとコーチングを通して<strong>やっと体感できました</strong>。</li>
-          <li>コーチングのおかげで、心がスーッと落ち着き、安心しました。浅くなっていた呼吸が、終わった後は<strong>見違えるほど楽に、深く</strong>なりました。</li>
-          <li>自分の感情を「ドラマを見るように俯瞰する視点」を持てたことで、不満や怒りに振り回されず、<strong>冷静に対処できるようになりました</strong>。</li>
-          <li>親から受けた昔の傷をしっかり認め、怖かった幼い自分に寄り添うことができ、<strong>張り詰めていた心の蓋が優しく開きました</strong>。</li>
-          <li>「自分は正しい、間違っていない」という心の頑なさが消えていくにつれ、<strong>学ぶ楽しさと圧倒的な安心感</strong>に包まれています。</li>
+          <li>「ありのままの自分を愛してあげましょう」の言葉に救われ、<br class="sp-break">病や障害を<strong>自分の特性として前向きに受け入れられました</strong>。</li>
+          <li>「まずは自分の幸せがあってこそ」という感覚が、<br class="sp-break">ヒーリングとコーチングを通して<strong>やっと体感できました</strong>。</li>
+          <li>コーチングのおかげで、<br class="sp-break">心がスーッと落ち着き、<br class="sp-break">安心しました。浅くなっていた呼吸が、<br class="sp-break">終わった後は<strong>見違えるほど楽に、深く</strong>なりました。</li>
+          <li>自分の感情を「ドラマを見るように俯瞰する視点」を持てたことで、<br class="sp-break">不満や怒りに振り回されず、<br class="sp-break"><strong>冷静に対処できるようになりました</strong>。</li>
+          <li>親から受けた昔の傷をしっかり認め、<br class="sp-break">怖かった幼い自分に寄り添うことができ、<br class="sp-break"><strong>張り詰めていた心の蓋が優しく開きました</strong>。</li>
+          <li>「自分は正しい、間違っていない」という心の頑なさが消えていくにつれ、<br class="sp-break"><strong>学ぶ楽しさと圧倒的な安心感</strong>に包まれています。</li>
         </ul>
       </div>
       <div class="target-group">
-        <h3>人生<br><span>現実の好転・人間関係の調和・生き方の変容</span></h3>
+        <h3>人生<br><span>現実の好転・人間関係の調和・<br class="sp-break">生き方の変容</span></h3>
         <ul class="target-list">
-          <li>幼少期からの家族関係の呪縛や、無意識の負の行動パターンを、初めて客観的に俯瞰して<strong>手放せました</strong>。</li>
-          <li>意識の変化と連動するように、新しい仕事が決まるなど、<strong>人生の現実が動き出しました</strong>。</li>
-          <li>自分の内面を観察し、相手へのコントロール欲を手放した途端、断絶状態だった大切な人から温かい謝罪の連絡が届き、<strong>奇跡的に復縁できました</strong>！</li>
-          <li>「ため息、否定、不安、後悔」を俯瞰して手放していくことで、<strong>職場のストレスが激減</strong>し、現実がどんどん明るくなっています。</li>
-          <li>「相手のせいにせず、自分の内面を見つめる」。この人生の法則を腑に落としたことで、もやもやが晴れて<strong>人生の視界がクリアになりました</strong>。</li>
+          <li>幼少期からの家族関係の呪縛や、<br class="sp-break">無意識の負の行動パターンを、<br class="sp-break">初めて客観的に俯瞰して<strong>手放せました</strong>。</li>
+          <li>意識の変化と連動するように、<br class="sp-break">新しい仕事が決まるなど、<br class="sp-break"><strong>人生の現実が動き出しました</strong>。</li>
+          <li>自分の内面を観察し、<br class="sp-break">相手へのコントロール欲を手放した途端、<br class="sp-break">断絶状態だった大切な人から温かい謝罪の連絡が届き、<br class="sp-break"><strong>奇跡的に復縁できました</strong>！</li>
+          <li>「ため息、否定、不安、後悔」を俯瞰して手放していくことで、<br class="sp-break"><strong>職場のストレスが激減</strong>し、<br class="sp-break">現実がどんどん明るくなっています。</li>
+          <li>「相手のせいにせず、<br class="sp-break">自分の内面を見つめる」。この人生の法則を腑に落としたことで、<br class="sp-break">もやもやが晴れて<strong>人生の視界がクリアになりました</strong>。</li>
         </ul>
       </div>
     </div>
@@ -994,7 +1007,7 @@
   <!-- Concept セクション -->
   <section id="concept" style="padding-bottom: 60px;">
     <div class="section-title">考え方</div>
-    <h2 class="section-heading">頚椎2番から読み解く、心身の緊張</h2>
+    <h2 class="section-heading">頚椎2番から読み解く、<br class="sp-break">心身の緊張</h2>
     <div class="concept-text">
       直感霊視によって、心身の不調を読み解きます。<br>
       特に注目するのは、頚椎2番です。
@@ -1062,7 +1075,7 @@
       <h3><span class="no-break">人生に変化をもたらす</span><span class="no-break">特別メニュー</span></h3>
       <p class="package-name">松果体ヒーリング</p>
       <div class="price">30,000<span>円</span></div>
-      <p>あなた自身の個性、生い立ち、魂の願い、適性、ぶつかりやすい困難などを総合的に見ながら、あなたの人生の旅の『テーマ』と『歩き方』をお伝えする通常のライフコーチングよりも更に大きく一歩踏み込んだスペシャルコーチングをセットにしています。</p>
+      <p>あなた自身の個性、<br class="sp-break">生い立ち、<br class="sp-break">魂の願い、<br class="sp-break">適性、<br class="sp-break">ぶつかりやすい困難などを総合的に見ながら、<br class="sp-break">あなたの人生の旅の『テーマ』と『歩き方』をお伝えする通常のライフコーチングよりも更に大きく一歩踏み込んだスペシャルコーチングをセットにしています。</p>
       <div class="quiet-cta" style="margin-top: 24px;">
         <a href="https://lin.ee/x2WpMEs" class="line-button" target="_blank" rel="noopener noreferrer">LINEで相談する</a>
       </div>
