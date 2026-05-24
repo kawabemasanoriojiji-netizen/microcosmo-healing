@@ -567,14 +567,19 @@
     .logo { margin-bottom: 30px; text-align: center; }
     .menu { flex-direction: row; flex-wrap: wrap; justify-content: center; margin-bottom: 30px; gap: 15px; }
     .booking-menu { text-align: center; }
-    .text-area { padding: 60px 20px 96px; flex-direction: column; gap: 30px; }
+    .text-area { padding: 60px 20px 46px; flex-direction: column; gap: 28px; }
     .main-text, .sub-text { writing-mode: horizontal-tb; text-align: center; max-height: none; }
     section { padding: 80px 20px; }
     .section-heading { font-size: 24px; margin-bottom: 42px; }
-    .hero-social { margin-top: 20px; padding-top: 16px; }
+    .hero-social { margin-top: 4px; padding-top: 16px; width: min(100%, 340px); }
     .hero-social .social-heading { text-align: center; }
     .hero-social .social-links { justify-content: center; }
-    .hero-social-visual { bottom: 28px; }
+    .hero-social-visual {
+      position: static;
+      transform: none;
+      max-width: 100%;
+      width: min(100%, 340px);
+    }
     .target-groups { grid-template-columns: 1fr; gap: 30px; max-width: 540px; }
     .target-list { gap: 13px; }
     .thought-list { padding: 22px 20px; }
@@ -592,6 +597,12 @@
     .special-package p,
     .profile-content p,
     .product-content p { font-size: 15.5px !important; line-height: 1.95 !important; }
+    .special-package { padding: 34px 20px; }
+    .special-package h3 {
+      font-size: 20px;
+      letter-spacing: 0.04em;
+      line-height: 1.7;
+    }
   }
 
   .menu-card {
@@ -639,6 +650,12 @@
     font-size: 24px;
     font-weight: normal;
     letter-spacing: 0.1em;
+    line-height: 1.6;
+  }
+
+  .special-package h3 .no-break {
+    display: inline-block;
+    white-space: nowrap;
   }
 
   .special-package .package-name {
@@ -883,7 +900,7 @@
       <div class="menu-card">
         <h3>対面ヒーリング</h3>
         <div class="menu-price">10,000<span>円</span></div>
-        <p>現在は出張のみ対応しております。（詳細な場所等はお問い合わせください）</p>
+        <p>出張も承ります。</p>
       </div>
       <div class="menu-card">
         <h3>ライフコーチング</h3>
@@ -894,7 +911,7 @@
 
     <!-- 特別パッケージ -->
     <div class="special-package">
-      <h3>【人生に変化をもたらす特別メニュー】</h3>
+      <h3>【<span class="no-break">人生に変化をもたらす</span><span class="no-break">特別メニュー</span>】</h3>
       <p class="package-name">松果体ヒーリング</p>
       <div class="price">30,000<span>円</span></div>
       <p>あなた自身の個性、生い立ち、魂の願い、適性、ぶつかりやすい困難などを総合的に見ながら、あなたの人生の旅の『テーマ』と『歩き方』をお伝えする通常のライフコーチングよりも更に大きく一歩踏み込んだスペシャルコーチングをセットにしています。</p>
