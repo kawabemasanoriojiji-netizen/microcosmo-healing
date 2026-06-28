@@ -28,6 +28,20 @@
   a { color: inherit; }
   strong { font-weight: 700; }
   .page-shell { min-height: 100svh; }
+  .home-link {
+    display: inline-block;
+    color: var(--text-light);
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    text-decoration: none;
+    margin: 0 0 28px;
+  }
+  .home-link:hover {
+    color: var(--text-color);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
   .book-hero {
     display: grid;
     grid-template-columns: minmax(360px, 0.9fr) minmax(460px, 1.1fr);
@@ -223,9 +237,15 @@
     font-size: 14px;
     line-height: 1.9;
   }
+  .bottom-note a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
   @media (max-width: 840px) {
     .book-hero { grid-template-columns: 1fr; min-height: auto; background: #ffffff; }
     .hero-copy { padding: 42px 22px 24px; }
+    .home-link { margin-bottom: 24px; }
     .brand { margin-bottom: 36px; text-align: center; }
     .hero-copy h1 { text-align: center; }
     .hero-image { border-left: none; border-top: 1px solid var(--line); min-height: auto; padding: 10px; background: var(--paper); }
@@ -247,6 +267,7 @@
 <div class="page-shell">
   <header class="book-hero">
     <div class="hero-copy">
+      <a class="home-link" href="./">← HPトップへ戻る</a>
       <p class="brand">microcosmo healing</p>
       <h1>魂の道 2026<br>第一部</h1>
     </div>
@@ -1036,7 +1057,7 @@
 <p>　そこで第二部では、第一部の説明の更に奥にある、この宇宙の秘密について解説する。</p>
     </article>
   </main>
-  <p class="bottom-note">第二部はLINE公式からのお申込みで無料進呈します。第一部印刷用PDFは<a href="pdf/tamashii-no-michi-2026-part1.pdf" target="_blank" rel="noopener noreferrer">こちらから開けます</a>。</p>
+  <p class="bottom-note">第二部はLINE公式からのお申込みで無料進呈します。第一部印刷用PDFは<a href="pdf/tamashii-no-michi-2026-part1.pdf" target="_blank" rel="noopener noreferrer">こちらから開けます</a>。<br><a href="./">HPトップへ戻る</a></p>
 </div>
 </body>
 </html>
