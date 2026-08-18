@@ -161,6 +161,77 @@
     margin-bottom: 36px;
   }
 
+  .bridge-note {
+    color: var(--text-light);
+    font-size: 15.5px;
+    line-height: 2.1;
+    max-width: 680px;
+    margin: 0 auto 42px;
+    text-align: center;
+  }
+
+  .bridge-note strong {
+    color: var(--text-color);
+    font-weight: normal;
+  }
+
+  .quiet-message {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .quiet-message h2 {
+    font-size: 25px;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    line-height: 1.8;
+    margin: 0 0 28px;
+  }
+
+  .quiet-message p {
+    color: var(--text-light);
+    font-size: 15.5px;
+    line-height: 2.15;
+    margin: 0 auto 22px;
+    max-width: 650px;
+  }
+
+  .fit-list {
+    display: grid;
+    gap: 14px;
+    list-style: none;
+    margin: 34px auto 0;
+    max-width: 620px;
+    padding: 0;
+    text-align: left;
+  }
+
+  .fit-list li {
+    border-left: 2px solid var(--border);
+    color: var(--text-light);
+    font-size: 15.5px;
+    line-height: 1.9;
+    padding-left: 18px;
+  }
+
+  .trial-copy {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 15.5px;
+    line-height: 2;
+    margin: 0 auto;
+    max-width: 560px;
+  }
+
+  .dandelion-accent {
+    display: block;
+    width: min(72vw, 375px);
+    height: auto;
+    margin: 0 auto 24px;
+    opacity: 0.92;
+  }
+
   .keep-line {
     display: inline-block;
   }
@@ -258,6 +329,34 @@
     color: var(--text-light);
     font-size: 15.5px;
     line-height: 2;
+  }
+
+  .expectation-title {
+    font-size: 22px;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    line-height: 1.7;
+    margin: 0 0 18px;
+  }
+
+  .expectation-title.green {
+    color: #1f8f55;
+  }
+
+  .expectation-title.pink {
+    color: #d36b88;
+  }
+
+  .expectation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .expectation-grid .concept-detail {
+    margin: 0 auto;
   }
 
   .thought-list {
@@ -532,7 +631,7 @@
   .hero-book-promo {
     position: absolute;
     left: 50%;
-    bottom: 94px;
+    bottom: 58px;
     width: min(78%, 360px);
     transform: translateX(-50%);
     color: inherit;
@@ -609,7 +708,7 @@
   .hero-social-visual {
     position: absolute;
     left: 50%;
-    bottom: 34px;
+    bottom: 4px;
     width: max-content;
     max-width: calc(100% - 40px);
     margin: 0;
@@ -648,7 +747,7 @@
     text-align: center;
     font-size: 28px;
     letter-spacing: 0.1em;
-    margin-bottom: 60px;
+    margin-bottom: 48px;
     font-weight: normal;
     text-wrap: pretty;
   }
@@ -717,7 +816,41 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 42px;
+  }
+
+  .menu-category {
+    border: 1px solid var(--border);
+    padding: 34px;
+    background: var(--bg-color);
+  }
+
+  .menu-category h3 {
+    margin: 0 0 24px;
+    font-size: 22px;
+    font-weight: normal;
+    letter-spacing: 0.08em;
+    line-height: 1.5;
+  }
+
+  .menu-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 16px;
+  }
+
+  .menu-items li {
+    color: var(--text-light);
+    font-size: 15.5px;
+    line-height: 1.8;
+  }
+
+  .menu-items .menu-note {
+    display: block;
+    padding-left: 1em;
+    font-size: 14px;
   }
 
   @media (max-width: 768px) {
@@ -729,6 +862,10 @@
     }
     .menu-grid {
       grid-template-columns: 1fr;
+    }
+    .expectation-grid {
+      grid-template-columns: 1fr;
+      gap: 42px;
     }
     .hero-container {
       display: grid;
@@ -791,7 +928,7 @@
       transform: none;
       width: min(100%, 340px);
       grid-template-columns: minmax(0, 1fr) 72px;
-      margin: 4px auto 0;
+      margin: 30px auto 0;
       text-align: left;
     }
     .hero-book-title {
@@ -814,9 +951,9 @@
     .menu a { font-size: 14px; letter-spacing: 0.08em; }
     .menu-group { align-items: center; flex-direction: row; gap: 12px; }
     .menu-group .menu-sub { padding-left: 0; }
-    section { padding: 80px 20px; }
+    section { padding: 68px 20px; }
     .section-title { font-size: 15px; }
-    .section-heading { font-size: 27px; margin-bottom: 42px; line-height: 1.6; }
+    .section-heading { font-size: 27px; margin-bottom: 34px; line-height: 1.6; }
     .section-heading,
     .main-text,
     .sub-text,
@@ -829,7 +966,7 @@
       word-break: keep-all;
       overflow-wrap: normal;
     }
-    .hero-social { margin-top: 4px; padding-top: 16px; width: min(100%, 340px); }
+    .hero-social { margin-top: 24px; padding-top: 16px; width: min(100%, 340px); }
     .hero-social .social-heading { text-align: center; }
     .hero-social .social-links { justify-content: center; }
     .hero-social-visual {
@@ -860,10 +997,16 @@
     .profile-content p,
     .product-content p { font-size: 17px !important; line-height: 1.95 !important; }
     .intro-note,
+    .bridge-note,
+    .quiet-message p,
     .recommend-note,
     .concept-detail,
     .concept-text,
     .blog-intro { font-size: 17px; line-height: 2; }
+    .quiet-message h2 { font-size: 24px; line-height: 1.7; }
+    .fit-list li,
+    .trial-copy { font-size: 17px; }
+    .dandelion-accent { width: min(82vw, 330px); margin-bottom: 20px; }
     .target-group h3 { font-size: 19px; }
     .target-group h3 span { font-size: 13px; }
     .target-list li,
@@ -879,6 +1022,15 @@
     }
     .latest-video-card span { font-size: 14px; line-height: 1.65; }
     .menu-card h3 { font-size: 20px; }
+    .menu-category { padding: 28px 22px; }
+    .menu-category h3 { font-size: 22px; }
+    .menu-items li { font-size: 17px; }
+    .expectation-title { font-size: 22px; }
+    #concept { padding-top: 46px !important; padding-bottom: 46px !important; }
+    #profile { margin: 32px auto 26px !important; padding: 42px 20px !important; }
+    #menu { padding-top: 40px !important; padding-bottom: 40px !important; }
+    #blog { padding-top: 34px !important; }
+    #product { padding-top: 28px !important; padding-bottom: 80px !important; }
     .special-package { padding: 34px 20px; }
     .special-package h3 {
       font-size: 21px;
@@ -999,10 +1151,8 @@
       <div class="logo">microcosmo<br>healing</div>
       <nav class="menu">
         <a href="#top">ホーム</a>
-        <a href="#voices">お客様の声</a>
-        <a href="#concept">考え方</a>
-        <a href="#menu">メニュー</a>
         <a href="#profile">プロフィール</a>
+        <a href="#menu">メニュー</a>
         <a href="#blog">ブログ</a>
         <a href="#product">製品</a>
       </nav>
@@ -1077,20 +1227,28 @@
   <section id="voices" style="padding-bottom: 60px;">
     <div class="section-title">Voice</div>
     <h2 class="section-heading">お客様の声</h2>
+    <p class="intro-note">
+      アトリエこしきは2007年にスタートしました。<br>
+      ヒーリングとコーチングを通して、体と心を整えていきます。
+    </p>
+    <p class="bridge-note">
+      体と心はひとつながり。<br>
+      共に手を取り合いながらより良い方向へと変わっていきます。
+    </p>
     <div class="target-groups">
       <div class="target-group">
         <h3>体<br><span>身体の変化・不調の改善・深い休息</span></h3>
         <ul class="target-list">
-          <li>何をやっても治らなかった慢性的不調が一気に改善に向かいました。</li>
-          <li>ヒーリングを受けるといつも体が温かくなり、疲れが癒されるのを感じます。定期的にメンテナンスして頂いています。</li>
-          <li>体調不良の時いつもすぐに対応して頂けるので助かっています。</li>
+          <li>何をやっても治らなかった<strong>慢性的不調</strong>が一気に改善に向かいました。</li>
+          <li>ヒーリングを受けるといつも体が温かくなり、<strong>疲れが癒される</strong>のを感じます。定期的にメンテナンスして頂いています。</li>
+          <li>体調不良の時いつも<strong>すぐに対応</strong>して頂けるので助かっています。</li>
         </ul>
       </div>
       <div class="target-group">
         <h3>心<br><span>メンタルの解放・自己受容・インナーチャイルド</span></h3>
         <ul class="target-list">
-          <li>自分の短所が実は長所だったことを教えて頂き、気持ちが楽になりました。</li>
-          <li>知らずに発しているネガティブな言葉に実は自分自身が傷ついていたことを教えて頂き、心の正しい「操縦法」が分かった気がします。</li>
+          <li>自分の<strong>短所が実は長所だった</strong>ことを教えて頂き、気持ちが楽になりました。</li>
+          <li>知らずに発しているネガティブな言葉に実は自分自身が傷ついていたことを教えて頂き、<strong>心の正しい操縦法</strong>が分かった気がします。</li>
           <li>許せなかった人に対する異なる見方に気付かされ、過去を水に流すことができました。</li>
         </ul>
       </div>
@@ -1105,91 +1263,50 @@
     </div>
   </section>
 
-  <!-- Concept セクション -->
-  <section id="concept" style="padding-bottom: 60px;">
-    <div class="section-title">考え方</div>
-    <h2 class="section-heading">頚椎2番から読み解く、心身の緊張</h2>
-    <div class="concept-text">
-      直感霊視によって、心身の不調を読み解きます。<br>
-      特に注目するのは、頚椎2番です。
-    </div>
-    <div class="concept-detail">
-      <p>頚椎２番は心身の不調の震源地。<br>
-      ヒーリングで癒すとこんな変化が起こります。</p>
-      <ul class="concept-list">
-        <li>不調の症状が改善する</li>
-        <li>痛みが消える</li>
-        <li>むくみがなくなる</li>
-        <li>肌艶がきれいになる</li>
-        <li>思考がすっきりする</li>
-      </ul>
-      <p style="margin-top: 34px;">またライフコーチングでは、<br>
-      「あなたらしさ」の実現を押し留める、頚椎２番の緊張を解きほぐす心のレッスンをします。</p>
-      <p>ライフコーチングは、以下の変化をもたらします。</p>
-      <ul class="concept-list">
-        <li>自己肯定感が増す</li>
-        <li>思い煩いがなくなる</li>
-        <li>人間関係のストレスが減る</li>
-        <li>自分らしく生きられるようになる</li>
+  <section id="fit" style="padding-top: 54px; padding-bottom: 54px;">
+    <div class="quiet-message">
+      <h2>こんな方におすすめです</h2>
+      <ul class="fit-list">
+        <li>慢性的な不調や疲れを、体だけの問題として片付けたくない方</li>
+        <li>自分の性格や生き方の癖を、責めるのではなく理解したい方</li>
+        <li>人に合わせることに慣れすぎて、自分の本心が分かりにくくなっている方</li>
+        <li>静かに話を聞いてもらいながら、必要な変化を起こしていきたい方</li>
       </ul>
     </div>
   </section>
 
-  <!-- Menu セクション -->
-  <section id="menu">
-    <div class="section-title">Menu &amp; Price</div>
-    <h2 class="section-heading">料金のご案内</h2>
-
-    <div class="menu-grid">
-      <div class="menu-card">
-        <h3><a href="moon_healing.html" class="text-link">満月新月の浄化ヒーリング</a></h3>
-        <div class="menu-price">5,000<span>円</span></div>
-        <p>定期的な心身のメンテナンスと浄化に。（オススメ）</p>
+  <!-- Concept セクション -->
+  <section id="concept" style="padding-top: 64px; padding-bottom: 64px;">
+    <img class="dandelion-accent" src="images/dandelion-fluff-watercolor-cropped.png" alt="綿毛の水彩画" loading="lazy">
+    <p class="bridge-note">
+      ヒーリングは体を整え、コーチングは心の扱い方を整えます。<br>
+      どちらも、眠っていた力が自然に働き始めるための入口です。
+    </p>
+    <div class="expectation-grid">
+      <div class="concept-detail">
+        <h2 class="expectation-title green">ヒーリングで期待される変化</h2>
+        <ul class="concept-list">
+          <li>不調の症状が改善する</li>
+          <li>痛みが消える</li>
+          <li>むくみがなくなる</li>
+          <li>肌艶がきれいになる</li>
+          <li>思考がすっきりする</li>
+        </ul>
       </div>
-      <div class="menu-card">
-        <h3><a href="healing.html" class="text-link">遠隔ヒーリング</a></h3>
-        <div class="menu-price">7,000<span>円</span></div>
-        <p>上記日程以外で、ご自身のタイミングで受けたい方に。</p>
-      </div>
-      <div class="menu-card">
-        <h3>対面ヒーリング／対面コーチング</h3>
-        <div class="menu-price">10,000<span>円</span></div>
-        <p>出張も承ります。</p>
-      </div>
-      <div class="menu-card">
-        <h3>マッサージ</h3>
-        <div class="menu-price">15,000<span>円</span></div>
-        <p>ヒーリングだけでは手の届かない深部の疲労と緊張をほぐします。</p>
-      </div>
-      <div class="menu-card">
-        <h3><a href="habit_counseling.html" class="text-link">（リモート）ライフコーチング</a></h3>
-        <div class="menu-price">7,000<span>円</span></div>
-        <p>人生の繰り返すパターンを明らかにし、本来の自然な在り方を取り戻す対話セッション。</p>
-      </div>
-    </div>
-
-    <div class="special-package" style="margin-bottom: 34px;">
-      <h3>初回無料体験</h3>
-      <p style="text-align: center;">遠隔ヒーリング or ライフコーチング（15分）</p>
-      <div class="quiet-cta" style="margin-top: 24px;">
-        <a href="trial.html" class="line-button"><span class="keep-line">初回無料体験</span><span class="keep-line">について見る</span></a>
-      </div>
-    </div>
-
-    <!-- 特別パッケージ -->
-    <div class="special-package">
-      <h3><span class="no-break">人生に変化をもたらす</span><span class="no-break">特別メニュー</span></h3>
-      <p class="package-name">松果体ヒーリング</p>
-      <div class="price">30,000<span>円</span></div>
-      <p>あなた自身の個性、生い立ち、魂の願い、適性、ぶつかりやすい困難などを総合的に見ながら、あなたの人生の旅の『テーマ』と『歩き方』をお伝えする通常のライフコーチングよりも更に大きく一歩踏み込んだスペシャルコーチングをセットにしています。</p>
-      <div class="quiet-cta" style="margin-top: 24px;">
-        <a href="https://lin.ee/x2WpMEs" class="line-button" target="_blank" rel="noopener noreferrer">LINEで相談する</a>
+      <div class="concept-detail">
+        <h2 class="expectation-title pink">コーチングで期待される変化</h2>
+        <ul class="concept-list">
+          <li>自己肯定感が増す</li>
+          <li>思い煩いがなくなる</li>
+          <li>人間関係のストレスが減る</li>
+          <li>自分らしく生きられるようになる</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- Profile Section -->
-  <section id="profile" style="background-color: #fafafa; border-radius: 8px; margin-bottom: 120px; padding: 60px 40px; max-width: 800px;">
+  <section id="profile" style="background-color: #fafafa; border-radius: 8px; margin: 34px auto 32px; padding: 52px 40px; max-width: 800px;">
     <div class="section-title">Profile &amp; Story</div>
     <div class="profile-container" style="display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
       <div class="profile-image" style="flex: 1; min-width: 250px;">
@@ -1202,7 +1319,7 @@
           2007年、27歳の時に持って生まれたヒーリング能力に気付き、ヒーラーになりました。「現代医療では難しい」と言われた不調のお客様が、続けて改善されたことをきっかけに、ご紹介の輪が広がり、18年間活動を続けています。
         </p>
         <p style="color: var(--text-light); line-height: 2; font-size: 15px;">
-          遠隔ヒーリングとライフコーチングを中心に活動しています。北海道から沖縄離島まで、全国にクライアントがいらっしゃいます。
+          遠隔ヒーリングとコーチングを中心に活動しています。北海道から沖縄離島まで、全国にクライアントがいらっしゃいます。
         </p>
         <p style="color: var(--text-light); line-height: 2; font-size: 15px;">
           仕事の傍ら、チェロや、動物のイラストや、家庭料理を楽しんでいます。
@@ -1211,8 +1328,41 @@
     </div>
   </section>
 
+  <!-- Menu セクション -->
+  <section id="menu" style="padding-top: 48px; padding-bottom: 48px;">
+    <div class="section-title">Menu &amp; Price</div>
+    <h2 class="section-heading">料金のご案内</h2>
+
+    <div class="menu-grid">
+      <div class="menu-category">
+        <h3><a href="healing.html" class="text-link">ヒーリング</a></h3>
+        <ul class="menu-items">
+          <li>遠隔ヒーリング（7,000円）<span class="menu-note">満月新月はお得な5,000円。</span></li>
+          <li>対面ヒーリング（10,000円）</li>
+          <li>マッサージセットコース（15,000円）</li>
+        </ul>
+      </div>
+      <div class="menu-category">
+        <h3><a href="habit_counseling.html" class="text-link">コーチング</a></h3>
+        <ul class="menu-items">
+          <li>ビデオ通話（7,000円）</li>
+          <li>対面（10,000円）</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="special-package" style="margin-bottom: 34px;">
+      <h3>初回無料体験を是非ご利用下さい</h3>
+      <p style="text-align: center;">遠隔ヒーリング or コーチング（15分）</p>
+      <div class="quiet-cta" style="margin-top: 24px;">
+        <a href="trial.html" class="line-button"><span class="keep-line">初回無料体験</span><span class="keep-line">について見る</span></a>
+      </div>
+    </div>
+
+  </section>
+
   <!-- Blog Section -->
-  <section id="blog" style="padding-top: 80px;">
+  <section id="blog" style="padding-top: 34px;">
     <div class="section-title">Blog</div>
     <h2 class="section-heading">最近の文章</h2>
     <div class="blog-grid" id="blog-posts" aria-live="polite">
@@ -1257,7 +1407,7 @@
   </section>
 
   <!-- Product Section -->
-  <section id="product" style="padding-bottom: 120px;">
+  <section id="product" style="padding-top: 32px; padding-bottom: 120px;">
     <div class="section-title">Product</div>
     <h2 class="section-heading">取り扱い製品</h2>
 
