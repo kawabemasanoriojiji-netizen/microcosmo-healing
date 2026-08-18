@@ -12,6 +12,8 @@
     --bg-color: #ffffff;
     --accent: #06C755; /* LINE green */
     --border: #dedede;
+    --space-large: 120px;
+    --space-small: 48px;
   }
   
   body {
@@ -142,14 +144,14 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 14px;
-    margin-top: 34px;
+    margin-top: var(--space-small);
   }
 
   .recommend-note {
     color: var(--text-light);
     font-size: 15px;
     line-height: 2;
-    margin: 30px 0 0;
+    margin: var(--space-small) 0 0;
     text-align: center;
   }
 
@@ -158,7 +160,7 @@
     color: var(--text-light);
     font-size: 15px;
     line-height: 2;
-    margin-bottom: 36px;
+    margin-bottom: var(--space-small);
   }
 
   .bridge-note {
@@ -166,7 +168,7 @@
     font-size: 15.5px;
     line-height: 2.1;
     max-width: 680px;
-    margin: 0 auto 42px;
+    margin: 0 auto var(--space-small);
     text-align: center;
   }
 
@@ -186,14 +188,14 @@
     font-weight: normal;
     letter-spacing: 0.1em;
     line-height: 1.8;
-    margin: 0 0 28px;
+    margin: 0 0 var(--space-small);
   }
 
   .quiet-message p {
     color: var(--text-light);
     font-size: 15.5px;
     line-height: 2.15;
-    margin: 0 auto 22px;
+    margin: 0 auto var(--space-small);
     max-width: 650px;
   }
 
@@ -201,7 +203,7 @@
     display: grid;
     gap: 14px;
     list-style: none;
-    margin: 34px auto 0;
+    margin: var(--space-small) auto 0;
     max-width: 620px;
     padding: 0;
     text-align: left;
@@ -228,7 +230,7 @@
     display: block;
     width: min(72vw, 375px);
     height: auto;
-    margin: 0 auto 24px;
+    margin: 0 auto var(--space-small);
     opacity: 0.92;
   }
 
@@ -308,7 +310,7 @@
 
   .concept-detail {
     max-width: 760px;
-    margin: 44px auto 0;
+    margin: var(--space-small) auto 0;
     color: var(--text-color);
     font-size: 16px;
     line-height: 2.1;
@@ -316,12 +318,12 @@
   }
 
   .concept-detail p {
-    margin: 0 0 22px;
+    margin: 0 0 var(--space-small);
   }
 
   .concept-list {
     list-style: none;
-    margin: 24px auto 0;
+    margin: var(--space-small) auto 0;
     padding: 0;
   }
 
@@ -336,7 +338,7 @@
     font-weight: normal;
     letter-spacing: 0.1em;
     line-height: 1.7;
-    margin: 0 0 18px;
+    margin: 0 0 var(--space-small);
   }
 
   .expectation-title.green {
@@ -375,7 +377,7 @@
     font-size: 15px;
     line-height: 2;
     max-width: 680px;
-    margin: 0 auto 42px;
+    margin: 0 auto var(--space-small);
   }
 
   .blog-grid {
@@ -455,7 +457,7 @@
 
   .latest-videos {
     max-width: 980px;
-    margin: 44px auto 0;
+    margin: var(--space-small) auto 0;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
@@ -488,7 +490,7 @@
   }
 
   .youtube-section-title {
-    margin-top: 58px;
+    margin-top: var(--space-large);
   }
 
   .youtube-section-heading {
@@ -728,7 +730,7 @@
 
   /* --- Common Section Styles --- */
   section {
-    padding: 120px 20px;
+    padding: var(--space-large) 20px;
     max-width: 900px;
     margin: 0 auto;
   }
@@ -739,7 +741,7 @@
     color: var(--text-light);
     letter-spacing: 0.2em;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: var(--space-small);
     text-transform: uppercase;
   }
 
@@ -747,7 +749,7 @@
     text-align: center;
     font-size: 28px;
     letter-spacing: 0.1em;
-    margin-bottom: 48px;
+    margin-bottom: var(--space-small);
     font-weight: normal;
     text-wrap: pretty;
   }
@@ -757,7 +759,7 @@
     text-align: center;
     line-height: 2.2;
     font-size: 16px;
-    margin-bottom: 40px;
+    margin-bottom: var(--space-small);
   }
 
   /* --- Flow Section --- */
@@ -816,7 +818,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    margin-bottom: 42px;
+    margin-bottom: var(--space-small);
   }
 
   .menu-category {
@@ -854,6 +856,10 @@
   }
 
   @media (max-width: 768px) {
+    :root {
+      --space-large: 68px;
+      --space-small: 34px;
+    }
     body {
       font-size: 17px;
       overflow-wrap: normal;
@@ -951,9 +957,9 @@
     .menu a { font-size: 14px; letter-spacing: 0.08em; }
     .menu-group { align-items: center; flex-direction: row; gap: 12px; }
     .menu-group .menu-sub { padding-left: 0; }
-    section { padding: 68px 20px; }
+    section { padding: var(--space-large) 20px; }
     .section-title { font-size: 15px; }
-    .section-heading { font-size: 27px; margin-bottom: 34px; line-height: 1.6; }
+    .section-heading { font-size: 27px; margin-bottom: var(--space-small); line-height: 1.6; }
     .section-heading,
     .main-text,
     .sub-text,
@@ -981,9 +987,9 @@
     .blog-card { min-height: 0; padding: 24px 22px; }
     .blog-card h3 { font-size: 17px; line-height: 1.65; }
     .blog-card p { font-size: 14px; line-height: 1.8; }
-    .latest-videos { grid-template-columns: 1fr; gap: 18px; margin-top: 34px; max-width: 520px; }
+    .latest-videos { grid-template-columns: 1fr; gap: 18px; margin-top: var(--space-small); max-width: 520px; }
     .latest-video-card { min-height: 44px; }
-    .social-section { padding: 34px 20px 54px; }
+    .social-section { padding: var(--space-small) 20px var(--space-large); }
     .social-links { gap: 8px 16px; }
     .social-link { font-size: 14px; }
     .flow-step { flex-direction: column; gap: 15px; padding: 30px 20px; }
@@ -1006,7 +1012,7 @@
     .quiet-message h2 { font-size: 24px; line-height: 1.7; }
     .fit-list li,
     .trial-copy { font-size: 17px; }
-    .dandelion-accent { width: min(82vw, 330px); margin-bottom: 20px; }
+    .dandelion-accent { width: min(82vw, 330px); margin-bottom: var(--space-small); }
     .target-group h3 { font-size: 19px; }
     .target-group h3 span { font-size: 13px; }
     .target-list li,
@@ -1026,12 +1032,12 @@
     .menu-category h3 { font-size: 22px; }
     .menu-items li { font-size: 17px; }
     .expectation-title { font-size: 22px; }
-    #concept { padding-top: 46px !important; padding-bottom: 46px !important; }
-    #profile { margin: 32px auto 26px !important; padding: 42px 20px !important; }
-    #menu { padding-top: 40px !important; padding-bottom: 40px !important; }
-    #blog { padding-top: 34px !important; }
-    #product { padding-top: 28px !important; padding-bottom: 80px !important; }
-    .special-package { padding: 34px 20px; }
+    #concept { padding-top: var(--space-large) !important; padding-bottom: var(--space-large) !important; }
+    #profile { margin: var(--space-large) auto !important; padding: var(--space-small) 20px !important; }
+    #menu { padding-top: var(--space-large) !important; padding-bottom: var(--space-large) !important; }
+    #blog { padding-top: var(--space-large) !important; }
+    #product { padding-top: var(--space-large) !important; padding-bottom: var(--space-large) !important; }
+    .special-package { padding: var(--space-small) 20px; }
     .special-package h3 {
       font-size: 21px;
       letter-spacing: 0.04em;
@@ -1224,7 +1230,7 @@
   </div>
 
   <!-- Voice セクション -->
-  <section id="voices" style="padding-bottom: 60px;">
+  <section id="voices">
     <div class="section-title">Voice</div>
     <h2 class="section-heading">お客様の声</h2>
     <p class="intro-note">
@@ -1263,7 +1269,7 @@
     </div>
   </section>
 
-  <section id="fit" style="padding-top: 54px; padding-bottom: 54px;">
+  <section id="fit">
     <div class="quiet-message">
       <h2>こんな方におすすめです</h2>
       <ul class="fit-list">
@@ -1276,7 +1282,7 @@
   </section>
 
   <!-- Concept セクション -->
-  <section id="concept" style="padding-top: 64px; padding-bottom: 64px;">
+  <section id="concept">
     <img class="dandelion-accent" src="images/dandelion-fluff-watercolor-cropped.png" alt="綿毛の水彩画" loading="lazy">
     <p class="bridge-note">
       ヒーリングは体を整え、コーチングは心の扱い方を整えます。<br>
@@ -1306,15 +1312,15 @@
   </section>
 
   <!-- Profile Section -->
-  <section id="profile" style="background-color: #fafafa; border-radius: 8px; margin: 34px auto 32px; padding: 52px 40px; max-width: 800px;">
+  <section id="profile" style="background-color: #fafafa; border-radius: 8px; margin: var(--space-large) auto; padding: var(--space-small) 40px; max-width: 800px;">
     <div class="section-title">Profile &amp; Story</div>
     <div class="profile-container" style="display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
       <div class="profile-image" style="flex: 1; min-width: 250px;">
         <!-- profile.jpg として画像を読み込みます -->
-        <img src="HP/images/profile.jpg" alt="プロフィール写真" style="width: 100%; border-radius: 4px; object-fit: cover;">
+        <img src="HP/profile.jpg" alt="プロフィール写真" style="width: 100%; border-radius: 4px; object-fit: cover;">
       </div>
       <div class="profile-content" style="flex: 2; min-width: 300px;">
-        <h3 style="font-size: 24px; margin-top: 0; font-weight: normal; margin-bottom: 20px;">プロフィール／オジジ</h3>
+        <h3 style="font-size: 24px; margin-top: 0; font-weight: normal; margin-bottom: var(--space-small);">プロフィール／オジジ</h3>
         <p style="color: var(--text-light); line-height: 2; font-size: 15px;">
           2007年、27歳の時に持って生まれたヒーリング能力に気付き、ヒーラーになりました。「現代医療では難しい」と言われた不調のお客様が、続けて改善されたことをきっかけに、ご紹介の輪が広がり、18年間活動を続けています。
         </p>
@@ -1329,7 +1335,7 @@
   </section>
 
   <!-- Menu セクション -->
-  <section id="menu" style="padding-top: 48px; padding-bottom: 48px;">
+  <section id="menu">
     <div class="section-title">Menu &amp; Price</div>
     <h2 class="section-heading">料金のご案内</h2>
 
@@ -1351,10 +1357,10 @@
       </div>
     </div>
 
-    <div class="special-package" style="margin-bottom: 34px;">
+    <div class="special-package" style="margin-bottom: var(--space-small);">
       <h3>初回無料体験を是非ご利用下さい</h3>
       <p style="text-align: center;">遠隔ヒーリング or コーチング（15分）</p>
-      <div class="quiet-cta" style="margin-top: 24px;">
+      <div class="quiet-cta">
         <a href="trial.html" class="line-button"><span class="keep-line">初回無料体験</span><span class="keep-line">について見る</span></a>
       </div>
     </div>
@@ -1362,7 +1368,7 @@
   </section>
 
   <!-- Blog Section -->
-  <section id="blog" style="padding-top: 34px;">
+  <section id="blog">
     <div class="section-title">Blog</div>
     <h2 class="section-heading">最近の文章</h2>
     <div class="blog-grid" id="blog-posts" aria-live="polite">
@@ -1407,7 +1413,7 @@
   </section>
 
   <!-- Product Section -->
-  <section id="product" style="padding-top: 32px; padding-bottom: 120px;">
+  <section id="product">
     <div class="section-title">Product</div>
     <h2 class="section-heading">取り扱い製品</h2>
 
