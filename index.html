@@ -730,9 +730,9 @@
 
   /* --- Common Section Styles --- */
   section {
-    padding: var(--space-large) 20px;
+    padding: 0 20px;
     max-width: 900px;
-    margin: 0 auto;
+    margin: var(--space-large) auto 0;
   }
 
   .section-title {
@@ -957,7 +957,7 @@
     .menu a { font-size: 14px; letter-spacing: 0.08em; }
     .menu-group { align-items: center; flex-direction: row; gap: 12px; }
     .menu-group .menu-sub { padding-left: 0; }
-    section { padding: var(--space-large) 20px; }
+    section { padding: 0 20px; }
     .section-title { font-size: 15px; }
     .section-heading { font-size: 27px; margin-bottom: var(--space-small); line-height: 1.6; }
     .section-heading,
@@ -1032,11 +1032,11 @@
     .menu-category h3 { font-size: 22px; }
     .menu-items li { font-size: 17px; }
     .expectation-title { font-size: 22px; }
-    #concept { padding-top: var(--space-large) !important; padding-bottom: var(--space-large) !important; }
-    #profile { margin: var(--space-large) auto !important; padding: var(--space-small) 20px !important; }
-    #menu { padding-top: var(--space-large) !important; padding-bottom: var(--space-large) !important; }
-    #blog { padding-top: var(--space-large) !important; }
-    #product { padding-top: var(--space-large) !important; padding-bottom: var(--space-large) !important; }
+    #concept,
+    #menu,
+    #blog,
+    #product { padding-top: 0 !important; padding-bottom: 0 !important; }
+    #profile { margin: var(--space-large) auto 0 !important; padding: var(--space-small) 20px !important; }
     .special-package { padding: var(--space-small) 20px; }
     .special-package h3 {
       font-size: 21px;
@@ -1312,12 +1312,12 @@
   </section>
 
   <!-- Profile Section -->
-  <section id="profile" style="background-color: #fafafa; border-radius: 8px; margin: var(--space-large) auto; padding: var(--space-small) 40px; max-width: 800px;">
+  <section id="profile" style="background-color: #fafafa; border-radius: 8px; margin: var(--space-large) auto 0; padding: var(--space-small) 40px; max-width: 800px;">
     <div class="section-title">Profile &amp; Story</div>
     <div class="profile-container" style="display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
       <div class="profile-image" style="flex: 1; min-width: 250px;">
         <!-- profile.jpg として画像を読み込みます -->
-        <img src="HP/profile.jpg" alt="プロフィール写真" style="width: 100%; border-radius: 4px; object-fit: cover;">
+        <img src="HP/profile.jpg?v=20260818-bench" alt="プロフィール写真" style="width: 100%; border-radius: 4px; object-fit: cover;">
       </div>
       <div class="profile-content" style="flex: 2; min-width: 300px;">
         <h3 style="font-size: 24px; margin-top: 0; font-weight: normal; margin-bottom: var(--space-small);">プロフィール／オジジ</h3>
