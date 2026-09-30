@@ -1106,7 +1106,31 @@
   .footer-contact {
     font-size: 14px;
     color: var(--text-light);
+    line-height: 2;
     margin-bottom: 40px;
+  }
+
+  .footer-contact-title {
+    color: var(--text-color);
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+
+  .footer-address,
+  .footer-inquiry {
+    margin: 0;
+  }
+
+  .footer-inquiry {
+    margin-top: 14px;
+  }
+
+  .footer-contact a {
+    color: inherit;
+    display: inline-block;
+    padding: 5px 2px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
 </style>
@@ -1345,7 +1369,9 @@
   <footer>
     <div class="footer-logo">microcosmo healing</div>
     <div class="footer-contact">
-      メール：microcosmo.healing@gmail.com
+      <div class="footer-contact-title">所在地・お問い合わせ</div>
+      <p class="footer-address">〒201-0012<br>東京都狛江市中和泉2-7-5</p>
+      <p class="footer-inquiry">お問い合わせは、<a href="https://lin.ee/x2WpMEs" target="_blank" rel="noopener noreferrer">LINE公式</a>または<a href="mailto:microcosmo.healing@gmail.com">メール</a>にて承ります。</p>
     </div>
     <p style="font-size: 12px; color: #999;">&copy; microcosmo healing</p>
   </footer>
