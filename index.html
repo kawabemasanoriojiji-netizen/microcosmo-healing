@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>microcosmo healing | 「本当の自分」に還るヒーリング</title>
+<title>アトリエこしき | MICROCOSMO HEALING</title>
 <script src="./analytics.js" defer></script>
 <style>
   :root {
     --text-color: #222222;
     --text-light: #4d4d4d;
     --bg-color: #ffffff;
-    --accent: #06C755; /* LINE green */
+    --accent: #171717;
     --border: #dedede;
     --space-large: 120px;
     --space-small: 48px;
@@ -21,7 +21,8 @@
     padding: 0;
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: "Yu Mincho", "MS Mincho", "Hiragino Mincho ProN", serif; 
+    font-family: "Yu Mincho", "MS Mincho", "Hiragino Mincho ProN", serif;
+    font-size: 17px;
     overflow-x: hidden;
     line-break: strict;
   }
@@ -29,7 +30,7 @@
   /* --- Hero Section --- */
   .hero-container {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 2.5fr 1.5fr;
     min-height: 100svh;
     width: 100vw;
   }
@@ -51,6 +52,22 @@
     margin-bottom: 80px;
     font-family: "Yu Gothic", "Meiryo", sans-serif;
     color: #111;
+  }
+
+  .brand-koshiki {
+    color: var(--text-light);
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    line-height: 1.7;
+    margin: -62px 0 58px;
+  }
+
+  .brand-koshiki span {
+    color: var(--text-color);
+    display: block;
+    font-size: 15px;
+    letter-spacing: 0.12em;
   }
   
   .menu {
@@ -374,7 +391,7 @@
   .blog-intro {
     text-align: center;
     color: var(--text-light);
-    font-size: 15px;
+    font-size: 17px;
     line-height: 2;
     max-width: 680px;
     margin: 0 auto var(--space-small);
@@ -415,8 +432,8 @@
 
   .blog-card p {
     color: var(--text-light);
-    font-size: 14px;
-    line-height: 1.9;
+    font-size: 17px;
+    line-height: 2;
     margin: 0 0 24px;
   }
 
@@ -595,7 +612,7 @@
   }
 
   .image-area {
-    background-image: url('images/healing_image.png');
+    background-image: url('images/atelier-koshiki-room.png');
     background-size: cover; 
     background-position: center;
   }
@@ -611,100 +628,28 @@
     position: relative;
   }
 
-  .main-text {
-    writing-mode: vertical-rl;
-    font-size: clamp(28px, min(3.5vw, 4.4svh), 46px);
-    letter-spacing: clamp(0.14em, 0.9svh, 0.28em);
-    line-height: 1.9;
-    max-height: calc(100svh - 96px);
-    transform: translateY(-34px);
-  }
-
-  .sub-text {
-    writing-mode: vertical-rl;
-    font-size: clamp(15px, min(1.8vw, 2.3svh), 20px);
-    letter-spacing: clamp(0.08em, 0.45svh, 0.15em);
-    line-height: 2.2;
-    color: #3f3f3f;
-    max-height: calc(100svh - 96px);
-    transform: translateY(-34px);
-  }
-
-  .hero-book-promo {
-    position: absolute;
-    left: 50%;
-    bottom: 58px;
-    width: min(78%, 360px);
-    transform: translateX(-50%);
-    color: inherit;
-    text-decoration: none;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 76px;
-    gap: 14px;
-    align-items: center;
-    padding: 14px 16px;
-    border: 1px solid var(--border);
-    background: rgba(255, 255, 255, 0.92);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
-  }
-
-  .hero-book-promo:hover,
-  .free-book-link:hover {
-    border-color: #bcbcbc;
-  }
-
-  .hero-book-label,
-  .free-book-label {
-    display: block;
-    color: var(--text-light);
-    font-family: "Yu Gothic", "Meiryo", sans-serif;
-    font-size: 12px;
-    letter-spacing: 0.14em;
-    line-height: 1.5;
-    margin-bottom: 4px;
-  }
-
-  .hero-book-title,
-  .free-book-title {
-    display: block;
-    font-size: 20px;
-    line-height: 1.55;
-    letter-spacing: 0.04em;
+  .hero-heading {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row-reverse;
+    font-family: inherit;
+    font-size: 28px;
+    font-weight: normal;
+    gap: 0.55em;
+    letter-spacing: 0.1em;
+    line-height: 1.7;
     margin: 0;
+    text-align: center;
   }
 
-  .hero-book-promo img,
-  .free-book-link img {
+  .hero-title-main,
+  .hero-title-secondary {
     display: block;
-    width: 100%;
-    height: auto;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    writing-mode: vertical-rl;
   }
 
-  .free-book-section {
-    padding-top: 0;
-    padding-bottom: 96px;
-  }
-
-  .free-book-link {
-    color: inherit;
-    text-decoration: none;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(120px, 180px);
-    gap: clamp(24px, 5vw, 46px);
-    align-items: center;
-    max-width: 720px;
-    margin: 0 auto;
-    padding: clamp(22px, 4vw, 34px);
-    border: 1px solid var(--border);
-    background: #fbfbf8;
-  }
-
-  .free-book-copy p {
-    color: var(--text-light);
-    font-size: 15px;
-    line-height: 1.9;
-    margin: 12px 0 0;
+  .hero-title-emphasis {
+    font-size: inherit;
   }
 
   .hero-social-visual {
@@ -726,6 +671,28 @@
 
   .hero-social-visual .social-links {
     justify-content: center;
+  }
+
+  .life-statement {
+    max-width: 790px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .life-statement h2 {
+    font-size: 28px;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    line-height: 1.7;
+    margin: 0 0 42px;
+  }
+
+  .life-statement .life-message {
+    color: var(--text-light);
+    font-size: 18px;
+    line-height: 2.1;
+    margin: 0 auto;
+    max-width: 650px;
   }
 
   /* --- Common Section Styles --- */
@@ -838,8 +805,8 @@
   .menu-guide,
   .menu-description {
     color: var(--text-light);
-    font-size: 15.5px;
-    line-height: 2;
+    font-size: 17px;
+    line-height: 2.1;
   }
 
   .menu-guide {
@@ -862,8 +829,18 @@
 
   .menu-items li {
     color: var(--text-light);
-    font-size: 15.5px;
-    line-height: 1.8;
+    font-size: 17px;
+    line-height: 1.9;
+  }
+
+  .profile-content p {
+    font-size: 17px !important;
+    line-height: 2.05 !important;
+  }
+
+  .product-content p:last-child {
+    font-size: 17px !important;
+    line-height: 1.95 !important;
   }
 
   .menu-items .menu-note {
@@ -908,6 +885,7 @@
       text-align: center;
       font-size: 26px;
     }
+    .brand-koshiki { margin: -16px 0 30px; text-align: center; }
     .menu {
       flex-direction: row;
       flex-wrap: wrap;
@@ -929,47 +907,13 @@
       flex-direction: column;
       gap: 28px;
     }
-    .main-text, .sub-text {
-      writing-mode: horizontal-tb;
-      text-align: center;
-      max-height: none;
-      text-wrap: pretty;
-      transform: none;
-    }
-    .main-text {
-      font-size: 34px;
-      line-height: 1.65;
-      letter-spacing: 0.06em;
-    }
+    .hero-heading { font-size: 27px; gap: 0.42em; line-height: 1.65; }
+    .life-statement h2 { font-size: 27px; line-height: 1.65; }
+    .life-statement .life-message { font-size: 17px; }
     .sub-text {
       font-size: 18px;
       line-height: 1.95;
       letter-spacing: 0.03em;
-    }
-    .hero-book-promo {
-      position: static;
-      transform: none;
-      width: min(100%, 340px);
-      grid-template-columns: minmax(0, 1fr) 72px;
-      margin: 30px auto 0;
-      text-align: left;
-    }
-    .hero-book-title {
-      font-size: 19px;
-      line-height: 1.5;
-    }
-    .free-book-section {
-      padding-top: 0;
-      padding-bottom: 76px;
-    }
-    .free-book-link {
-      grid-template-columns: 1fr;
-      max-width: 420px;
-      text-align: center;
-    }
-    .free-book-link img {
-      width: min(58%, 190px);
-      margin: 0 auto;
     }
     .menu a { font-size: 14px; letter-spacing: 0.08em; }
     .menu-group { align-items: center; flex-direction: row; gap: 12px; }
@@ -978,8 +922,7 @@
     .section-title { font-size: 15px; }
     .section-heading { font-size: 27px; margin-bottom: var(--space-small); line-height: 1.6; }
     .section-heading,
-    .main-text,
-    .sub-text,
+    .hero-heading,
     .line-button,
     .menu a,
     .target-group h3,
@@ -1173,7 +1116,8 @@
   <!-- ヒーローセクション -->
   <div class="hero-container" id="top">
     <div class="sidebar">
-      <div class="logo">microcosmo<br>healing</div>
+      <div class="logo">MICROCOSMO<br>HEALING</div>
+      <div class="brand-koshiki"><span>アトリエこしき</span>ATELIER KOSHIKI</div>
       <nav class="menu">
         <a href="#top">ホーム</a>
         <a href="#profile">プロフィール</a>
@@ -1181,27 +1125,10 @@
         <a href="#blog">ブログ</a>
         <a href="#product">製品</a>
       </nav>
-      <div class="booking-menu">
-        <a href="trial.html" class="line-button"><span class="keep-line">初回無料体験</span><span class="keep-line">について見る</span></a>
-      </div>
     </div>
     <div class="image-area"></div>
     <div class="text-area">
-      <div class="main-text">
-        <span style="display: inline-block;">「本当の私」に還る、</span><br>
-        <span style="display: inline-block;">　真の癒しを</span>
-      </div>
-      <div class="sub-text">
-        ストレスにあえぐ頚椎二番を<br>
-        優しく包み込み、癒すヒーリング
-      </div>
-      <a class="hero-book-promo" href="tamashii-no-michi.html" aria-label="無料書籍『魂の道』を読む">
-        <span>
-          <span class="hero-book-label">無料書籍</span>
-          <span class="hero-book-title">『魂の道』</span>
-        </span>
-        <img src="images/tamashii-no-michi/docx/image-01.png" alt="無料書籍『魂の道』表紙" loading="eager">
-      </a>
+      <h1 class="hero-heading"><span class="hero-title-main"><span class="hero-title-emphasis">命</span>の本当の力が、</span><span class="hero-title-secondary">長い眠りから覚める場所</span></h1>
       <div class="hero-social hero-social-visual" aria-label="SNSリンク">
         <div class="social-links">
           <a class="social-link" href="https://www.instagram.com/microcosmo_healing/" target="_blank" rel="noopener noreferrer" aria-label="Instagram healing">
@@ -1248,85 +1175,11 @@
     </div>
   </div>
 
-  <!-- Voice セクション -->
-  <section id="voices">
-    <div class="section-title">Voice</div>
-    <h2 class="section-heading">お客様の声</h2>
-    <p class="intro-note">
-      アトリエこしきは2007年にスタートしました。<br>
-      ヒーリングとコーチングを通して、体と心を整えていきます。
-    </p>
-    <p class="bridge-note">
-      体と心はひとつながり。<br>
-      共に手を取り合いながらより良い方向へと変わっていきます。
-    </p>
-    <div class="target-groups">
-      <div class="target-group">
-        <h3>体<br><span>身体の変化・不調の改善・深い休息</span></h3>
-        <ul class="target-list">
-          <li>何をやっても治らなかった<strong>慢性的不調</strong>が一気に改善に向かいました。</li>
-          <li>ヒーリングを受けるといつも体が温かくなり、<strong>疲れが癒される</strong>のを感じます。定期的にメンテナンスして頂いています。</li>
-          <li>体調不良の時いつも<strong>すぐに対応</strong>して頂けるので助かっています。</li>
-        </ul>
-      </div>
-      <div class="target-group">
-        <h3>心<br><span>メンタルの解放・自己受容・インナーチャイルド</span></h3>
-        <ul class="target-list">
-          <li>自分の<strong>短所が実は長所だった</strong>ことを教えて頂き、気持ちが楽になりました。</li>
-          <li>知らずに発しているネガティブな言葉に実は自分自身が傷ついていたことを教えて頂き、<strong>心の正しい操縦法</strong>が分かった気がします。</li>
-          <li>許せなかった人に対する異なる見方に気付かされ、過去を水に流すことができました。</li>
-        </ul>
-      </div>
-      <div class="target-group">
-        <h3>人生<br><span>現実の好転・人間関係の調和・生き方の変容</span></h3>
-        <ul class="target-list">
-          <li>自分が本当に望む生き方は何なのか。コーチングによってようやく分かり始めてきました。</li>
-          <li>自分の何をどう直せば状況が良くなるのか、具体的な指導が現実を変えてくれました。</li>
-          <li>ヒーリングとコーチングを通して、心持ちが以前に比べてずっとポジティブになりました。</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="fit">
-    <div class="quiet-message">
-      <h2>こんな方におすすめです</h2>
-      <ul class="fit-list">
-        <li>慢性的な不調や疲れを、体だけの問題として片付けたくない方</li>
-        <li>自分の性格や生き方の癖を、責めるのではなく理解したい方</li>
-        <li>人に合わせることに慣れすぎて、自分の本心が分かりにくくなっている方</li>
-        <li>静かに話を聞いてもらいながら、必要な変化を起こしていきたい方</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Concept セクション -->
-  <section id="concept">
-    <img class="dandelion-accent" src="images/dandelion-fluff-watercolor-cropped.png" alt="綿毛の水彩画" loading="lazy">
-    <p class="bridge-note">
-      ヒーリングは体を整え、コーチングは心の扱い方を整えます。<br>
-      どちらも、眠っていた力が自然に働き始めるための入口です。
-    </p>
-    <div class="expectation-grid">
-      <div class="concept-detail">
-        <h2 class="expectation-title green">ヒーリングで期待される変化</h2>
-        <ul class="concept-list">
-          <li>不調の症状が改善する</li>
-          <li>痛みが消える</li>
-          <li>むくみがなくなる</li>
-          <li>肌艶がきれいになる</li>
-          <li>思考がすっきりする</li>
-        </ul>
-      </div>
-      <div class="concept-detail">
-        <h2 class="expectation-title pink">コーチングで期待される変化</h2>
-        <ul class="concept-list">
-          <li>自己肯定感が増す</li>
-          <li>思い煩いがなくなる</li>
-          <li>人間関係のストレスが減る</li>
-          <li>自分らしく生きられるようになる</li>
-        </ul>
-      </div>
+  <section id="life">
+    <div class="section-title">Atelier Koshiki / Microcosmo Healing</div>
+    <div class="life-statement">
+      <h2>生命は、あなたが思っているより<br>強く、賢く、美しい。</h2>
+      <p class="life-message">「こんなものだ」と諦めないで、<br>といつも命は言っています。<br><br>そしてその声を聞いてくれる人に、<br>大きな力を送り返してくれるのです。<br><br>病気も、人間関係の悩みも、<br>そうして解きほぐされていきます。</p>
     </div>
   </section>
 
@@ -1360,7 +1213,7 @@
     <p class="menu-guide">
       体の不調、疲れ、痛みが気になる方は、ヒーリングへ。<br>
       人間関係や自分自身との関わり方についてお悩みの方は、コーチングへ。<br>
-      迷う方は、初回無料体験で今の状態をお聞かせください。
+      ご自身の状態に合わせて、お選びください。
     </p>
 
     <div class="menu-grid">
@@ -1384,14 +1237,6 @@
           <li>ビデオ通話（7,000円）</li>
           <li>対面（10,000円）</li>
         </ul>
-      </div>
-    </div>
-
-    <div class="special-package" style="margin-bottom: var(--space-small);">
-      <h3>初回無料体験を是非ご利用下さい</h3>
-      <p style="text-align: center;">どちらを選べばよいか分からない方も、まずは今の状態をお聞かせください。<br>15分の無料体験で、ヒーリングまたはコーチングの入口をご案内します。</p>
-      <div class="quiet-cta">
-        <a href="trial.html" class="line-button"><span class="keep-line">初回無料体験</span><span class="keep-line">について見る</span></a>
       </div>
     </div>
 
@@ -1427,17 +1272,17 @@
     <div class="section-title youtube-section-title">YouTube</div>
     <h2 class="section-heading youtube-section-heading">最新の動画</h2>
     <div class="latest-videos" id="youtube-videos" aria-label="YouTube最新動画">
-      <a class="latest-video-card" href="https://www.youtube.com/watch?v=ITH-M4guXzE" target="_blank" rel="noopener noreferrer" aria-label="ヒーリング夜話＃４　光を掴むのか、闇に掴まれるのか。をYouTubeで開く">
-        <img src="https://i.ytimg.com/vi/ITH-M4guXzE/hqdefault.jpg" alt="ヒーリング夜話＃４　光を掴むのか、闇に掴まれるのか。" loading="lazy">
-        <span>ヒーリング夜話＃４　光を掴むのか、闇に掴まれるのか。</span>
+      <a class="latest-video-card" href="https://www.youtube.com/watch?v=N273OjKnc00" target="_blank" rel="noopener noreferrer" aria-label="ヒーリング夜話 #19 秋分！をYouTubeで開く">
+        <img src="https://i.ytimg.com/vi/N273OjKnc00/hqdefault.jpg" alt="ヒーリング夜話 #19 秋分！" loading="lazy">
+        <span>ヒーリング夜話 #19 秋分！</span>
       </a>
-      <a class="latest-video-card" href="https://www.youtube.com/watch?v=WuUCnaGj7qM" target="_blank" rel="noopener noreferrer" aria-label="ヒーリング夜話＃３　 内なる声を信じる力と感謝する心の力をYouTubeで開く">
-        <img src="https://i.ytimg.com/vi/WuUCnaGj7qM/hqdefault.jpg" alt="ヒーリング夜話＃３　 内なる声を信じる力と感謝する心の力" loading="lazy">
-        <span>ヒーリング夜話＃３　 内なる声を信じる力と感謝する心の力</span>
+      <a class="latest-video-card" href="https://www.youtube.com/watch?v=ZjOOtfeBUlw" target="_blank" rel="noopener noreferrer" aria-label="ヒーリング夜話 #18 心の静けさとそれがお得な話についてをYouTubeで開く">
+        <img src="https://i.ytimg.com/vi/ZjOOtfeBUlw/hqdefault.jpg" alt="ヒーリング夜話 #18 心の静けさとそれがお得な話について" loading="lazy">
+        <span>ヒーリング夜話 #18 心の静けさとそれがお得な話について</span>
       </a>
-      <a class="latest-video-card" href="https://www.youtube.com/watch?v=uxRg6hY5hoM" target="_blank" rel="noopener noreferrer" aria-label="ヒーリング夜話＃２　内なる命の力と七番目の方位をYouTubeで開く">
-        <img src="https://i.ytimg.com/vi/uxRg6hY5hoM/hqdefault.jpg" alt="ヒーリング夜話＃２　内なる命の力と七番目の方位" loading="lazy">
-        <span>ヒーリング夜話＃２　内なる命の力と七番目の方位</span>
+      <a class="latest-video-card" href="https://www.youtube.com/watch?v=Xb4Awe-6OIk" target="_blank" rel="noopener noreferrer" aria-label="ヒーリング夜話 #17 内なる心の 自由についてをYouTubeで開く">
+        <img src="https://i.ytimg.com/vi/Xb4Awe-6OIk/hqdefault.jpg" alt="ヒーリング夜話 #17 内なる心の 自由について" loading="lazy">
+        <span>ヒーリング夜話 #17 内なる心の 自由について</span>
       </a>
     </div>
   </section>
@@ -1461,17 +1306,6 @@
         </p>
       </div>
     </div>
-  </section>
-
-  <section class="free-book-section" aria-labelledby="free-book-heading">
-    <a class="free-book-link" href="tamashii-no-michi.html">
-      <div class="free-book-copy">
-        <span class="free-book-label">無料書籍</span>
-        <h2 class="free-book-title" id="free-book-heading">『魂の道』</h2>
-        <p>人生に繰り返し現れる問いを、魂からの声として読み解くための一冊です。第一部を公開しています。</p>
-      </div>
-      <img src="images/tamashii-no-michi/docx/image-01.png" alt="無料書籍『魂の道』表紙" loading="lazy">
-    </a>
   </section>
 
   <div class="social-section" aria-labelledby="social-heading">
