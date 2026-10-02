@@ -226,7 +226,7 @@ a { color:inherit; }
   .service-footer { margin-top:36px; }
   .coaching-page .service-page { padding-top:18px; }
   .coaching-page .page-title { margin-bottom:10px; font-size:17px; }
-  .coaching-page .coaching-spread { width:100%; gap:8px; }
+  .coaching-page .coaching-spread { width:100%; margin-inline:0; gap:8px; }
   .coaching-page .coaching-scene { min-height:0; padding:0; grid-template-columns:1fr; gap:8px; }
   .coaching-page .scene-01, .coaching-page .scene-02, .coaching-page .scene-03, .coaching-page .scene-04, .coaching-page .scene-05 { height:auto; min-height:0; }
   .coaching-page .coaching-scene .panel-copy, .coaching-page .scene-04 .panel-copy { max-width:none; margin:0; padding:22px 44px; }
@@ -234,18 +234,12 @@ a { color:inherit; }
   .coaching-page .coaching-scene .panel-copy p { font-size:17px; line-height:2.1; }
   .coaching-page .coaching-scene .panel-art { height:auto; min-height:0; padding:0; }
   .coaching-page .coaching-scene .panel-art img { height:auto; object-fit:contain; }
-  .coaching-page .scene-01 .panel-copy { order:1; }
-  .coaching-page .scene-01 .panel-art { order:2; }
-  .coaching-page .scene-02 .panel-art { order:1; }
-  .coaching-page .scene-02 .panel-copy { order:2; }
-  .coaching-page .scene-03 .panel-copy { order:1; }
-  .coaching-page .scene-03 .panel-art { order:2; }
-  .coaching-page .scene-05 .panel-copy { order:1; }
-  .coaching-page .scene-05 .panel-art { order:2; }
+  .coaching-page .coaching-scene .panel-art { order:1; }
+  .coaching-page .coaching-scene .panel-copy { order:2; }
   .coaching-page .coaching-price { max-width:none; padding-top:30px; }
   .healing-page .service-page { padding-top:18px; }
   .healing-page .page-title { margin-bottom:10px; font-size:17px; }
-  .healing-page .healing-spread { width:100%; gap:8px; }
+  .healing-page .healing-spread { width:100%; margin-inline:0; gap:8px; }
   .healing-page .coaching-scene { min-height:0; padding:0; grid-template-columns:1fr; gap:8px; }
   .healing-page .scene-01, .healing-page .scene-02, .healing-page .scene-03, .healing-page .scene-04, .healing-page .scene-05 { height:auto; min-height:0; }
   .healing-page .coaching-scene .panel-copy, .healing-page .scene-04 .panel-copy { max-width:none; margin:0; padding:22px 44px; }
@@ -253,14 +247,8 @@ a { color:inherit; }
   .healing-page .coaching-scene .panel-copy p { font-size:17px; line-height:2.1; }
   .healing-page .coaching-scene .panel-art { height:auto; min-height:0; padding:0; }
   .healing-page .coaching-scene .panel-art img { height:auto; object-fit:contain; }
-  .healing-page .scene-01 .panel-copy { order:1; }
-  .healing-page .scene-01 .panel-art { order:2; }
-  .healing-page .scene-02 .panel-art { order:1; }
-  .healing-page .scene-02 .panel-copy { order:2; }
-  .healing-page .scene-03 .panel-copy { order:1; }
-  .healing-page .scene-03 .panel-art { order:2; }
-  .healing-page .scene-05 .panel-art { order:1; }
-  .healing-page .scene-05 .panel-copy { order:2; }
+  .healing-page .coaching-scene .panel-art { order:1; }
+  .healing-page .coaching-scene .panel-copy { order:2; }
   .healing-price { max-width:none; padding-top:30px; }
   .healing-special, .healing-faq { padding-top:58px; }
   .special-exhibits { grid-template-columns:1fr; gap:28px; }
@@ -270,7 +258,7 @@ a { color:inherit; }
   .contact-bridge { margin-top:58px; font-size:17px; }
   .shared-contact-content h2, .healing-special > h2, .healing-page .healing-faq h2 { font-size:27px; }
   .healing-page .healing-faq .faq-entry-art { width:100%; }
-  .healing-page .healing-faq .faq-entry-art h2 { top:16px; left:20px; font-size:clamp(21px,6.5vw,25px); }
+  .healing-page .healing-faq .faq-entry-art h2 { top:50%; left:14px; margin:0; padding:10px 14px; background:#fff; font-size:clamp(21px,6.5vw,25px); transform:translateY(-50%); }
   .healing-page .healing-faq .chat-line { gap:10px; }
   .healing-page .healing-faq .speaker-icon { width:58px; height:58px; flex-basis:58px; }
   .healing-page .healing-faq .chat { max-width:calc(100% - 68px); padding:16px 18px; }
