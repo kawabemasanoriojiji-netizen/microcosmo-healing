@@ -780,26 +780,65 @@
     line-height: 1.9 !important;
   }
 
-  /* --- Menu & Price Section --- */
-  .menu-grid {
+  .life-statement {
+    max-width: 790px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .life-statement h2 {
+    font-size: 28px;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    line-height: 1.7;
+    margin: 0 0 42px;
+  }
+
+  .life-statement .life-message {
+    color: var(--text-light);
+    font-size: 18px;
+    line-height: 2.1;
+    margin: 0;
+  }
+
+  /* --- Service guide --- */
+  .service-guide-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    margin-bottom: var(--space-small);
+    align-items: start;
   }
 
-  .menu-category {
-    border: 1px solid var(--border);
-    padding: 34px;
-    background: var(--bg-color);
+  .service-guide-link {
+    display: block;
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
   }
 
-  .menu-category h3 {
-    margin: 0 0 24px;
-    font-size: 22px;
+  .service-guide-art {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .service-guide-art img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+
+  .service-guide-label {
+    display: inline-block;
+    margin-top: 18px;
+    font-size: 19px;
     font-weight: normal;
     letter-spacing: 0.08em;
     line-height: 1.5;
+    text-underline-offset: 5px;
   }
 
   .menu-guide,
@@ -843,6 +882,27 @@
     line-height: 1.95 !important;
   }
 
+  @media (hover: hover) {
+    .service-guide-link:hover .service-guide-art img {
+      opacity: 0.92;
+    }
+
+    .service-guide-link:hover .service-guide-label {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+    }
+  }
+
+  .profile-content p {
+    font-size: 17px !important;
+    line-height: 2.05 !important;
+  }
+
+  .product-content p:last-child {
+    font-size: 17px !important;
+    line-height: 1.95 !important;
+  }
+
   .menu-items .menu-note {
     display: block;
     padding-left: 1em;
@@ -860,8 +920,11 @@
       word-break: normal;
       line-break: strict;
     }
-    .menu-grid {
+    .life-statement h2 { font-size: 27px; line-height: 1.65; }
+    .life-statement .life-message { font-size: 17px; }
+    .service-guide-grid {
       grid-template-columns: 1fr;
+      gap: 36px;
     }
     .expectation-grid {
       grid-template-columns: 1fr;
@@ -990,9 +1053,7 @@
     }
     .latest-video-card span { font-size: 14px; line-height: 1.65; }
     .menu-card h3 { font-size: 20px; }
-    .menu-category { padding: 28px 22px; }
-    .menu-category h3 { font-size: 22px; }
-    .menu-items li { font-size: 17px; }
+    .service-guide-label { margin-top: 16px; font-size: 18px; }
     .expectation-title { font-size: 22px; }
     #concept,
     #menu,
@@ -1155,7 +1216,7 @@
       <h1 class="hero-heading"><span class="hero-title-main"><span class="hero-title-emphasis">命</span>の本当の力が、</span><span class="hero-title-secondary">長い眠りから覚める場所</span></h1>
       <div class="hero-social hero-social-visual" aria-label="SNSリンク">
         <div class="social-links">
-          <a class="social-link" href="https://www.instagram.com/microcosmo_healing/" target="_blank" rel="noopener noreferrer" aria-label="Instagram healing">
+          <a class="social-link" href="https://www.instagram.com/ojiji838861/" target="_blank" rel="noopener noreferrer" aria-label="Instagram healing">
             <span class="social-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="5" y="5" width="14" height="14" rx="4"></rect>
@@ -1207,6 +1268,14 @@
     </div>
   </section>
 
+  <section id="life">
+    <div class="section-title">Atelier Koshiki / Microcosmo Healing</div>
+    <div class="life-statement">
+      <h2>生命は、あなたが思っているより<br>強く、賢く、美しい。</h2>
+      <p class="life-message">「こんなものだ」と諦めないで、<br>といつも命は言っています。<br><br>そしてその声を聞いてくれる人に、<br>大きな力を送り返してくれるのです。<br><br>病気も、人間関係の悩みも、<br>そうして解きほぐされていきます。<br><br>すべては繋がっていますよ。</p>
+    </div>
+  </section>
+
   <!-- Profile Section -->
   <section id="profile" style="background-color: #fafafa; border-radius: 8px; margin: var(--space-large) auto 0; padding: var(--space-small) 40px; max-width: 800px;">
     <div class="section-title">Profile &amp; Story</div>
@@ -1230,38 +1299,20 @@
     </div>
   </section>
 
-  <!-- Menu セクション -->
+  <!-- Service guide -->
   <section id="menu">
-    <div class="section-title">Menu &amp; Price</div>
-    <h2 class="section-heading">料金のご案内</h2>
-    <p class="menu-guide">
-      体の不調、疲れ、痛みが気になる方は、ヒーリングへ。<br>
-      人間関係や自分自身との関わり方についてお悩みの方は、コーチングへ。<br>
-      ご自身の状態に合わせて、お選びください。
-    </p>
+    <div class="section-title">Service Guide</div>
+    <h2 class="section-heading">サービスご案内</h2>
 
-    <div class="menu-grid">
-      <div class="menu-category">
-        <h3>ヒーリング</h3>
-        <p class="menu-description">
-          体の緊張や慢性的な不調を、回復と再生に向けて力強く後押しします。
-        </p>
-        <ul class="menu-items">
-          <li>遠隔ヒーリング（7,000円）<span class="menu-note">満月新月はお得な5,000円。</span></li>
-          <li>対面ヒーリング（10,000円）</li>
-          <li>マッサージセットコース（15,000円）</li>
-        </ul>
-      </div>
-      <div class="menu-category">
-        <h3>コーチング</h3>
-        <p class="menu-description">
-          より良い現実を引き寄せるための「心の扱い方」について、実践的なアドバイスをします。
-        </p>
-        <ul class="menu-items">
-          <li>ビデオ通話（7,000円）</li>
-          <li>対面（10,000円）</li>
-        </ul>
-      </div>
+    <div class="service-guide-grid">
+      <a class="service-guide-link" href="healing(2).html" aria-label="ヒーリングページへ">
+        <div class="service-guide-art"><img src="images/HPの絵/img20261002_11013363.png" alt="レコードを聞く犬の絵"></div>
+        <span class="service-guide-label">ヒーリング　→</span>
+      </a>
+      <a class="service-guide-link" href="habit_counseling.html" aria-label="コーチングページへ">
+        <div class="service-guide-art"><img src="images/HPの絵/27.png" alt="うさぎと子供がリュックを背負っている絵"></div>
+        <span class="service-guide-label">コーチング　→</span>
+      </a>
     </div>
 
   </section>
@@ -1335,7 +1386,7 @@
   <div class="social-section" aria-labelledby="social-heading">
     <h2 class="social-heading" id="social-heading">日々の発信</h2>
     <div class="social-links">
-      <a class="social-link" href="https://www.instagram.com/microcosmo_healing/" target="_blank" rel="noopener noreferrer" aria-label="Instagram healing">
+      <a class="social-link" href="https://www.instagram.com/ojiji838861/" target="_blank" rel="noopener noreferrer" aria-label="Instagram healing">
         <span class="social-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <rect x="5" y="5" width="14" height="14" rx="4"></rect>
