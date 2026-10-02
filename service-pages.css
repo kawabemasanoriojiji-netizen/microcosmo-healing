@@ -258,7 +258,7 @@ a { color:inherit; }
   .contact-bridge { margin-top:58px; font-size:17px; }
   .shared-contact-content h2, .healing-special > h2, .healing-page .healing-faq h2 { font-size:27px; }
   .healing-page .healing-faq .faq-entry-art { width:100%; }
-  .healing-page .healing-faq .faq-entry-art h2 { top:50%; left:50%; margin:0; padding:10px 14px; background:#fff; font-size:clamp(21px,6.5vw,25px); transform:translate(-50%,-50%); }
+  .healing-page .healing-faq .faq-entry-art h2 { top:50%; left:50%; margin:0; padding:10px 14px; background:#fff; font-size:17px; white-space:nowrap; transform:translate(-50%,-50%); }
   .healing-page .healing-faq .chat-line { gap:10px; }
   .healing-page .healing-faq .speaker-icon { width:58px; height:58px; flex-basis:58px; }
   .healing-page .healing-faq .chat { max-width:calc(100% - 68px); padding:16px 18px; }
